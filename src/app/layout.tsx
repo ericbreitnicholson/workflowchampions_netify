@@ -14,8 +14,8 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Workflow Champions | Expert Digital Marketing for Realtors',
-  description: 'Specialized SEO services for real estate agents. Boost your online presence, dominate local searches, and grow your real estate business with our proven strategies.',
+  title: 'Best Real Estate SEO Services in the USA | Workflow Champions',
+  description: 'Leading Real Estate SEO agency helping agents dominate local search rankings. Our proven SEO strategies help realtors attract more leads and outrank competitors. Specialized in real estate digital marketing.',
   robots: {
     index: true,
     follow: true,

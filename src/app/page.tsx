@@ -28,7 +28,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Improve Your Real Estate SEO with Workflow Champions
+              Best Real Estate SEO Services in the USA - Workflow Champions
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-200">
               Dominate local searches, attract quality leads, and grow your real estate business with our specialized SEO strategies. <span className="font-semibold text-primary-200">Our guarantee: if your rankings don't improve, you don't pay.</span>
@@ -179,6 +179,66 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Workflow Champions",
+            "description": "Leading Real Estate SEO agency helping agents dominate local search rankings. Our proven SEO strategies help realtors attract more leads and outrank competitors.",
+            "url": "https://workflowchampions.com",
+            "areaServed": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "priceRange": "$$",
+            "serviceType": ["Real Estate SEO", "Digital Marketing", "Local SEO"],
+            "knowsAbout": [
+              "Real Estate SEO",
+              "Local Search Optimization",
+              "Digital Marketing for Realtors",
+              "Real Estate Marketing",
+              "Search Engine Optimization"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Real Estate SEO Services",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Local Search Dominance",
+                    "description": "Optimize your presence for local real estate searches and capture more leads"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Content That Converts",
+                    "description": "SEO-optimized content creation for real estate professionals"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Technical SEO Excellence",
+                    "description": "Technical optimization for real estate websites"
+                  }
+                }
+              ]
+            },
+            "sameAs": [
+              "https://calendly.com/eric-workflowchampions/30min"
+            ]
+          })
+        }}
+      />
     </>
   )
 }
