@@ -3,7 +3,7 @@
   <!-- Main Pages -->
   <url>
     <loc>https://workflowchampions.com/</loc>
-    <lastmod>2024-03-14</lastmod>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -15,8 +15,8 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/blog</loc>
-    <lastmod>2024-03-14</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
@@ -33,8 +33,8 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/contact</loc>
-    <lastmod>2024-03-14</lastmod>
+    <lastmod>2024-03-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset> 
