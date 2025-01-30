@@ -23,9 +23,9 @@ export default function Contact() {
       <Navigation />
       <div className="min-h-screen bg-white">
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl text-center mb-12">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl text-center mb-12">
             Schedule a Consultation
-          </h2>
+          </h1>
           
           {/* Calendly inline widget */}
           <div 
