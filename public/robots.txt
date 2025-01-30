@@ -1,0 +1,23 @@
+# Allow all crawlers
+User-agent: *
+
+# Allow most pages
+Allow: /
+Allow: /services
+Allow: /blog
+Allow: /about
+Allow: /locations
+Allow: /contact
+
+# Disallow admin, private areas, and legal pages
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /terms
+Disallow: /privacy
+
+# Sitemap location
+Sitemap: https://workflowchampions.com/sitemap.xml
+
+# Crawl delay for better server performance
+Crawl-delay: 10 
