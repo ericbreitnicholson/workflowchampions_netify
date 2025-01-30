@@ -1,5 +1,4 @@
-'use client'
-
+import { Metadata } from 'next'
 import { useEffect, useState } from 'react'
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
@@ -8,13 +7,16 @@ import client, { POSTS_QUERY, type WPPost } from '@/lib/wordpress'
 import { format } from 'date-fns'
 import parse from 'html-react-parser'
 
-// Add metadata to prevent indexing
-export const metadata = {
+// Export metadata configuration at the module level
+export const metadata: Metadata = {
   robots: {
     index: false,
     follow: false,
   }
 }
+
+// Mark the component as client-side
+'use client'
 
 export default function Blog() {
   const [posts, setPosts] = useState<WPPost[]>([])
