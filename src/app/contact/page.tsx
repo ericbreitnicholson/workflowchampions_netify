@@ -30,7 +30,7 @@ export default function Contact() {
           {/* Calendly inline widget */}
           <div 
             className="calendly-inline-widget" 
-            data-url="https://calendly.com/ericbreitnicholson"
+            data-url="https://calendly.com/eric-workflowchampions/30min"
             style={{ minWidth: '320px', height: '700px' }} 
           />
         </div>
