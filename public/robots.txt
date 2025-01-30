@@ -9,12 +9,10 @@ Allow: /about
 Allow: /locations
 Allow: /contact
 
-# Disallow admin, private areas, and legal pages
+# Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
-Disallow: /terms
-Disallow: /privacy
 
 # Sitemap location
 Sitemap: https://workflowchampions.com/sitemap.xml

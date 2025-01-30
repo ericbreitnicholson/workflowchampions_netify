@@ -8,6 +8,14 @@ import client, { POSTS_QUERY, type WPPost } from '@/lib/wordpress'
 import { format } from 'date-fns'
 import parse from 'html-react-parser'
 
+// Add metadata to prevent indexing
+export const metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  }
+}
+
 export default function Blog() {
   const [posts, setPosts] = useState<WPPost[]>([])
   const [loading, setLoading] = useState(true)
