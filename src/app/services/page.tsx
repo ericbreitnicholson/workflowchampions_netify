@@ -69,6 +69,88 @@ export default function Services() {
     <>
       <Navigation />
       
+      {/* SEO Audit Product Section */}
+      <div className="bg-white pt-16 sm:pt-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-xl border-2 border-primary-200 bg-white shadow-lg">
+            <div className="absolute top-0 right-0 -mt-2 -mr-2 bg-primary-500 text-white px-4 py-1 rounded-bl-xl text-sm font-semibold">
+              $50 Value
+            </div>
+            
+            <div className="p-8">
+              <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                <div>
+                  <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                    Comprehensive SEO Audit
+                  </h2>
+                  <p className="mt-4 text-lg text-gray-600">
+                    Get a detailed analysis of your website's SEO performance and discover untapped opportunities for growth.
+                  </p>
+                  
+                  <div className="mt-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">What's Included:</h3>
+                    <ul className="space-y-3">
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Technical SEO Analysis</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Keyword Research & Analysis</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Competitor Analysis</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Content Gap Analysis</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Local SEO Performance Review</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Site Speed & Performance Check</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Mobile Optimization Assessment</span>
+                      </li>
+                      <li className="flex items-start">
+                        <ChevronRightIcon className="h-6 w-5 flex-none text-primary-600 mt-1" aria-hidden="true" />
+                        <span className="text-gray-600">Backlink Profile Analysis</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="mt-8">
+                    <Link
+                      href="https://calendly.com/eric-workflowchampions/30min"
+                      className="btn-primary"
+                    >
+                      Get Your SEO Audit
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="mt-8 lg:mt-0">
+                  <div className="relative aspect-[4/3] overflow-hidden rounded-xl">
+                    <Image
+                      src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                      alt="SEO Analytics Dashboard"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <div className="relative isolate overflow-hidden bg-white">
         <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
