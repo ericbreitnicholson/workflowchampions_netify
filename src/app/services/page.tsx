@@ -69,6 +69,28 @@ export default function Services() {
     <>
       <Navigation />
       
+      {/* Hero Section */}
+      <div className="relative isolate overflow-hidden bg-white pt-16 sm:pt-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl lg:mx-0">
+            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+              Dominate Your Local Real Estate Market
+            </h1>
+            <p className="mt-6 text-xl leading-8 text-gray-600">
+              Stop losing leads to big brokerages. Our proven SEO strategies help independent agents compete and win against bigger competitors with deeper pockets.
+            </p>
+            <div className="mt-8 text-center">
+              <Link
+                href="https://calendly.com/eric-workflowchampions/30min"
+                className="btn-primary"
+              >
+                Get Your Custom SEO Strategy
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* SEO Audit Product Section */}
       <div className="bg-white pt-16 sm:pt-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -146,28 +168,6 @@ export default function Services() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <div className="relative isolate overflow-hidden bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:mx-0">
-            <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Dominate Your Local Real Estate Market
-            </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-600">
-              Stop losing leads to big brokerages. Our proven SEO strategies help independent agents compete and win against bigger competitors with deeper pockets.
-            </p>
-            <div className="mt-8 text-center">
-              <Link
-                href="https://calendly.com/eric-workflowchampions/30min"
-                className="btn-primary"
-              >
-                Get Your Custom SEO Strategy
-              </Link>
             </div>
           </div>
         </div>
