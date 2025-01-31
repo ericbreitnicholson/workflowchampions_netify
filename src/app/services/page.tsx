@@ -84,7 +84,7 @@ export default function Services() {
                     Comprehensive SEO Audit
                   </h2>
                   <p className="mt-4 text-lg text-gray-600">
-                    Get a detailed analysis of your website's SEO performance and discover untapped opportunities for growth.
+                    Get a detailed analysis of your website's SEO performance and discover untapped opportunities for growth in your local real estate market.
                   </p>
                   
                   <div className="mt-6">
