@@ -1,7 +1,7 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { gql } from '@apollo/client/core';
 
-const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || 'https://your-wordpress-site.com/graphql';
+const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || 'https://workflowchampions.com/graphql';
 
 // Create the Apollo Client
 const client = new ApolloClient({
@@ -17,10 +17,11 @@ export default client;
 export function formatWPContent(content: string): string {
   if (!content) return '';
   
-  // Remove WordPress-specific tags and unwanted formatting
   return content
     .replace(/\[.*?\]/g, '') // Remove shortcodes
     .replace(/<\/?p>/g, '') // Remove p tags
+    .replace(/<!--.*?-->/g, '') // Remove HTML comments
+    .replace(/\n\s*\n/g, '\n') // Remove extra line breaks
     .trim();
 }
 
@@ -45,6 +46,11 @@ export interface WPPost {
       slug: string;
     }[];
   };
+  seo?: {
+    title: string;
+    metaDesc: string;
+    canonical: string;
+  };
 }
 
 export interface WPPage {
@@ -54,6 +60,11 @@ export interface WPPage {
   slug: string;
   template?: {
     templateName: string;
+  };
+  seo?: {
+    title: string;
+    metaDesc: string;
+    canonical: string;
   };
 }
 
@@ -67,6 +78,11 @@ export const PAGE_QUERY = gql`
       slug
       template {
         templateName
+      }
+      seo {
+        title
+        metaDesc
+        canonical
       }
     }
   }
@@ -94,6 +110,11 @@ export const POSTS_QUERY = gql`
             name
             slug
           }
+        }
+        seo {
+          title
+          metaDesc
+          canonical
         }
       }
     }
