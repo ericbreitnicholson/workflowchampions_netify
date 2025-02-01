@@ -3,6 +3,29 @@ import { gql } from '@apollo/client/core';
 
 const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || 'https://workflowchampions.com/graphql';
 
+// Test query to verify connection
+export const TEST_QUERY = gql`
+  query TestConnection {
+    generalSettings {
+      title
+      url
+    }
+  }
+`;
+
+// Function to test the connection
+export async function testConnection() {
+  try {
+    const result = await client.query({
+      query: TEST_QUERY
+    });
+    return result.data;
+  } catch (error) {
+    console.error('WordPress connection error:', error);
+    throw error;
+  }
+}
+
 // Create the Apollo Client
 const client = new ApolloClient({
   link: createHttpLink({
