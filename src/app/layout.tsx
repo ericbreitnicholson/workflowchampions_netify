@@ -37,6 +37,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full scroll-smooth">
       <head>
+        {/* Google Tag Manager */}
+        <Script id="google-tag-manager" strategy="beforeInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-PPR48VWJ');`}
+        </Script>
+        {/* End Google Tag Manager */}
+        
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-KVX3X09SSY"
           strategy="afterInteractive"
@@ -52,6 +62,17 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${inter.className} h-full antialiased`}>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-PPR48VWJ"
+            height="0"
+            width="0"
+            style={{ display: 'none', visibility: 'hidden' }}
+          />
+        </noscript>
+        {/* End Google Tag Manager (noscript) */}
+        
         <div className="flex min-h-full flex-col">
           <main className="flex-grow pt-16">
             {children}
