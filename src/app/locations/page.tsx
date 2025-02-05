@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import LocationsContent from '@/components/LocationsContent'
 import Image from 'next/image'
 import Link from 'next/link'
+import Navigation from '@/components/Navigation'
 
 export const metadata: Metadata = {
   title: 'Service Locations | Best Real Estate SEO Services by Location',
@@ -11,39 +12,51 @@ export const metadata: Metadata = {
 const counties = [
   {
     name: "Orange County",
+    slug: "orange-county",
     description: "Serving real estate agents in Anaheim, Santa Ana, Irvine, and throughout Orange County.",
     population: "3.2M",
-    agents: "12,000+"
+    agents: "12,000+",
+    cities: ["Anaheim", "Santa Ana", "Irvine", "Huntington Beach", "Newport Beach", "Laguna Beach"]
   },
   {
     name: "Los Angeles County",
+    slug: "los-angeles-county",
     description: "Supporting realtors across LA, Beverly Hills, Santa Monica, and the greater Los Angeles area.",
     population: "10M",
-    agents: "30,000+"
+    agents: "30,000+",
+    cities: ["Los Angeles", "Beverly Hills", "Santa Monica", "Pasadena", "Long Beach", "Malibu"]
   },
   {
     name: "San Diego County",
+    slug: "san-diego-county",
     description: "Helping agents succeed in San Diego, La Jolla, Carlsbad, and surrounding communities.",
     population: "3.3M",
-    agents: "15,000+"
+    agents: "15,000+",
+    cities: ["San Diego", "La Jolla", "Carlsbad", "Coronado", "Del Mar", "Encinitas"]
   },
   {
     name: "Riverside County",
+    slug: "riverside-county",
     description: "Serving real estate professionals in Riverside, Palm Springs, and the Coachella Valley.",
     population: "2.5M",
-    agents: "8,000+"
+    agents: "8,000+",
+    cities: ["Riverside", "Palm Springs", "Palm Desert", "La Quinta", "Temecula", "Corona"]
   },
   {
     name: "San Bernardino County",
+    slug: "san-bernardino-county",
     description: "Supporting agents in San Bernardino, Ontario, Rancho Cucamonga, and beyond.",
     population: "2.2M",
-    agents: "7,000+"
+    agents: "7,000+",
+    cities: ["San Bernardino", "Ontario", "Rancho Cucamonga", "Redlands", "Upland", "Chino Hills"]
   }
 ]
 
 export default function Page() {
   return (
     <div>
+      <Navigation />
+      
       {/* Hero Section */}
       <div className="relative">
         {/* Hero Background Image */}
@@ -97,6 +110,23 @@ export default function Page() {
         </div>
       </div>
 
+      {/* Quick Navigation */}
+      <div className="bg-gray-50 border-y border-gray-200">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <nav className="flex flex-wrap justify-center gap-4">
+            {counties.map((county) => (
+              <a
+                key={county.slug}
+                href={`#${county.slug}`}
+                className="text-primary-600 hover:text-primary-800 font-medium"
+              >
+                {county.name}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
+
       {/* Counties Grid Section */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -109,32 +139,50 @@ export default function Page() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="space-y-16">
             {counties.map((county) => (
               <div
-                key={county.name}
-                className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
+                key={county.slug}
+                id={county.slug}
+                className="scroll-mt-20"
               >
-                <div className="flex flex-col h-full">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {county.name}
-                  </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">
-                    {county.description}
-                  </p>
-                  <div className="flex justify-between text-sm text-gray-500 mt-4">
-                    <span>Population: {county.population}</span>
-                    <span>Active Agents: {county.agents}</span>
+                <div className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors">
+                  <div className="flex flex-col h-full">
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                      {county.name}
+                    </h3>
+                    <p className="text-gray-600 mb-6 flex-grow">
+                      {county.description}
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                      <div>
+                        <h4 className="font-medium text-gray-900 mb-2">Key Cities We Serve:</h4>
+                        <ul className="grid grid-cols-2 gap-2">
+                          {county.cities.map((city) => (
+                            <li key={city} className="text-gray-600">
+                              • {city}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      <div className="space-y-4">
+                        <div className="flex justify-between text-sm text-gray-500">
+                          <span>Population:</span>
+                          <span className="font-medium">{county.population}</span>
+                        </div>
+                        <div className="flex justify-between text-sm text-gray-500">
+                          <span>Active Agents:</span>
+                          <span className="font-medium">{county.agents}</span>
+                        </div>
+                        <Link
+                          href="https://calendly.com/eric-workflowchampions/30min"
+                          className="mt-4 btn-primary w-full text-center"
+                        >
+                          Get Started in {county.name}
+                        </Link>
+                      </div>
+                    </div>
                   </div>
-                  <Link
-                    href="https://calendly.com/eric-workflowchampions/30min"
-                    className="mt-6 text-primary-600 hover:text-primary-700 font-semibold inline-flex items-center"
-                  >
-                    Get Started
-                    <svg className="ml-2 h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
                 </div>
               </div>
             ))}
