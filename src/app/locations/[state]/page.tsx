@@ -1228,12 +1228,13 @@ export default function StatePage({ params }: { params: StateParams }) {
           
           <div className="grid gap-8 lg:grid-cols-2">
             {state.counties.map((county) => (
-              <div
+              <Link
                 key={county.slug}
-                className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
+                href={`/locations/${params.state}/${county.slug}`}
+                className="group relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
               >
                 <div className="flex flex-col h-full">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4 group-hover:text-primary-600">
                     {county.name}
                   </h3>
                   <p className="text-gray-600 mb-6 flex-grow">
@@ -1248,15 +1249,14 @@ export default function StatePage({ params }: { params: StateParams }) {
                         </li>
                       ))}
                     </ul>
-                    <Link
-                      href={`/locations/${params.state}/${county.slug}`}
+                    <div
                       className="btn-primary w-full text-center"
                     >
                       Learn More About {county.name}
-                    </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
