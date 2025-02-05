@@ -1,105 +1,88 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
+import { stateData } from '../locations/[state]/page'
 
 export const metadata: Metadata = {
   title: 'Sitemap | Workflow Champions',
   description: 'Complete sitemap of Workflow Champions website, listing all our pages and services.',
 }
 
-export default function Page() {
+export default function SitemapPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Navigation />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Sitemap</h1>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Main Pages */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Main Pages</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-blue-600 hover:text-blue-800">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-blue-600 hover:text-blue-800">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations" className="text-blue-600 hover:text-blue-800">
-                  Locations
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-blue-600 hover:text-blue-800">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-blue-600 hover:text-blue-800">
-                  Contact
-                </Link>
-              </li>
-            </ul>
+      <div className="bg-white py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Sitemap
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              A complete list of all pages on our website.
+            </p>
           </div>
 
-          {/* Service Areas */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Service Areas</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/locations#california" className="text-blue-600 hover:text-blue-800">
-                  California
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations#texas" className="text-blue-600 hover:text-blue-800">
-                  Texas
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations#florida" className="text-blue-600 hover:text-blue-800">
-                  Florida
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations#new-york" className="text-blue-600 hover:text-blue-800">
-                  New York
-                </Link>
-              </li>
-              <li>
-                <Link href="/locations#arizona" className="text-blue-600 hover:text-blue-800">
-                  Arizona
-                </Link>
-              </li>
-            </ul>
-          </div>
+          <div className="grid gap-16">
+            {/* Main Pages */}
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Main Pages</h2>
+              <ul className="grid gap-3">
+                <li><a href="/" className="text-primary-600 hover:text-primary-500">Home</a></li>
+                <li><a href="/services" className="text-primary-600 hover:text-primary-500">Services</a></li>
+                <li><a href="/locations" className="text-primary-600 hover:text-primary-500">Locations</a></li>
+                <li><a href="/about" className="text-primary-600 hover:text-primary-500">About</a></li>
+                <li><a href="/contact" className="text-primary-600 hover:text-primary-500">Contact</a></li>
+              </ul>
+            </div>
 
-          {/* Legal Pages */}
-          <div className="bg-white p-6 rounded-lg shadow">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">Legal</h2>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/terms" className="text-blue-600 hover:text-blue-800">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="text-blue-600 hover:text-blue-800">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/sitemap" className="text-blue-600 hover:text-blue-800">
-                  Sitemap
-                </Link>
-              </li>
-            </ul>
+            {/* Location Pages */}
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Location Pages</h2>
+              {Object.entries(stateData).map(([stateSlug, state]) => (
+                <div key={stateSlug} className="mb-8">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4">
+                    <a href={`/locations/${stateSlug}`} className="text-primary-600 hover:text-primary-500">
+                      {state.name}
+                    </a>
+                  </h3>
+                  <div className="pl-6">
+                    {state.counties.map((county) => (
+                      <div key={county.slug} className="mb-4">
+                        <h4 className="text-lg font-medium text-gray-900 mb-2">
+                          <a href={`/locations/${stateSlug}/${county.slug}`} className="text-primary-600 hover:text-primary-500">
+                            {county.name}
+                          </a>
+                        </h4>
+                        <ul className="pl-6 grid gap-2">
+                          {county.cities.map((city) => (
+                            <li key={city.slug}>
+                              <a
+                                href={`/locations/${stateSlug}/${county.slug}/${city.slug}`}
+                                className="text-primary-600 hover:text-primary-500"
+                              >
+                                {city.name}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Legal Pages */}
+            <div>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-6">Legal Pages</h2>
+              <ul className="grid gap-3">
+                <li><a href="/terms" className="text-primary-600 hover:text-primary-500">Terms of Service</a></li>
+                <li><a href="/privacy" className="text-primary-600 hover:text-primary-500">Privacy Policy</a></li>
+                <li><a href="/sitemap" className="text-primary-600 hover:text-primary-500">Sitemap</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
