@@ -135,7 +135,10 @@ export default function Page() {
                 id={state.slug}
                 className="scroll-mt-20"
               >
-                <div className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors">
+                <Link
+                  href={`/locations/${state.slug}`}
+                  className="block relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
+                >
                   <div className="flex flex-col h-full">
                     <h3 className="text-2xl font-semibold text-gray-900 mb-4">
                       {state.name}
@@ -155,16 +158,15 @@ export default function Page() {
                         </ul>
                       </div>
                       <div className="flex items-end justify-end">
-                        <Link
-                          href="https://calendly.com/eric-workflowchampions/30min"
+                        <span
                           className="btn-primary w-full text-center"
                         >
                           Get Started in {state.name}
-                        </Link>
+                        </span>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
