@@ -52,33 +52,193 @@
 
   <!-- State Pages -->
   <url>
-    <loc>https://workflowchampions.com/locations#california</loc>
+    <loc>https://workflowchampions.com/locations/california</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workflowchampions.com/locations#texas</loc>
+    <loc>https://workflowchampions.com/locations/texas</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workflowchampions.com/locations#florida</loc>
+    <loc>https://workflowchampions.com/locations/florida</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workflowchampions.com/locations#new-york</loc>
+    <loc>https://workflowchampions.com/locations/new-york</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://workflowchampions.com/locations#arizona</loc>
+    <loc>https://workflowchampions.com/locations/arizona</loc>
     <lastmod>2024-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- California County Pages -->
+  <url>
+    <loc>https://workflowchampions.com/locations/california/los-angeles</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/california/orange</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/california/san-diego</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/california/san-francisco</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/california/santa-clara</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Texas County Pages -->
+  <url>
+    <loc>https://workflowchampions.com/locations/texas/harris</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/texas/dallas</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/texas/travis</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/texas/bexar</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/texas/collin</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Florida County Pages -->
+  <url>
+    <loc>https://workflowchampions.com/locations/florida/miami-dade</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/florida/orange</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/florida/palm-beach</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/florida/hillsborough</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/florida/broward</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- New York County Pages -->
+  <url>
+    <loc>https://workflowchampions.com/locations/new-york/new-york</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/new-york/kings</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/new-york/queens</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/new-york/nassau</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/new-york/westchester</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Arizona County Pages -->
+  <url>
+    <loc>https://workflowchampions.com/locations/arizona/maricopa</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/arizona/pima</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/arizona/coconino</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/arizona/yavapai</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/arizona/pinal</loc>
+    <lastmod>2024-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset> 
