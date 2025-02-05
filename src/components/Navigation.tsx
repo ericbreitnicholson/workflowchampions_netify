@@ -9,6 +9,7 @@ import { usePathname } from 'next/navigation'
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Services', href: '/services' },
+  { name: 'Locations', href: '/locations' },
   // { name: 'Blog', href: '/blog' }, // Temporarily hidden
   { name: 'About', href: '/about' },
   { name: 'Contact', href: '/contact' },
