@@ -2,6 +2,15 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
+
+# Redirect non-admin traffic on admin subdomain to main site
+RewriteCond %{HTTP_HOST} ^admin\.workflowchampions\.com$ [NC]
+RewriteCond %{REQUEST_URI} !^/wp-admin [NC]
+RewriteCond %{REQUEST_URI} !^/wp-login\.php [NC]
+RewriteCond %{REQUEST_URI} !^/wp-json [NC]
+RewriteCond %{REQUEST_URI} !^/graphql [NC]
+RewriteRule ^(.*)$ https://workflowchampions.com/$1 [L,R=301]
+
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

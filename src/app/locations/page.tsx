@@ -1,5 +1,4 @@
 import { Metadata } from 'next'
-import LocationsContent from '@/components/LocationsContent'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navigation from '@/components/Navigation'
@@ -171,9 +170,6 @@ export default function Page() {
           </div>
         </div>
       </div>
-
-      {/* Original Locations Content */}
-      <LocationsContent />
     </div>
   )
 } 
