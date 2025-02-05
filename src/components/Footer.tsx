@@ -14,10 +14,10 @@ export default function Footer() {
         <div className="mt-8 md:order-2 md:mt-0">
           <nav className="flex justify-center space-x-6">
             <Link
-              href="/locations"
+              href="/sitemap"
               className="text-sm leading-6 text-gray-600 hover:text-gray-900"
             >
-              Locations
+              Sitemap
             </Link>
             <Link
               href="/terms"
@@ -32,20 +32,6 @@ export default function Footer() {
               Privacy Policy
             </Link>
           </nav>
-        </div>
-        {/* Legal Links */}
-        <div className="mt-8 border-t border-gray-700 pt-8">
-          <div className="flex justify-center space-x-6">
-            <Link href="/terms" className="text-gray-400 hover:text-gray-300">
-              Terms
-            </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-gray-300">
-              Privacy
-            </Link>
-            <Link href="/sitemap" className="text-gray-400 hover:text-gray-300">
-              Sitemap
-            </Link>
-          </div>
         </div>
       </div>
     </footer>
