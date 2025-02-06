@@ -1169,7 +1169,7 @@ export async function generateMetadata({ params }: { params: StateParams }): Pro
   if (!state) return notFound()
 
   return {
-    title: `${state.name} Real Estate SEO Services | Workflow Champions`,
+    title: `Best SEO Services in ${state.name} | Workflow Champions`,
     description: `Find local Real Estate SEO services in ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
   }
 }
@@ -1198,7 +1198,7 @@ export default function StatePage({ params }: { params: StateParams }) {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center text-white">
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
-                {state.name} Real Estate SEO Services
+                Best SEO Services in {state.name}
               </h1>
               <p className="text-lg leading-8 mb-8">
                 {state.description}
