@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: CityParams }): Prom
   if (!cityData) return notFound()
 
   return {
-    title: `${cityData.name} Real Estate SEO Services | Workflow Champions`,
+    title: `Best SEO Services in ${cityData.name} | Workflow Champions`,
     description: `Find local Real Estate SEO services in ${cityData.name}, ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
   }
 }
@@ -72,7 +72,7 @@ export default function CityPage({ params }: { params: CityParams }) {
                 </Link>
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
-                {cityData.name} Real Estate SEO Services
+                Best SEO Services in {cityData.name}
               </h1>
               <p className="text-lg leading-8 mb-8">
                 {cityData.description}
@@ -93,10 +93,10 @@ export default function CityPage({ params }: { params: CityParams }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              {cityData.name} Real Estate Market
+              Highly Rated SEO Company in {cityData.name}
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Key insights about the {cityData.name} real estate market.
+              Discover how our hyper-local SEO strategies have helped {cityData.name} real estate agents achieve page-one rankings and dominate their local market.
             </p>
           </div>
           
@@ -128,10 +128,10 @@ export default function CityPage({ params }: { params: CityParams }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Popular {cityData.name} Neighborhoods
+              SEO Optimization in {cityData.name}
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Key areas where we help real estate agents dominate search results.
+              Targeting high-value neighborhoods and micro-markets within {cityData.name} for maximum local impact.
             </p>
           </div>
           
@@ -170,13 +170,13 @@ export default function CityPage({ params }: { params: CityParams }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
-              Our {cityData.name} SEO Strategy
+              Top SEO Agency in {cityData.name}
             </h2>
             <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {cityData.seoStrategies.map((strategy) => (
                 <div key={strategy.title} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:border-primary-200 transition-colors">
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">{strategy.title}</h3>
-                  <p className="text-gray-600">{strategy.description}</p>
+                  <p className="text-gray-600">Specialized {cityData.name}-focused {strategy.description.toLowerCase()}</p>
                 </div>
               ))}
             </div>
@@ -234,10 +234,10 @@ export default function CityPage({ params }: { params: CityParams }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Ready to Dominate {cityData.name} Real Estate?
+              Ready to Dominate {cityData.name}'s Real Estate Market?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Join the growing number of successful agents who trust us with their SEO in {cityData.name}. Remember, if your rankings don't improve, you don't pay.
+              Stand out in {cityData.name}'s competitive real estate market with our proven city-specific SEO strategies. Our local expertise and data-driven approach ensure your success in this unique market.
             </p>
             <div className="mt-10">
               <Link

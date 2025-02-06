@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: CountyParams }): Pr
   if (!county) return notFound()
 
   return {
-    title: `${county.name} Real Estate SEO Services | Workflow Champions`,
+    title: `Best SEO Services in ${county.name} | Workflow Champions`,
     description: `Find local Real Estate SEO services in ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
   }
 }
@@ -58,7 +58,7 @@ export default function CountyPage({ params }: { params: CountyParams }) {
                 </Link>
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
-                {county.name} Real Estate SEO Services
+                Best SEO Services in {county.name}
               </h1>
               <p className="text-lg leading-8 mb-8">
                 {county.description}
@@ -151,23 +151,26 @@ export default function CountyPage({ params }: { params: CountyParams }) {
       {/* SEO Benefits Section */}
       <div className="bg-gray-50 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
-              Why Choose Our {county.name} SEO Services?
+          <div className="mx-auto max-w-2xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Top SEO Agency in {county.name}
             </h2>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Local Market Expertise</h3>
-                <p className="text-gray-600">Deep understanding of {county.name}'s unique real estate landscape.</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Targeted Traffic</h3>
-                <p className="text-gray-600">Attract high-intent buyers and sellers in your specific area.</p>
-              </div>
-              <div className="bg-white rounded-lg p-6 shadow-sm">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Proven Results</h3>
-                <p className="text-gray-600">Track record of success with real estate agents in {county.name}.</p>
-              </div>
+            <p className="mt-6 text-lg leading-8 text-gray-600">
+              Empowering real estate professionals across {county.name} County with data-driven SEO strategies that deliver measurable results.
+            </p>
+          </div>
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">County-Wide Expertise</h3>
+              <p className="text-gray-600">Specialized knowledge of {county.name} County's diverse real estate submarkets and buyer preferences.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Multi-City Optimization</h3>
+              <p className="text-gray-600">Strategic SEO coverage across all major cities in {county.name} County for maximum market presence.</p>
+            </div>
+            <div className="bg-white rounded-lg p-6 shadow-sm">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Local Authority Building</h3>
+              <p className="text-gray-600">Establish your agency as the go-to real estate authority throughout {county.name} County.</p>
             </div>
           </div>
         </div>
@@ -178,10 +181,10 @@ export default function CountyPage({ params }: { params: CountyParams }) {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Ready to Dominate {county.name} Real Estate?
+              Ready to Expand Your {county.name} County Presence?
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Join the growing number of successful agents who trust us with their SEO. Remember, if your rankings don't improve, you don't pay.
+              Join the leading real estate professionals who dominate {county.name} County's online searches. Our county-wide SEO strategies ensure your visibility across all major cities and neighborhoods.
             </p>
             <div className="mt-10">
               <Link
