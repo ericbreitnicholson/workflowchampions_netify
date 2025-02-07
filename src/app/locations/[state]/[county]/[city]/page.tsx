@@ -11,6 +11,16 @@ type CityParams = {
   city: string
 }
 
+// Function to shuffle array
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export async function generateMetadata({ params }: { params: CityParams }): Promise<Metadata> {
   const state = stateData[params.state]
   if (!state) return notFound()
@@ -37,11 +47,155 @@ export default function CityPage({ params }: { params: CityParams }) {
   const cityData = county.cities.find(c => c.slug === params.city)
   if (!cityData) return notFound()
 
+  // Define main content sections
+  const mainSections = shuffleArray([
+    // Market Stats Section
+    <div key="market-stats" className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Highly Rated SEO Company in {cityData.name}
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Discover how our hyper-local SEO strategies have helped {cityData.name} real estate agents achieve page-one rankings and dominate their local market.
+          </p>
+        </div>
+        
+        <div className="grid gap-8 lg:grid-cols-3">
+          {cityData.marketStats.map((stat) => (
+            <div
+              key={stat.label}
+              className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
+            >
+              <div className="flex flex-col h-full items-center text-center">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  {stat.label}
+                </h3>
+                <p className="text-3xl font-bold text-primary-600 mb-2">
+                  {stat.value}
+                </p>
+                <p className="text-gray-600">
+                  {stat.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>,
+
+    // Neighborhoods Section
+    <div key="neighborhoods" className="bg-gray-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            SEO Optimization in {cityData.name}
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Targeting high-value neighborhoods and micro-markets within {cityData.name} for maximum local impact.
+          </p>
+        </div>
+        
+        <div className="grid gap-8 lg:grid-cols-2">
+          {cityData.neighborhoods.map((neighborhood) => (
+            <div
+              key={neighborhood.name}
+              className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
+            >
+              <div className="flex flex-col h-full">
+                <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+                  {neighborhood.name}
+                </h3>
+                <p className="text-gray-600 mb-6 flex-grow">
+                  {neighborhood.description}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {neighborhood.features.map((feature) => (
+                    <span
+                      key={feature}
+                      className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-medium text-primary-700"
+                    >
+                      {feature}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>,
+
+    // SEO Strategy Section
+    <div key="seo-strategy" className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
+            Top SEO Agency in {cityData.name}
+          </h2>
+          <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {cityData.seoStrategies.map((strategy) => (
+              <div key={strategy.title} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:border-primary-200 transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">{strategy.title}</h3>
+                <p className="text-gray-600">Specialized {cityData.name}-focused {strategy.description.toLowerCase()}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>,
+
+    // Related Cities Section
+    <div key="related-cities" className="bg-gray-50 py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            Explore Other Cities in {county.name}
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+            Discover more opportunities in nearby cities.
+          </p>
+        </div>
+        
+        <div className="grid gap-8 lg:grid-cols-3">
+          {county.cities
+            .filter(c => c.slug !== cityData.slug)
+            .slice(0, 3)
+            .map((city) => (
+              <Link
+                key={city.slug}
+                href={`/locations/${params.state}/${params.county}/${city.slug}`}
+                className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-primary-200 transition-colors"
+              >
+                <div className="relative h-48 w-full">
+                  <Image
+                    src={city.image || county.image || state.image}
+                    alt={`${city.name} real estate market`}
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600">
+                    {city.name}
+                  </h3>
+                  <p className="text-gray-600 line-clamp-2">
+                    {city.description}
+                  </p>
+                </div>
+              </Link>
+            ))}
+        </div>
+      </div>
+    </div>
+  ]);
+
   return (
     <div>
       <Navigation />
       
-      {/* Hero Section */}
+      {/* Hero Section - Always First */}
       <div className="relative">
         <div className="absolute inset-0 -z-10">
           <Image
@@ -88,148 +242,10 @@ export default function CityPage({ params }: { params: CityParams }) {
         </div>
       </div>
 
-      {/* Market Stats Section */}
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Highly Rated SEO Company in {cityData.name}
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Discover how our hyper-local SEO strategies have helped {cityData.name} real estate agents achieve page-one rankings and dominate their local market.
-            </p>
-          </div>
-          
-          <div className="grid gap-8 lg:grid-cols-3">
-            {cityData.marketStats.map((stat) => (
-              <div
-                key={stat.label}
-                className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
-              >
-                <div className="flex flex-col h-full items-center text-center">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {stat.label}
-                  </h3>
-                  <p className="text-3xl font-bold text-primary-600 mb-2">
-                    {stat.value}
-                  </p>
-                  <p className="text-gray-600">
-                    {stat.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Main Content Sections - Randomly Ordered */}
+      {mainSections}
 
-      {/* Neighborhoods Section */}
-      <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              SEO Optimization in {cityData.name}
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Targeting high-value neighborhoods and micro-markets within {cityData.name} for maximum local impact.
-            </p>
-          </div>
-          
-          <div className="grid gap-8 lg:grid-cols-2">
-            {cityData.neighborhoods.map((neighborhood) => (
-              <div
-                key={neighborhood.name}
-                className="relative overflow-hidden rounded-lg border border-gray-200 p-8 hover:border-primary-200 transition-colors"
-              >
-                <div className="flex flex-col h-full">
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">
-                    {neighborhood.name}
-                  </h3>
-                  <p className="text-gray-600 mb-6 flex-grow">
-                    {neighborhood.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {neighborhood.features.map((feature) => (
-                      <span
-                        key={feature}
-                        className="inline-flex items-center rounded-full bg-primary-50 px-3 py-1 text-sm font-medium text-primary-700"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* SEO Strategy Section */}
-      <div className="bg-white py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-8">
-              Top SEO Agency in {cityData.name}
-            </h2>
-            <div className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {cityData.seoStrategies.map((strategy) => (
-                <div key={strategy.title} className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:border-primary-200 transition-colors">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{strategy.title}</h3>
-                  <p className="text-gray-600">Specialized {cityData.name}-focused {strategy.description.toLowerCase()}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Related Cities Section */}
-      <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Explore Other Cities in {county.name}
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Discover more opportunities in nearby cities.
-            </p>
-          </div>
-          
-          <div className="grid gap-8 lg:grid-cols-3">
-            {county.cities
-              .filter(c => c.slug !== cityData.slug)
-              .slice(0, 3)
-              .map((city) => (
-                <Link
-                  key={city.slug}
-                  href={`/locations/${params.state}/${params.county}/${city.slug}`}
-                  className="group relative overflow-hidden rounded-lg border border-gray-200 hover:border-primary-200 transition-colors"
-                >
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={city.image || county.image || state.image}
-                      alt={`${city.name} real estate market`}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-primary-600">
-                      {city.name}
-                    </h3>
-                    <p className="text-gray-600 line-clamp-2">
-                      {city.description}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-          </div>
-        </div>
-      </div>
-
-      {/* CTA Section */}
+      {/* CTA Section - Always Last */}
       <div className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
