@@ -88,10 +88,10 @@ export default function Home() {
             {/* SOGO Homes logo */}
             <div className="flex justify-center">
               <Image
-                src="/images/sogo-homes-logo.png?v=2"
-                alt="SOGO Homes - Sell One, Give One"
+                src="/images/airtable-logo.png?v=2"
+                alt="Airtable"
                 width={180}
-                height={75}
+                height={50}
                 className="object-contain"
                 priority
               />
