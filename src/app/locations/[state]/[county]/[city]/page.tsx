@@ -209,7 +209,7 @@ export default function CityPage({ params }: { params: CityParams }) {
 
         <div className="relative py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center text-white">
+            <div className="mx-auto max-w-2xl text-center hero-text">
               <div className="flex items-center justify-center gap-2 mb-8 text-primary-200">
                 <Link
                   href={`/locations/${params.state}`}

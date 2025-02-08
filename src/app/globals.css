@@ -118,6 +118,10 @@
     margin-top: 1.5rem;
     color: #6B7280;
   }
+
+  .hero-text {
+    @apply text-gray-50;
+  }
 }
 
 /* Custom scrollbar */
