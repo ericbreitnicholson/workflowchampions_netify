@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "generate-locations": "ts-node --project tsconfig.json src/scripts/generateLocations.ts"
+    "generate-locations": "ts-node --project tsconfig.json src/scripts/generateLocations.ts",
+    "generate-sitemap": "ts-node --project tsconfig.json src/scripts/generateSitemap.ts"
   },
   "dependencies": {
     "@apollo/client": "^3.8.10",
