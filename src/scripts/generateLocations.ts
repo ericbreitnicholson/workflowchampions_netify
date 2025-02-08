@@ -18,17 +18,64 @@ function getStateDescription(stateName: string): string {
 
 // Helper function to get county description
 function getCountyDescription(countyName: string, stateName: string): string {
+  if (countyName === 'Miami-Dade') {
+    return `Dominate Miami-Dade's competitive real estate market with our proven SEO strategies. From Miami Beach to Coral Gables, we help agents capture high-intent buyers and sellers through targeted local search optimization.`
+  }
   return `Supporting real estate professionals throughout ${countyName}, showcasing the unique opportunities in this thriving region of ${stateName}.`
 }
 
 // Helper function to get city description
 function getCityDescription(cityName: string, countyName: string): string {
+  if (cityName === 'Miami') {
+    return `Expert real estate SEO services in Miami, helping agents dominate local search results and connect with qualified buyers and sellers. Our proven strategies ensure your visibility in Miami's dynamic property market.`
+  }
+  if (cityName === 'Miami Beach') {
+    return `Specialized real estate SEO services for Miami Beach agents, focusing on luxury properties and beachfront listings. Our strategies help you stand out in this prestigious market.`
+  }
   return `Expert real estate SEO services in ${cityName}, helping agents connect with qualified buyers and sellers in ${countyName}.`
 }
 
 // Helper function to generate market stats for a city
 function generateMarketStats(cityName: string) {
-  // Randomize the values slightly for each city
+  if (cityName === 'Miami') {
+    return [
+      {
+        label: "Average Home Price",
+        value: "$625,000",
+        description: "Median home value in Miami"
+      },
+      {
+        label: "Market Growth",
+        value: "10.5%",
+        description: "Annual market appreciation"
+      },
+      {
+        label: "Days on Market",
+        value: "25",
+        description: "Average days to sell a property"
+      }
+    ]
+  }
+  if (cityName === 'Miami Beach') {
+    return [
+      {
+        label: "Average Home Price",
+        value: "$850,000",
+        description: "Median home value in Miami Beach"
+      },
+      {
+        label: "Market Growth",
+        value: "11.2%",
+        description: "Annual market appreciation"
+      },
+      {
+        label: "Days on Market",
+        value: "28",
+        description: "Average days to sell a property"
+      }
+    ]
+  }
+  // Default randomized stats for other cities
   const basePrice = 350000 + Math.floor(Math.random() * 300000)
   const growth = 5 + Math.floor(Math.random() * 7)
   const days = 20 + Math.floor(Math.random() * 20)
@@ -54,6 +101,45 @@ function generateMarketStats(cityName: string) {
 
 // Helper function to generate neighborhoods for a city
 function generateNeighborhoods(cityName: string) {
+  if (cityName === 'Miami') {
+    return [
+      {
+        name: "Brickell",
+        description: "Miami's sophisticated financial district with luxury condos and waterfront properties",
+        features: ["Luxury Living", "Financial Hub", "Waterfront Views"]
+      },
+      {
+        name: "Coconut Grove",
+        description: "Historic bayside community known for its lush landscapes and artistic vibe",
+        features: ["Historic Charm", "Waterfront", "Cultural Hub"]
+      },
+      {
+        name: "Coral Way",
+        description: "Tree-lined residential area with Mediterranean revival architecture",
+        features: ["Family-Friendly", "Historic Homes", "Central Location"]
+      }
+    ]
+  }
+  if (cityName === 'Miami Beach') {
+    return [
+      {
+        name: "South Beach",
+        description: "Iconic Art Deco district with vibrant lifestyle and beachfront properties",
+        features: ["Art Deco", "Beach Access", "Nightlife"]
+      },
+      {
+        name: "Mid-Beach",
+        description: "Upscale residential area with luxury condos and historic homes",
+        features: ["Luxury Living", "Ocean Views", "Resort Style"]
+      },
+      {
+        name: "North Beach",
+        description: "Family-friendly area with a mix of condos and single-family homes",
+        features: ["Family-Friendly", "Beachfront", "Local Charm"]
+      }
+    ]
+  }
+  // Default neighborhoods for other cities
   const areas = [
     ["Downtown", "Urban core", ["Nightlife", "Shopping", "Culture"]],
     ["Historic District", "Heritage area", ["Historic Homes", "Parks", "Community"]],
@@ -61,7 +147,6 @@ function generateNeighborhoods(cityName: string) {
     ["University District", "Educational hub", ["Campus Life", "Research", "Innovation"]]
   ]
   
-  // Select 2-3 random areas
   const selectedAreas = areas.sort(() => 0.5 - Math.random()).slice(0, 2 + Math.floor(Math.random() * 2))
   
   return selectedAreas.map(([name, desc, features]) => ({
@@ -73,6 +158,38 @@ function generateNeighborhoods(cityName: string) {
 
 // Helper function to generate SEO strategies for a city
 function generateSeoStrategies(cityName: string) {
+  if (cityName === 'Miami') {
+    return [
+      {
+        title: "Miami SEO Domination",
+        description: "Comprehensive local search optimization for Miami's unique market"
+      },
+      {
+        title: "Multilingual SEO",
+        description: "Target both English and Spanish-speaking clients effectively"
+      },
+      {
+        title: "Neighborhood Authority",
+        description: "Build expertise in specific Miami neighborhoods"
+      }
+    ]
+  }
+  if (cityName === 'Miami Beach') {
+    return [
+      {
+        title: "Luxury Market Focus",
+        description: "Target high-net-worth buyers and international investors"
+      },
+      {
+        title: "Visual SEO",
+        description: "Optimize property imagery for maximum impact"
+      },
+      {
+        title: "Local Area Marketing",
+        description: "Showcase neighborhood expertise and lifestyle benefits"
+      }
+    ]
+  }
   return [
     {
       title: "Local Search Optimization",
@@ -125,12 +242,22 @@ async function generateLocationData(): Promise<void> {
     // Find or create county
     let countyData = stateData[stateSlug].counties.find(c => c.slug === countySlug)
     if (!countyData) {
-      countyData = {
-        name: county.replace(/-/g, ' '),
-        slug: countySlug,
-        description: getCountyDescription(county.replace(/-/g, ' '), state.replace(/-/g, ' ')),
-        image: `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
-        cities: []
+      if (county === 'Miami-Dade') {
+        countyData = {
+          name: county.replace(/-/g, ' '),
+          slug: countySlug,
+          description: getCountyDescription(county.replace(/-/g, ' '), state.replace(/-/g, ' ')),
+          image: 'https://images.unsplash.com/photo-1503891617560-5b8c2e28cbf6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+          cities: []
+        }
+      } else {
+        countyData = {
+          name: county.replace(/-/g, ' '),
+          slug: countySlug,
+          description: getCountyDescription(county.replace(/-/g, ' '), state.replace(/-/g, ' ')),
+          image: `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+          cities: []
+        }
       }
       stateData[stateSlug].counties.push(countyData)
     }
@@ -139,11 +266,16 @@ async function generateLocationData(): Promise<void> {
     const existingCity = countyData.cities.find(c => c.slug === citySlug)
     if (!existingCity) {
       const cityName = city.replace(/-/g, ' ')
+      const cityImages: Record<string, string> = {
+        'miami': 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        'miami-beach': 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+      }
+      const cityImage = cityImages[citySlug] || `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`
       countyData.cities.push({
         name: cityName,
         slug: citySlug,
         description: getCityDescription(cityName, county.replace(/-/g, ' ')),
-        image: `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+        image: cityImage,
         marketStats: generateMarketStats(cityName),
         neighborhoods: generateNeighborhoods(cityName),
         seoStrategies: generateSeoStrategies(cityName)
