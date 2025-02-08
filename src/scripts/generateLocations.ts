@@ -3,6 +3,40 @@ import path from 'path'
 import { StateData } from '../app/locations/[state]/page'
 import { stateImages } from '../data/locations'
 
+// Add type definitions at the top of the file
+type CityDescription = {
+  [key: string]: string;
+}
+
+type MarketStat = {
+  label: string;
+  value: string;
+  description: string;
+}
+
+type CityStats = {
+  [key: string]: MarketStat[];
+}
+
+type Neighborhood = {
+  name: string;
+  description: string;
+  features: string[];
+}
+
+type CityNeighborhoods = {
+  [key: string]: Neighborhood[];
+}
+
+type SeoStrategy = {
+  title: string;
+  description: string;
+}
+
+type CitySeoStrategies = {
+  [key: string]: SeoStrategy[];
+}
+
 // Helper function to convert string to slug
 function toSlug(str: string): string {
   return str
@@ -26,19 +60,20 @@ function getCountyDescription(countyName: string, stateName: string): string {
 
 // Helper function to get city description
 function getCityDescription(cityName: string, countyName: string): string {
-  if (cityName === 'Miami') {
-    return `Expert real estate SEO services in Miami, helping agents dominate local search results and connect with qualified buyers and sellers. Our proven strategies ensure your visibility in Miami's dynamic property market.`
+  const descriptions: CityDescription = {
+    'Miami': `Expert real estate SEO services in Miami, helping agents dominate local search results and connect with qualified buyers and sellers. Our proven strategies ensure your visibility in Miami's dynamic property market.`,
+    'Miami Beach': `Specialized real estate SEO services for Miami Beach agents, focusing on luxury properties and beachfront listings. Our strategies help you stand out in this prestigious market.`,
+    'Hialeah': `Comprehensive real estate SEO services in Hialeah, helping agents connect with the vibrant Hispanic community and showcase properties in this dynamic multicultural market.`,
+    'Homestead': `Expert real estate SEO services in Homestead, helping agents highlight affordable housing opportunities and agricultural charm while targeting qualified buyers in this growing community.`,
+    'Opa Locka': `Specialized real estate SEO services in Opa Locka, helping agents showcase the area's unique Moorish architecture and emerging opportunities in this historic Miami-Dade community.`
   }
-  if (cityName === 'Miami Beach') {
-    return `Specialized real estate SEO services for Miami Beach agents, focusing on luxury properties and beachfront listings. Our strategies help you stand out in this prestigious market.`
-  }
-  return `Expert real estate SEO services in ${cityName}, helping agents connect with qualified buyers and sellers in ${countyName}.`
+  return descriptions[cityName] || `Expert real estate SEO services in ${cityName}, helping agents connect with qualified buyers and sellers in ${countyName}.`
 }
 
 // Helper function to generate market stats for a city
-function generateMarketStats(cityName: string) {
-  if (cityName === 'Miami') {
-    return [
+function generateMarketStats(cityName: string): MarketStat[] {
+  const cityStats: CityStats = {
+    'Miami': [
       {
         label: "Average Home Price",
         value: "$625,000",
@@ -54,10 +89,8 @@ function generateMarketStats(cityName: string) {
         value: "25",
         description: "Average days to sell a property"
       }
-    ]
-  }
-  if (cityName === 'Miami Beach') {
-    return [
+    ],
+    'Miami Beach': [
       {
         label: "Average Home Price",
         value: "$850,000",
@@ -73,9 +106,63 @@ function generateMarketStats(cityName: string) {
         value: "28",
         description: "Average days to sell a property"
       }
+    ],
+    'Hialeah': [
+      {
+        label: "Average Home Price",
+        value: "$425,000",
+        description: "Median home value in Hialeah"
+      },
+      {
+        label: "Market Growth",
+        value: "9.8%",
+        description: "Annual market appreciation"
+      },
+      {
+        label: "Days on Market",
+        value: "22",
+        description: "Average days to sell a property"
+      }
+    ],
+    'Homestead': [
+      {
+        label: "Average Home Price",
+        value: "$375,000",
+        description: "Median home value in Homestead"
+      },
+      {
+        label: "Market Growth",
+        value: "12.5%",
+        description: "Annual market appreciation"
+      },
+      {
+        label: "Days on Market",
+        value: "20",
+        description: "Average days to sell a property"
+      }
+    ],
+    'Opa Locka': [
+      {
+        label: "Average Home Price",
+        value: "$295,000",
+        description: "Median home value in Opa Locka"
+      },
+      {
+        label: "Market Growth",
+        value: "8.5%",
+        description: "Annual market appreciation"
+      },
+      {
+        label: "Days on Market",
+        value: "30",
+        description: "Average days to sell a property"
+      }
     ]
   }
-  // Default randomized stats for other cities
+  return cityStats[cityName] || generateDefaultStats(cityName)
+}
+
+function generateDefaultStats(cityName: string) {
   const basePrice = 350000 + Math.floor(Math.random() * 300000)
   const growth = 5 + Math.floor(Math.random() * 7)
   const days = 20 + Math.floor(Math.random() * 20)
@@ -100,46 +187,65 @@ function generateMarketStats(cityName: string) {
 }
 
 // Helper function to generate neighborhoods for a city
-function generateNeighborhoods(cityName: string) {
-  if (cityName === 'Miami') {
-    return [
+function generateNeighborhoods(cityName: string): Neighborhood[] {
+  const cityNeighborhoods: CityNeighborhoods = {
+    'Hialeah': [
       {
-        name: "Brickell",
-        description: "Miami's sophisticated financial district with luxury condos and waterfront properties",
-        features: ["Luxury Living", "Financial Hub", "Waterfront Views"]
+        name: "Palm Springs",
+        description: "Family-oriented neighborhood with a mix of single-family homes and apartments",
+        features: ["Family-Friendly", "Shopping Centers", "Parks"]
       },
       {
-        name: "Coconut Grove",
-        description: "Historic bayside community known for its lush landscapes and artistic vibe",
-        features: ["Historic Charm", "Waterfront", "Cultural Hub"]
+        name: "Hialeah Heights",
+        description: "Residential area known for its quiet streets and community atmosphere",
+        features: ["Residential", "Schools", "Community"]
       },
       {
-        name: "Coral Way",
-        description: "Tree-lined residential area with Mediterranean revival architecture",
-        features: ["Family-Friendly", "Historic Homes", "Central Location"]
+        name: "West Hialeah",
+        description: "Growing area with new developments and shopping centers",
+        features: ["New Development", "Shopping", "Accessibility"]
+      }
+    ],
+    'Homestead': [
+      {
+        name: "Downtown Homestead",
+        description: "Historic district with a mix of commercial and residential properties",
+        features: ["Historic", "Shopping", "Dining"]
+      },
+      {
+        name: "Keys Gate",
+        description: "Master-planned community with modern amenities",
+        features: ["Gated Community", "Amenities", "Family-Friendly"]
+      },
+      {
+        name: "Waterstone",
+        description: "Upscale residential area with lakefront properties",
+        features: ["Luxury Homes", "Lakes", "Parks"]
+      }
+    ],
+    'Opa Locka': [
+      {
+        name: "Magnolia North",
+        description: "Residential neighborhood with historic Moorish Revival architecture",
+        features: ["Historic", "Architecture", "Community"]
+      },
+      {
+        name: "Opa-locka Business District",
+        description: "Commercial area with mixed-use developments",
+        features: ["Business", "Development", "Central Location"]
+      },
+      {
+        name: "Lake Ingram",
+        description: "Waterfront neighborhood with scenic views",
+        features: ["Waterfront", "Parks", "Residential"]
       }
     ]
   }
-  if (cityName === 'Miami Beach') {
-    return [
-      {
-        name: "South Beach",
-        description: "Iconic Art Deco district with vibrant lifestyle and beachfront properties",
-        features: ["Art Deco", "Beach Access", "Nightlife"]
-      },
-      {
-        name: "Mid-Beach",
-        description: "Upscale residential area with luxury condos and historic homes",
-        features: ["Luxury Living", "Ocean Views", "Resort Style"]
-      },
-      {
-        name: "North Beach",
-        description: "Family-friendly area with a mix of condos and single-family homes",
-        features: ["Family-Friendly", "Beachfront", "Local Charm"]
-      }
-    ]
-  }
-  // Default neighborhoods for other cities
+  
+  return cityNeighborhoods[cityName] || generateDefaultNeighborhoods(cityName)
+}
+
+function generateDefaultNeighborhoods(cityName: string) {
   const areas = [
     ["Downtown", "Urban core", ["Nightlife", "Shopping", "Culture"]],
     ["Historic District", "Heritage area", ["Historic Homes", "Parks", "Community"]],
@@ -157,39 +263,56 @@ function generateNeighborhoods(cityName: string) {
 }
 
 // Helper function to generate SEO strategies for a city
-function generateSeoStrategies(cityName: string) {
-  if (cityName === 'Miami') {
-    return [
+function generateSeoStrategies(cityName: string): SeoStrategy[] {
+  const citySeoStrategies: CitySeoStrategies = {
+    'Hialeah': [
       {
-        title: "Miami SEO Domination",
-        description: "Comprehensive local search optimization for Miami's unique market"
+        title: "Bilingual SEO Excellence",
+        description: "Optimize for both English and Spanish searches to maximize reach"
       },
       {
-        title: "Multilingual SEO",
-        description: "Target both English and Spanish-speaking clients effectively"
+        title: "Local Market Focus",
+        description: "Target specific Hialeah neighborhoods and communities"
       },
       {
-        title: "Neighborhood Authority",
-        description: "Build expertise in specific Miami neighborhoods"
+        title: "Cultural Marketing",
+        description: "Highlight Hispanic heritage and community connections"
+      }
+    ],
+    'Homestead': [
+      {
+        title: "Affordable Housing Focus",
+        description: "Target first-time homebuyers and growing families"
+      },
+      {
+        title: "Agricultural Appeal",
+        description: "Showcase unique properties with agricultural potential"
+      },
+      {
+        title: "Community Growth",
+        description: "Highlight development and investment opportunities"
+      }
+    ],
+    'Opa Locka': [
+      {
+        title: "Historical Value",
+        description: "Emphasize unique architecture and historical significance"
+      },
+      {
+        title: "Investment Potential",
+        description: "Target investors and developers in growing areas"
+      },
+      {
+        title: "Community Development",
+        description: "Highlight neighborhood improvements and opportunities"
       }
     ]
   }
-  if (cityName === 'Miami Beach') {
-    return [
-      {
-        title: "Luxury Market Focus",
-        description: "Target high-net-worth buyers and international investors"
-      },
-      {
-        title: "Visual SEO",
-        description: "Optimize property imagery for maximum impact"
-      },
-      {
-        title: "Local Area Marketing",
-        description: "Showcase neighborhood expertise and lifestyle benefits"
-      }
-    ]
-  }
+  
+  return citySeoStrategies[cityName] || generateDefaultSeoStrategies(cityName)
+}
+
+function generateDefaultSeoStrategies(cityName: string) {
   return [
     {
       title: "Local Search Optimization",
@@ -268,7 +391,10 @@ async function generateLocationData(): Promise<void> {
       const cityName = city.replace(/-/g, ' ')
       const cityImages: Record<string, string> = {
         'miami': 'https://images.unsplash.com/photo-1533106497176-45ae19e68ba2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
-        'miami-beach': 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
+        'miami-beach': 'https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        'hialeah': 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        'homestead': 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80',
+        'opa-locka': 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80'
       }
       const cityImage = cityImages[citySlug] || `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`
       countyData.cities.push({

@@ -122,6 +122,11 @@
   .hero-text {
     @apply text-gray-50;
   }
+
+  .hero-text h1,
+  .hero-text p {
+    @apply text-gray-50;
+  }
 }
 
 /* Custom scrollbar */
