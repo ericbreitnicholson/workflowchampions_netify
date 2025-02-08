@@ -22,39 +22,95 @@ function getCountyDescription(countyName: string, stateName: string): string {
 }
 
 // Helper function to get city description
-function getCityDescription(cityName: string): string {
-  return `Expert real estate SEO services in ${cityName}, helping agents connect with qualified buyers and sellers in this growing market.`
+function getCityDescription(cityName: string, countyName: string): string {
+  return `Expert real estate SEO services in ${cityName}, helping agents connect with qualified buyers and sellers in ${countyName}.`
 }
 
-// Helper function to get major cities for a county
-function getMajorCities(countyName: string, stateName: string): string[] {
-  // This could be expanded with a more comprehensive database
-  return ['Downtown', 'North', 'South', 'East', 'West'].map(area => 
-    `${countyName.replace(' County', '')} ${area}`
-  )
+// Helper function to generate market stats for a city
+function generateMarketStats(cityName: string) {
+  // Randomize the values slightly for each city
+  const basePrice = 350000 + Math.floor(Math.random() * 300000)
+  const growth = 5 + Math.floor(Math.random() * 7)
+  const days = 20 + Math.floor(Math.random() * 20)
+  
+  return [
+    {
+      label: "Average Home Price",
+      value: `$${basePrice.toLocaleString()}`,
+      description: `Median home value in ${cityName}`
+    },
+    {
+      label: "Market Growth",
+      value: `${growth}%`,
+      description: "Annual market appreciation"
+    },
+    {
+      label: "Days on Market",
+      value: days.toString(),
+      description: "Average days to sell a property"
+    }
+  ]
+}
+
+// Helper function to generate neighborhoods for a city
+function generateNeighborhoods(cityName: string) {
+  const areas = [
+    ["Downtown", "Urban core", ["Nightlife", "Shopping", "Culture"]],
+    ["Historic District", "Heritage area", ["Historic Homes", "Parks", "Community"]],
+    ["Suburban Heights", "Family-friendly area", ["Schools", "Parks", "Safety"]],
+    ["University District", "Educational hub", ["Campus Life", "Research", "Innovation"]]
+  ]
+  
+  // Select 2-3 random areas
+  const selectedAreas = areas.sort(() => 0.5 - Math.random()).slice(0, 2 + Math.floor(Math.random() * 2))
+  
+  return selectedAreas.map(([name, desc, features]) => ({
+    name: `${name}`,
+    description: `${cityName}'s ${desc}`,
+    features: features as string[]
+  }))
+}
+
+// Helper function to generate SEO strategies for a city
+function generateSeoStrategies(cityName: string) {
+  return [
+    {
+      title: "Local Search Optimization",
+      description: `Target high-intent buyers in ${cityName}`
+    },
+    {
+      title: "Neighborhood Expertise",
+      description: "Showcase your knowledge of local areas"
+    },
+    {
+      title: "Market Analysis Content",
+      description: "Share insights on local market trends"
+    }
+  ]
 }
 
 // Main function to generate location data
 async function generateLocationData(): Promise<void> {
   // Read the CSV file
-  const csvPath = path.join(process.cwd(), 'State-County.csv')
+  const csvPath = path.join(process.cwd(), 'State-County-City.csv')
   const csvContent = fs.readFileSync(csvPath, 'utf-8')
   
   // Parse CSV content
   const lines = csvContent.split('\n').slice(1) // Skip header
-  const stateCountyPairs = lines
+  const locationData = lines
     .filter(line => line.trim())
     .map(line => {
-      const [state, county] = line.split(',').map(str => str.trim())
-      return { state, county }
+      const [state, county, city] = line.split(',').map(str => str.trim())
+      return { state, county, city }
     })
 
   // Generate state data structure
   const stateData: StateData = {}
 
-  stateCountyPairs.forEach(({ state, county }) => {
+  locationData.forEach(({ state, county, city }) => {
     const stateSlug = toSlug(state)
     const countySlug = toSlug(county)
+    const citySlug = toSlug(city)
     
     // Initialize state if it doesn't exist
     if (!stateData[stateSlug]) {
@@ -66,61 +122,31 @@ async function generateLocationData(): Promise<void> {
       }
     }
 
-    // Add county if it doesn't exist
-    const existingCounty = stateData[stateSlug].counties.find(c => c.slug === countySlug)
-    if (!existingCounty) {
-      const countyName = county.replace(/-/g, ' ')
-      const cities = getMajorCities(countyName, state.replace(/-/g, ' '))
-      
-      stateData[stateSlug].counties.push({
-        name: countyName,
+    // Find or create county
+    let countyData = stateData[stateSlug].counties.find(c => c.slug === countySlug)
+    if (!countyData) {
+      countyData = {
+        name: county.replace(/-/g, ' '),
         slug: countySlug,
-        description: getCountyDescription(countyName, state.replace(/-/g, ' ')),
+        description: getCountyDescription(county.replace(/-/g, ' '), state.replace(/-/g, ' ')),
         image: `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
-        cities: cities.map(cityName => ({
-          name: cityName,
-          slug: toSlug(cityName),
-          description: getCityDescription(cityName),
-          marketStats: [
-            {
-              label: "Average Home Price",
-              value: "$450,000",
-              description: `Median home value in ${cityName}`
-            },
-            {
-              label: "Market Growth",
-              value: "8%",
-              description: "Annual market appreciation"
-            },
-            {
-              label: "Days on Market",
-              value: "30",
-              description: "Average days to sell a property"
-            }
-          ],
-          neighborhoods: [
-            {
-              name: "Downtown",
-              description: `${cityName}'s vibrant city center`,
-              features: ["Urban Living", "Entertainment", "Dining"]
-            },
-            {
-              name: "Historic District",
-              description: "Charming historic architecture",
-              features: ["Historic Homes", "Tree-lined Streets", "Community"]
-            }
-          ],
-          seoStrategies: [
-            {
-              title: "Local Search Optimization",
-              description: `Target high-intent buyers in ${cityName}`
-            },
-            {
-              title: "Neighborhood Expertise",
-              description: "Showcase your knowledge of local areas"
-            }
-          ]
-        }))
+        cities: []
+      }
+      stateData[stateSlug].counties.push(countyData)
+    }
+
+    // Add city if it doesn't exist
+    const existingCity = countyData.cities.find(c => c.slug === citySlug)
+    if (!existingCity) {
+      const cityName = city.replace(/-/g, ' ')
+      countyData.cities.push({
+        name: cityName,
+        slug: citySlug,
+        description: getCityDescription(cityName, county.replace(/-/g, ' ')),
+        image: `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`,
+        marketStats: generateMarketStats(cityName),
+        neighborhoods: generateNeighborhoods(cityName),
+        seoStrategies: generateSeoStrategies(cityName)
       })
     }
   })
