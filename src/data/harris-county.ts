@@ -10,7 +10,7 @@ export const harrisCountyData: County = {
       name: "Houston",
       slug: "houston",
       description: "As the heart of Harris County, Houston offers diverse real estate opportunities from luxury high-rises in River Oaks to charming bungalows in The Heights.",
-      image: "https://images.unsplash.com/photo-1548519853-8d6b06f785fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+      image: "https://images.unsplash.com/photo-1613361632906-73b64e9c74a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
       marketStats: [
         {
           label: "Average Home Price",

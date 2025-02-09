@@ -1,0 +1,283 @@
+{
+  "pages": [
+    {
+      "url": "https://workflowchampions.com/",
+      "clicks": 4,
+      "impressions": 12,
+      "ctr": "33.33%",
+      "position": 9.33
+    },
+    {
+      "url": "https://workflowchampions.com/locations",
+      "clicks": 1,
+      "impressions": 7,
+      "ctr": "14.29%",
+      "position": 2
+    },
+    {
+      "url": "https://workflowchampions.com/locations/california/los-angeles/beverly-hills",
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": "0%",
+      "position": 91.33
+    },
+    {
+      "url": "https://workflowchampions.com/locations/california/los-angeles/santa-monica",
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": "0%",
+      "position": 90.75
+    },
+    {
+      "url": "https://workflowchampions.com/contact",
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": "0%",
+      "position": 22.2
+    },
+    {
+      "url": "https://workflowchampions.com/locations/texas",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": "0%",
+      "position": 89.67
+    },
+    {
+      "url": "https://workflowchampions.com/locations/california/los-angeles/los-angeles",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "url": "https://workflowchampions.com/locations/florida/miami-dade",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 11
+    }
+  ],
+  "devices": [
+    {
+      "device": "Desktop",
+      "clicks": 3,
+      "impressions": 35,
+      "ctr": "8.57%",
+      "position": 66.74
+    },
+    {
+      "device": "Mobile",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": "50%",
+      "position": 1.5
+    }
+  ],
+  "countries": [
+    {
+      "country": "United States",
+      "clicks": 3,
+      "impressions": 14,
+      "ctr": "21.43%",
+      "position": 39.29
+    },
+    {
+      "country": "Sweden",
+      "clicks": 1,
+      "impressions": 2,
+      "ctr": "50%",
+      "position": 1.5
+    },
+    {
+      "country": "Brazil",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": "0%",
+      "position": 86.67
+    },
+    {
+      "country": "Russia",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": "0%",
+      "position": 96.33
+    },
+    {
+      "country": "Bangladesh",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": "0%",
+      "position": 47.5
+    },
+    {
+      "country": "Philippines",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": "0%",
+      "position": 49
+    },
+    {
+      "country": "Mexico",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 82
+    },
+    {
+      "country": "Indonesia",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 83
+    },
+    {
+      "country": "Italy",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 88
+    },
+    {
+      "country": "Thailand",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 92
+    },
+    {
+      "country": "Dominican Republic",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 99
+    },
+    {
+      "country": "Poland",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 99
+    },
+    {
+      "country": "Austria",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "country": "Iraq",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "country": "Turkey",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "country": "Venezuela",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "country": "South Korea",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 101
+    }
+  ],
+  "queries": [
+    {
+      "query": "best seo company in santa monica",
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": "0%",
+      "position": 89.5
+    },
+    {
+      "query": "seo services in beverly hills",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": "0%",
+      "position": 82.75
+    },
+    {
+      "query": "seo services beverly hills",
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": "0%",
+      "position": 97.75
+    },
+    {
+      "query": "pasadena neighborhood seo services",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "query": "seo service for real estate san antonio tx",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": "0%",
+      "position": 87.5
+    },
+    {
+      "query": "seo miami dade",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 11
+    },
+    {
+      "query": "best seo services in santa monica",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 88
+    },
+    {
+      "query": "seo service real estate san antonio",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 94
+    },
+    {
+      "query": "seo work flow",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 99
+    },
+    {
+      "query": "beverly seo",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "query": "real estate workflow expert",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 100
+    },
+    {
+      "query": "best seo companies santa monica",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": "0%",
+      "position": 101
+    }
+  ]
+}

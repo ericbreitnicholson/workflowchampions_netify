@@ -1,0 +1,141 @@
+{
+  "date": "02092025",
+  "summary": {
+    "totalClicks": 5,
+    "totalImpressions": 48,
+    "avgPosition": 52.035,
+    "topPages": [
+      {
+        "url": "https://workflowchampions.com/",
+        "clicks": 4,
+        "impressions": 12,
+        "ctr": "33.33%",
+        "position": 9.33
+      },
+      {
+        "url": "https://workflowchampions.com/locations",
+        "clicks": 1,
+        "impressions": 7,
+        "ctr": "14.29%",
+        "position": 2
+      },
+      {
+        "url": "https://workflowchampions.com/locations/california/los-angeles/beverly-hills",
+        "clicks": 0,
+        "impressions": 9,
+        "ctr": "0%",
+        "position": 91.33
+      },
+      {
+        "url": "https://workflowchampions.com/locations/california/los-angeles/santa-monica",
+        "clicks": 0,
+        "impressions": 8,
+        "ctr": "0%",
+        "position": 90.75
+      },
+      {
+        "url": "https://workflowchampions.com/contact",
+        "clicks": 0,
+        "impressions": 5,
+        "ctr": "0%",
+        "position": 22.2
+      }
+    ],
+    "deviceBreakdown": [
+      {
+        "device": "Desktop",
+        "clicks": 3,
+        "impressions": 35,
+        "ctr": "8.57%",
+        "position": 66.74
+      },
+      {
+        "device": "Mobile",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": "50%",
+        "position": 1.5
+      }
+    ],
+    "topQueries": [
+      {
+        "query": "best seo company in santa monica",
+        "clicks": 0,
+        "impressions": 6,
+        "ctr": "0%",
+        "position": 89.5
+      },
+      {
+        "query": "seo services in beverly hills",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": "0%",
+        "position": 82.75
+      },
+      {
+        "query": "seo services beverly hills",
+        "clicks": 0,
+        "impressions": 4,
+        "ctr": "0%",
+        "position": 97.75
+      },
+      {
+        "query": "pasadena neighborhood seo services",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": "0%",
+        "position": 100
+      },
+      {
+        "query": "seo service for real estate san antonio tx",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": "0%",
+        "position": 87.5
+      }
+    ],
+    "topCountries": [
+      {
+        "country": "United States",
+        "clicks": 3,
+        "impressions": 14,
+        "ctr": "21.43%",
+        "position": 39.29
+      },
+      {
+        "country": "Sweden",
+        "clicks": 1,
+        "impressions": 2,
+        "ctr": "50%",
+        "position": 1.5
+      },
+      {
+        "country": "Brazil",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": "0%",
+        "position": 86.67
+      },
+      {
+        "country": "Russia",
+        "clicks": 0,
+        "impressions": 3,
+        "ctr": "0%",
+        "position": 96.33
+      },
+      {
+        "country": "Bangladesh",
+        "clicks": 0,
+        "impressions": 2,
+        "ctr": "0%",
+        "position": 47.5
+      }
+    ]
+  },
+  "recommendations": [
+    "Critical: Mobile visibility is very low. Prioritize mobile optimization.",
+    "Focus on improving content and backlinks for low-ranking pages (average position: 78.8)",
+    "Enhance local SEO efforts for US market (current CTR: 21.43%)",
+    "Optimize for these well-ranking queries: seo miami dade"
+  ]
+}

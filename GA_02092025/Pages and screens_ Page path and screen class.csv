@@ -1,0 +1,19 @@
+# ----------------------------------------
+# Pages and screens: Page path and screen class
+# Account: Workflow Champions
+# Property: workflowchampions.com
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20241111
+# End date: 20250208
+Page path and screen class,Views,Active users,Views per active user,Average engagement time per active user,Event count,Key events,Total revenue
+/,167,161,1.0372670807453417,3.248447204968944,524,0,0
+/+,15,15,1,0,46,0,0
+/contact,9,8,1.125,6.25,29,0,0
+/services,6,2,3,42,12,0,0
+/locations/florida/miami-dade,2,1,2,22,7,0,0
+/wp-admin/setup-config.php,2,2,1,3,7,0,0
+/favicon.ico,1,1,1,0,1,0,0
+/locations,1,1,1,0,3,0,0
+/locations/new-york/new-york/manhattan,1,1,1,0,3,0,0

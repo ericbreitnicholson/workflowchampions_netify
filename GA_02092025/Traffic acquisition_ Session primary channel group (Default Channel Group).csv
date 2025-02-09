@@ -1,0 +1,13 @@
+# ----------------------------------------
+# Traffic acquisition: Session primary channel group (Default Channel Group)
+# Account: Workflow Champions
+# Property: workflowchampions.com
+# ----------------------------------------
+# 
+# All Users
+# Start date: 20241111
+# End date: 20250208
+Session primary channel group (Default Channel Group),Sessions,Engaged sessions,Engagement rate,Average engagement time per session,Events per session,Event count,Key events,Session key event rate,Total revenue
+Direct,187,11,0.058823529411764705,2.962566844919786,3.27807486631016,613,0,0,0
+Organic Search,3,3,1,41,3.6666666666666665,11,0,0,0
+Referral,2,0,0,4,4,8,0,0,0

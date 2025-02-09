@@ -1,0 +1,19 @@
+[Cursor] Update: Harris County content and images
+
+- Added detailed descriptions for Harris County and Houston
+- Updated market statistics with current data
+- Added Spring as a major suburb with relevant content
+- Included neighborhood-specific information for The Heights, River Oaks, Medical Center, and Energy Corridor
+- Added high-quality images for Houston skyline and neighborhoods
+- Created update script for maintaining location data
+
+[Cursor] Fix: Update Harris County and Houston hero images
+
+- Updated Harris County hero image to a better skyline shot
+- Updated Houston city image to a different skyline view
+- Using a more reliable Unsplash photo that shows the downtown area
+
+[Cursor] Fix: Update Houston city image
+
+- Updated Houston city image to a different skyline view
+- Using a more reliable Unsplash photo that shows the downtown area 
