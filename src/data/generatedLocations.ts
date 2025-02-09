@@ -1,4 +1,3 @@
-
 import { StateData } from '../app/locations/[state]/page'
 
 export const stateData: StateData = {
@@ -8011,318 +8010,138 @@ export const stateData: StateData = {
       {
         "name": "Harris",
         "slug": "harris",
-        "description": "Supporting real estate professionals throughout Harris, showcasing the unique opportunities in this thriving region of Texas.",
-        "image": "https://images.unsplash.com/photo-168419?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+        "description": "Harris County, home to Houston and its diverse suburbs, is Texas' most populous county and a dynamic real estate market. From the energy corridor to the medical center, our SEO strategies help agents connect with buyers and sellers in this thriving metropolitan area.",
+        "image": "https://images.unsplash.com/photo-1548519853-2393f0c56e9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         "cities": [
           {
             "name": "Houston",
             "slug": "houston",
-            "description": "Expert real estate SEO services in Houston, helping agents connect with qualified buyers and sellers in Harris.",
-            "image": "https://images.unsplash.com/photo-326161?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            "description": "As the heart of Harris County, Houston offers diverse real estate opportunities from luxury high-rises in River Oaks to charming bungalows in The Heights.",
+            "image": "https://images.unsplash.com/photo-1548519853-2393f0c56e9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
             "marketStats": [
               {
                 "label": "Average Home Price",
-                "value": "$378,547",
+                "value": "$375,000",
                 "description": "Median home value in Houston"
               },
               {
                 "label": "Market Growth",
-                "value": "11%",
+                "value": "6.5%",
                 "description": "Annual market appreciation"
               },
               {
                 "label": "Days on Market",
-                "value": "32",
+                "value": "45",
                 "description": "Average days to sell a property"
               }
             ],
             "neighborhoods": [
               {
-                "name": "Suburban Heights",
-                "description": "Houston's Family-friendly area",
-                "features": [
-                  "Schools",
-                  "Parks",
-                  "Safety"
-                ]
-              },
-              {
-                "name": "University District",
-                "description": "Houston's Educational hub",
-                "features": [
-                  "Campus Life",
-                  "Research",
-                  "Innovation"
-                ]
-              }
-            ],
-            "seoStrategies": [
-              {
-                "title": "Local Search Optimization",
-                "description": "Target high-intent buyers in Houston"
-              },
-              {
-                "title": "Neighborhood Expertise",
-                "description": "Showcase your knowledge of local areas"
-              },
-              {
-                "title": "Market Analysis Content",
-                "description": "Share insights on local market trends"
-              }
-            ]
-          },
-          {
-            "name": "Katy",
-            "slug": "katy",
-            "description": "Expert real estate SEO services in Katy, helping agents connect with qualified buyers and sellers in Harris.",
-            "image": "https://images.unsplash.com/photo-152225?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "marketStats": [
-              {
-                "label": "Average Home Price",
-                "value": "$457,017",
-                "description": "Median home value in Katy"
-              },
-              {
-                "label": "Market Growth",
-                "value": "8%",
-                "description": "Annual market appreciation"
-              },
-              {
-                "label": "Days on Market",
-                "value": "20",
-                "description": "Average days to sell a property"
-              }
-            ],
-            "neighborhoods": [
-              {
-                "name": "Downtown",
-                "description": "Katy's Urban core",
-                "features": [
-                  "Nightlife",
-                  "Shopping",
-                  "Culture"
-                ]
-              },
-              {
-                "name": "Historic District",
-                "description": "Katy's Heritage area",
+                "name": "The Heights",
+                "description": "Historic Houston neighborhood known for its Victorian architecture and vibrant local scene",
                 "features": [
                   "Historic Homes",
-                  "Parks",
-                  "Community"
+                  "Local Restaurants",
+                  "Arts District"
                 ]
               },
               {
-                "name": "Suburban Heights",
-                "description": "Katy's Family-friendly area",
+                "name": "River Oaks",
+                "description": "Prestigious area featuring luxury estates and high-end shopping",
                 "features": [
-                  "Schools",
+                  "Luxury Homes",
+                  "Tree-lined Streets",
+                  "Upscale Shopping"
+                ]
+              },
+              {
+                "name": "Medical Center",
+                "description": "Dynamic area near the world's largest medical complex",
+                "features": [
+                  "Modern Condos",
+                  "Healthcare Hub",
+                  "Research Institutions"
+                ]
+              },
+              {
+                "name": "Energy Corridor",
+                "description": "West Houston's business district with excellent schools",
+                "features": [
+                  "Corporate Hub",
                   "Parks",
-                  "Safety"
+                  "Master-planned Communities"
                 ]
               }
             ],
             "seoStrategies": [
               {
-                "title": "Local Search Optimization",
-                "description": "Target high-intent buyers in Katy"
+                "title": "Local Market Analysis",
+                "description": "Deep insights into Houston's diverse submarkets"
               },
               {
                 "title": "Neighborhood Expertise",
-                "description": "Showcase your knowledge of local areas"
+                "description": "Targeted content for each unique district"
               },
               {
-                "title": "Market Analysis Content",
-                "description": "Share insights on local market trends"
+                "title": "Market Trends",
+                "description": "Real-time data on Houston's dynamic market"
               }
             ]
           },
           {
             "name": "Spring",
             "slug": "spring",
-            "description": "Expert real estate SEO services in Spring, helping agents connect with qualified buyers and sellers in Harris.",
-            "image": "https://images.unsplash.com/photo-484330?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+            "description": "A rapidly growing suburb north of Houston, known for its excellent schools and family-friendly communities.",
+            "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
             "marketStats": [
               {
                 "label": "Average Home Price",
-                "value": "$631,852",
+                "value": "$320,000",
                 "description": "Median home value in Spring"
               },
               {
                 "label": "Market Growth",
-                "value": "7%",
+                "value": "7.2%",
                 "description": "Annual market appreciation"
               },
               {
                 "label": "Days on Market",
-                "value": "22",
+                "value": "38",
                 "description": "Average days to sell a property"
               }
             ],
             "neighborhoods": [
               {
-                "name": "Downtown",
-                "description": "Spring's Urban core",
+                "name": "Old Town Spring",
+                "description": "Historic district with charming shops and restaurants",
                 "features": [
-                  "Nightlife",
+                  "Historic Area",
                   "Shopping",
-                  "Culture"
+                  "Dining"
                 ]
               },
               {
-                "name": "Historic District",
-                "description": "Spring's Heritage area",
+                "name": "Klein",
+                "description": "Family-oriented community with top-rated schools",
                 "features": [
-                  "Historic Homes",
+                  "Great Schools",
                   "Parks",
-                  "Community"
-                ]
-              },
-              {
-                "name": "Suburban Heights",
-                "description": "Spring's Family-friendly area",
-                "features": [
-                  "Schools",
-                  "Parks",
-                  "Safety"
+                  "Family Living"
                 ]
               }
             ],
             "seoStrategies": [
               {
-                "title": "Local Search Optimization",
-                "description": "Target high-intent buyers in Spring"
+                "title": "Suburban Market Focus",
+                "description": "Specialized strategies for Spring's growing suburban market"
               },
               {
-                "title": "Neighborhood Expertise",
-                "description": "Showcase your knowledge of local areas"
+                "title": "School District Expertise",
+                "description": "Highlight top-rated schools and family-friendly amenities"
               },
               {
-                "title": "Market Analysis Content",
-                "description": "Share insights on local market trends"
-              }
-            ]
-          },
-          {
-            "name": "Cypress",
-            "slug": "cypress",
-            "description": "Expert real estate SEO services in Cypress, helping agents connect with qualified buyers and sellers in Harris.",
-            "image": "https://images.unsplash.com/photo-541013?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "marketStats": [
-              {
-                "label": "Average Home Price",
-                "value": "$482,995",
-                "description": "Median home value in Cypress"
-              },
-              {
-                "label": "Market Growth",
-                "value": "6%",
-                "description": "Annual market appreciation"
-              },
-              {
-                "label": "Days on Market",
-                "value": "28",
-                "description": "Average days to sell a property"
-              }
-            ],
-            "neighborhoods": [
-              {
-                "name": "Downtown",
-                "description": "Cypress's Urban core",
-                "features": [
-                  "Nightlife",
-                  "Shopping",
-                  "Culture"
-                ]
-              },
-              {
-                "name": "Historic District",
-                "description": "Cypress's Heritage area",
-                "features": [
-                  "Historic Homes",
-                  "Parks",
-                  "Community"
-                ]
-              }
-            ],
-            "seoStrategies": [
-              {
-                "title": "Local Search Optimization",
-                "description": "Target high-intent buyers in Cypress"
-              },
-              {
-                "title": "Neighborhood Expertise",
-                "description": "Showcase your knowledge of local areas"
-              },
-              {
-                "title": "Market Analysis Content",
-                "description": "Share insights on local market trends"
-              }
-            ]
-          },
-          {
-            "name": "Humble",
-            "slug": "humble",
-            "description": "Expert real estate SEO services in Humble, helping agents connect with qualified buyers and sellers in Harris.",
-            "image": "https://images.unsplash.com/photo-838432?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-            "marketStats": [
-              {
-                "label": "Average Home Price",
-                "value": "$586,064",
-                "description": "Median home value in Humble"
-              },
-              {
-                "label": "Market Growth",
-                "value": "9%",
-                "description": "Annual market appreciation"
-              },
-              {
-                "label": "Days on Market",
-                "value": "37",
-                "description": "Average days to sell a property"
-              }
-            ],
-            "neighborhoods": [
-              {
-                "name": "Historic District",
-                "description": "Humble's Heritage area",
-                "features": [
-                  "Historic Homes",
-                  "Parks",
-                  "Community"
-                ]
-              },
-              {
-                "name": "Suburban Heights",
-                "description": "Humble's Family-friendly area",
-                "features": [
-                  "Schools",
-                  "Parks",
-                  "Safety"
-                ]
-              },
-              {
-                "name": "Downtown",
-                "description": "Humble's Urban core",
-                "features": [
-                  "Nightlife",
-                  "Shopping",
-                  "Culture"
-                ]
-              }
-            ],
-            "seoStrategies": [
-              {
-                "title": "Local Search Optimization",
-                "description": "Target high-intent buyers in Humble"
-              },
-              {
-                "title": "Neighborhood Expertise",
-                "description": "Showcase your knowledge of local areas"
-              },
-              {
-                "title": "Market Analysis Content",
-                "description": "Share insights on local market trends"
+                "title": "Community Insights",
+                "description": "Showcase Spring's unique blend of history and modern growth"
               }
             ]
           }
