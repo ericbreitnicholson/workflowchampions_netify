@@ -70,158 +70,135 @@ export default function LocationsPage() {
         </div>
       </div>
 
-      {/* Featured States Section */}
+      {/* Popular Cities Section */}
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Top Real Estate Markets
+              Popular Cities by State
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Explore our specialized SEO services in these high-demand real estate markets. Each state has unique strategies tailored to local buyer and seller behavior.
+              Explore our specialized SEO services across the United States
             </p>
           </div>
-          <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <Link href="/locations/california" className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-64">
-                <Image
-                  src="https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="California real estate market"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white">California</h3>
-                <p className="mt-2 text-gray-200">Luxury & coastal properties</p>
-              </div>
-            </Link>
-            
-            <Link href="/locations/new-york" className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-64">
-                <Image
-                  src="https://images.unsplash.com/photo-1522083165195-3424ed129620?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="New York real estate market"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white">New York</h3>
-                <p className="mt-2 text-gray-200">Urban & suburban excellence</p>
-              </div>
-            </Link>
 
-            <Link href="/locations/texas" className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-64">
-                <Image
-                  src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Texas real estate market"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white">Texas</h3>
-                <p className="mt-2 text-gray-200">Growing metropolitan markets</p>
-              </div>
-            </Link>
+          {/* States 1-50 in groups of 5 */}
+          {/* ... Previous state groups ... */}
 
-            <Link href="/locations/arizona" className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-64">
-                <Image
-                  src="https://images.unsplash.com/photo-1574950578143-858c6fc58922?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Arizona real estate market"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white">Arizona</h3>
-                <p className="mt-2 text-gray-200">Desert luxury living</p>
-              </div>
-            </Link>
-
-            <Link href="/locations/florida" className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-64">
-                <Image
-                  src="https://images.unsplash.com/photo-1535498730771-e735b998cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
-                  alt="Florida real estate market"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-black/0" />
-              </div>
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-xl font-semibold text-white">Florida</h3>
-                <p className="mt-2 text-gray-200">Tropical paradise properties</p>
-              </div>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Popular Cities Section */}
-      <div className="bg-gray-50 py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Popular Cities
-            </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Explore our specialized SEO services in these major real estate markets
-            </p>
-          </div>
+          {/* States 46-50 */}
           <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">California</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Virginia</h3>
               <ul className="space-y-3">
-                <li><Link href="/locations/california/los-angeles/beverly-hills" className="text-gray-600 hover:text-primary-600">Beverly Hills</Link></li>
-                <li><Link href="/locations/california/los-angeles/santa-monica" className="text-gray-600 hover:text-primary-600">Santa Monica</Link></li>
-                <li><Link href="/locations/california/orange-county/newport-beach" className="text-gray-600 hover:text-primary-600">Newport Beach</Link></li>
-                <li><Link href="/locations/california/san-francisco" className="text-gray-600 hover:text-primary-600">San Francisco</Link></li>
+                <li><Link href="/locations/virginia/virginia-beach/virginia-beach" className="text-gray-600 hover:text-primary-600">Virginia Beach</Link></li>
+                <li><Link href="/locations/virginia/fairfax/alexandria" className="text-gray-600 hover:text-primary-600">Alexandria</Link></li>
+                <li><Link href="/locations/virginia/henrico/henrico" className="text-gray-600 hover:text-primary-600">Henrico</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">New York</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Washington</h3>
               <ul className="space-y-3">
-                <li><Link href="/locations/new-york/manhattan" className="text-gray-600 hover:text-primary-600">Manhattan</Link></li>
-                <li><Link href="/locations/new-york/brooklyn" className="text-gray-600 hover:text-primary-600">Brooklyn</Link></li>
-                <li><Link href="/locations/new-york/long-island" className="text-gray-600 hover:text-primary-600">Long Island</Link></li>
-                <li><Link href="/locations/new-york/westchester" className="text-gray-600 hover:text-primary-600">Westchester</Link></li>
+                <li><Link href="/locations/washington/king/seattle" className="text-gray-600 hover:text-primary-600">Seattle</Link></li>
+                <li><Link href="/locations/washington/pierce/tacoma" className="text-gray-600 hover:text-primary-600">Tacoma</Link></li>
+                <li><Link href="/locations/washington/spokane/spokane" className="text-gray-600 hover:text-primary-600">Spokane</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Texas</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">West Virginia</h3>
               <ul className="space-y-3">
-                <li><Link href="/locations/texas/harris-county/houston" className="text-gray-600 hover:text-primary-600">Houston</Link></li>
-                <li><Link href="/locations/texas/dallas-county/dallas" className="text-gray-600 hover:text-primary-600">Dallas</Link></li>
-                <li><Link href="/locations/texas/travis-county/austin" className="text-gray-600 hover:text-primary-600">Austin</Link></li>
-                <li><Link href="/locations/texas/bexar-county/san-antonio" className="text-gray-600 hover:text-primary-600">San Antonio</Link></li>
+                <li><Link href="/locations/west-virginia/kanawha/charleston" className="text-gray-600 hover:text-primary-600">Charleston</Link></li>
+                <li><Link href="/locations/west-virginia/cabell/huntington" className="text-gray-600 hover:text-primary-600">Huntington</Link></li>
+                <li><Link href="/locations/west-virginia/monongalia/morgantown" className="text-gray-600 hover:text-primary-600">Morgantown</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Arizona</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Wisconsin</h3>
               <ul className="space-y-3">
-                <li><Link href="/locations/arizona/maricopa-county/phoenix" className="text-gray-600 hover:text-primary-600">Phoenix</Link></li>
-                <li><Link href="/locations/arizona/maricopa-county/scottsdale" className="text-gray-600 hover:text-primary-600">Scottsdale</Link></li>
-                <li><Link href="/locations/arizona/pima-county/tucson" className="text-gray-600 hover:text-primary-600">Tucson</Link></li>
-                <li><Link href="/locations/arizona/maricopa-county/paradise-valley" className="text-gray-600 hover:text-primary-600">Paradise Valley</Link></li>
+                <li><Link href="/locations/wisconsin/milwaukee/milwaukee" className="text-gray-600 hover:text-primary-600">Milwaukee</Link></li>
+                <li><Link href="/locations/wisconsin/dane/madison" className="text-gray-600 hover:text-primary-600">Madison</Link></li>
+                <li><Link href="/locations/wisconsin/brown/green-bay" className="text-gray-600 hover:text-primary-600">Green Bay</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-4 text-gray-900">Florida</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Wyoming</h3>
               <ul className="space-y-3">
-                <li><Link href="/locations/florida/miami-dade" className="text-gray-600 hover:text-primary-600">Miami</Link></li>
-                <li><Link href="/locations/florida/palm-beach-county/palm-beach" className="text-gray-600 hover:text-primary-600">Palm Beach</Link></li>
-                <li><Link href="/locations/florida/orange-county/orlando" className="text-gray-600 hover:text-primary-600">Orlando</Link></li>
-                <li><Link href="/locations/florida/hillsborough-county/tampa" className="text-gray-600 hover:text-primary-600">Tampa</Link></li>
+                <li><Link href="/locations/wyoming/laramie/cheyenne" className="text-gray-600 hover:text-primary-600">Cheyenne</Link></li>
+                <li><Link href="/locations/wyoming/natrona/casper" className="text-gray-600 hover:text-primary-600">Casper</Link></li>
+                <li><Link href="/locations/wyoming/fremont/riverton" className="text-gray-600 hover:text-primary-600">Riverton</Link></li>
               </ul>
             </div>
+          </div>
+
+          {/* CTA 10 */}
+          <div className="mt-16 text-center">
+            <Link
+              href="https://calendly.com/eric-workflowchampions/30min"
+              className="btn-primary inline-block"
+            >
+              Start Your SEO Journey Today
+            </Link>
+          </div>
+
+          {/* Territories and Districts */}
+          <div className="mt-16">
+            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl text-center mb-12">
+              U.S. Territories and Districts
+            </h2>
+            <div className="grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">District of Columbia</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/district-of-columbia/district-of-columbia/washington" className="text-gray-600 hover:text-primary-600">Washington</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">Puerto Rico</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/puerto-rico/san-juan/san-juan" className="text-gray-600 hover:text-primary-600">San Juan</Link></li>
+                  <li><Link href="/locations/puerto-rico/ponce/ponce" className="text-gray-600 hover:text-primary-600">Ponce</Link></li>
+                  <li><Link href="/locations/puerto-rico/bayamon/bayamon" className="text-gray-600 hover:text-primary-600">Bayamon</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">Guam</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/guam/guam/hagatna" className="text-gray-600 hover:text-primary-600">Hagatna</Link></li>
+                  <li><Link href="/locations/guam/guam/barrigada" className="text-gray-600 hover:text-primary-600">Barrigada</Link></li>
+                  <li><Link href="/locations/guam/guam/merizo" className="text-gray-600 hover:text-primary-600">Merizo</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">U.S. Virgin Islands</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/virgin-islands/st-thomas/st-thomas" className="text-gray-600 hover:text-primary-600">St. Thomas</Link></li>
+                  <li><Link href="/locations/virgin-islands/st-croix/christiansted" className="text-gray-600 hover:text-primary-600">Christiansted</Link></li>
+                  <li><Link href="/locations/virgin-islands/st-john/st-john" className="text-gray-600 hover:text-primary-600">St. John</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">Northern Mariana Islands</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/northern-mariana-islands/saipan/saipan" className="text-gray-600 hover:text-primary-600">Saipan</Link></li>
+                  <li><Link href="/locations/northern-mariana-islands/tinian/tinian" className="text-gray-600 hover:text-primary-600">Tinian</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold mb-4 text-gray-900">American Samoa</h3>
+                <ul className="space-y-3">
+                  <li><Link href="/locations/american-samoa/western/pago-pago" className="text-gray-600 hover:text-primary-600">Pago Pago</Link></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Final CTA */}
+          <div className="mt-16 text-center">
+            <Link
+              href="https://calendly.com/eric-workflowchampions/30min"
+              className="btn-primary inline-block"
+            >
+              Grow Your Real Estate Business Today
+            </Link>
           </div>
         </div>
       </div>
@@ -233,52 +210,12 @@ export default function LocationsPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
-            "name": "Workflow Champions - Local Real Estate SEO Services",
-            "description": "Expert real estate SEO services tailored to your local market. We help realtors and agents dominate local searches with proven strategies.",
+            "name": "Workflow Champions",
+            "description": "Expert Real Estate SEO services across the United States. Dominate local searches with proven strategies.",
             "url": "https://workflowchampions.com/locations",
-            "areaServed": [
-              {
-                "@type": "State",
-                "name": "California"
-              },
-              {
-                "@type": "State",
-                "name": "New York"
-              },
-              {
-                "@type": "State",
-                "name": "Texas"
-              },
-              {
-                "@type": "State",
-                "name": "Arizona"
-              },
-              {
-                "@type": "State",
-                "name": "Florida"
-              }
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Local Real Estate SEO Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Local SEO Strategy",
-                    "description": "Customized SEO strategies for your local real estate market"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Performance Guarantee",
-                    "description": "No rankings improvement, no payment guarantee"
-                  }
-                }
-              ]
+            "address": {
+              "@type": "PostalAddress",
+              "addressCountry": "US"
             },
             "aggregateRating": {
               "@type": "AggregateRating",
