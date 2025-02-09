@@ -8011,13 +8011,13 @@ export const stateData: StateData = {
         "name": "Harris",
         "slug": "harris",
         "description": "Harris County, home to Houston and its diverse suburbs, is Texas' most populous county and a dynamic real estate market. From the energy corridor to the medical center, our SEO strategies help agents connect with buyers and sellers in this thriving metropolitan area.",
-        "image": "https://images.unsplash.com/photo-1548519853-2393f0c56e9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+        "image": "https://images.unsplash.com/photo-1530089711124-9ca31fb9e863?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
         "cities": [
           {
             "name": "Houston",
             "slug": "houston",
             "description": "As the heart of Harris County, Houston offers diverse real estate opportunities from luxury high-rises in River Oaks to charming bungalows in The Heights.",
-            "image": "https://images.unsplash.com/photo-1548519853-2393f0c56e9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+            "image": "https://images.unsplash.com/photo-1642961090154-bd5c6d5466e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
             "marketStats": [
               {
                 "label": "Average Home Price",
