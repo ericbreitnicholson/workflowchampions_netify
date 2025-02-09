@@ -39,8 +39,7 @@ async function generateSitemap() {
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-  </url>
-`
+  </url>\n`
 
   // Add main locations page
   sitemap += `  <url>
@@ -48,8 +47,7 @@ async function generateSitemap() {
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-`
+  </url>\n`
 
   // Add state pages
   for (const [stateSlug, state] of Object.entries(stateData)) {
@@ -57,14 +55,13 @@ async function generateSitemap() {
     <loc>${BASE_URL}/locations/${stateSlug}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    ${state.image ? `<image:image>
+    <priority>0.8</priority>${state.image ? `
+    <image:image>
       <image:loc>${state.image}</image:loc>
-      <image:title>${state.name} Real Estate Market</image:title>
-      <image:caption>Real Estate SEO Services in ${state.name}</image:caption>
+      <image:title>${escapeXml(state.name)} Real Estate Market</image:title>
+      <image:caption>Real Estate SEO Services in ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
-  </url>
-`
+  </url>\n`
 
     // Add county pages
     for (const county of state.counties) {
@@ -72,14 +69,13 @@ async function generateSitemap() {
     <loc>${BASE_URL}/locations/${stateSlug}/${county.slug}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    ${county.image ? `<image:image>
+    <priority>0.7</priority>${county.image ? `
+    <image:image>
       <image:loc>${county.image}</image:loc>
-      <image:title>${county.name}, ${state.name} Real Estate Market</image:title>
-      <image:caption>Real Estate SEO Services in ${county.name}, ${state.name}</image:caption>
+      <image:title>${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
+      <image:caption>Real Estate SEO Services in ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
-  </url>
-`
+  </url>\n`
 
       // Add city pages
       for (const city of county.cities) {
@@ -87,20 +83,19 @@ async function generateSitemap() {
     <loc>${BASE_URL}/locations/${stateSlug}/${county.slug}/${city.slug}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    ${city.image ? `<image:image>
+    <priority>0.6</priority>${city.image ? `
+    <image:image>
       <image:loc>${city.image}</image:loc>
-      <image:title>${city.name}, ${county.name}, ${state.name} Real Estate Market</image:title>
-      <image:caption>Expert Real Estate SEO Services in ${city.name}, ${county.name}, ${state.name}</image:caption>
+      <image:title>${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
+      <image:caption>Expert Real Estate SEO Services in ${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
-  </url>
-`
+  </url>\n`
       }
     }
   }
 
   // Close XML
-  sitemap += '</urlset>'
+  sitemap += '</urlset>\n'
 
   // Write sitemap
   fs.writeFileSync('public/sitemap.xml', sitemap)
@@ -135,6 +130,20 @@ Host: workflowchampions.com`
 
   fs.writeFileSync('public/robots.txt', robotsTxt)
   console.log('robots.txt generated successfully!')
+}
+
+// Helper function to escape XML special characters
+function escapeXml(unsafe: string): string {
+  return unsafe.replace(/[<>&'"]/g, (c) => {
+    switch (c) {
+      case '<': return '&lt;'
+      case '>': return '&gt;'
+      case '&': return '&amp;'
+      case "'": return '&apos;'
+      case '"': return '&quot;'
+      default: return c
+    }
+  })
 }
 
 generateSitemap().catch(console.error) 
