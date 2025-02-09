@@ -4,12 +4,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
-  description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
-  keywords: 'real estate seo, real estate marketing, local seo, real estate agent marketing, realtor seo, real estate seo agency, best real estate seo company',
+  title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+  description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',
+  keywords: 'workflow champions, real estate seo, real estate marketing, local seo, real estate agent marketing, realtor seo, real estate seo agency',
   openGraph: {
-    title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
-    description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
+    title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+    description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',
     images: [
       {
         url: 'https://workflowchampions.com/og-image.jpg',
@@ -24,8 +24,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
-    description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
+    title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+    description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',
     images: ['https://workflowchampions.com/og-image.jpg'],
     site: '@workflowchamps',
   },
@@ -60,7 +60,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              #1 Ranked Real Estate SEO Agency | Guaranteed Results
+              Workflow Champions: Elevating Real Estate Success Through SEO Excellence
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-200">
               Dominate your local real estate market with our award-winning SEO strategies. We help agents attract quality leads and grow their business in Beverly Hills, Santa Monica, and beyond. <span className="font-semibold text-primary-200">100% Satisfaction Guarantee: No Rankings, No Payment</span>
@@ -81,7 +81,7 @@ export default function Home() {
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <h2 className="text-center text-lg font-semibold leading-8 text-gray-900">
-            Trusted by institutions around the world
+            Trusted by Top Real Estate Professionals Nationwide
           </h2>
           <div className="mx-auto mt-16 max-w-lg grid grid-cols-2 items-center gap-x-12 gap-y-12 sm:max-w-xl lg:mx-0 lg:max-w-none">
             {/* RE/MAX logo */}
@@ -141,9 +141,9 @@ export default function Home() {
       <div className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
-            <h2 className="text-base font-semibold leading-7 text-primary-600">Grow Faster</h2>
+            <h2 className="text-base font-semibold leading-7 text-primary-600">Real Estate SEO Mastery</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Everything you need to succeed online
+              Dominate Local Property Searches
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
               Our comprehensive real estate SEO services are designed to help you attract more qualified leads and grow your business.
@@ -199,7 +199,7 @@ export default function Home() {
         </div>
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Ready to grow your real estate business?
+            Transform Your Real Estate Digital Presence
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
             Get started today with our proven SEO strategies designed specifically for real estate professionals. Remember, if your rankings don't improve, you don't pay.
