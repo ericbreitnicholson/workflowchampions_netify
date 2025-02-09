@@ -57,7 +57,7 @@ async function generateSitemap() {
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>${state.image ? `
     <image:image>
-      <image:loc>${state.image}</image:loc>
+      <image:loc>${escapeUrl(state.image)}</image:loc>
       <image:title>${escapeXml(state.name)} Real Estate Market</image:title>
       <image:caption>Real Estate SEO Services in ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
@@ -71,7 +71,7 @@ async function generateSitemap() {
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>${county.image ? `
     <image:image>
-      <image:loc>${county.image}</image:loc>
+      <image:loc>${escapeUrl(county.image)}</image:loc>
       <image:title>${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
       <image:caption>Real Estate SEO Services in ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
@@ -85,7 +85,7 @@ async function generateSitemap() {
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>${city.image ? `
     <image:image>
-      <image:loc>${city.image}</image:loc>
+      <image:loc>${escapeUrl(city.image)}</image:loc>
       <image:title>${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
       <image:caption>Expert Real Estate SEO Services in ${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
     </image:image>` : ''}
@@ -144,6 +144,11 @@ function escapeXml(unsafe: string): string {
       default: return c
     }
   })
+}
+
+// Helper function to escape URLs in XML
+function escapeUrl(url: string): string {
+  return url.replace(/&/g, '&amp;')
 }
 
 generateSitemap().catch(console.error) 
