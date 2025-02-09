@@ -82,8 +82,401 @@ export default function LocationsPage() {
             </p>
           </div>
 
-          {/* States 1-50 in groups of 5 */}
-          {/* ... Previous state groups ... */}
+          {/* States 1-5 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Alabama</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/alabama/jefferson/birmingham" className="text-gray-600 hover:text-primary-600">Birmingham</Link></li>
+                <li><Link href="/locations/alabama/madison/huntsville" className="text-gray-600 hover:text-primary-600">Huntsville</Link></li>
+                <li><Link href="/locations/alabama/mobile/mobile" className="text-gray-600 hover:text-primary-600">Mobile</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Alaska</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/alaska/anchorage/anchorage" className="text-gray-600 hover:text-primary-600">Anchorage</Link></li>
+                <li><Link href="/locations/alaska/fairbanks-north-star/fairbanks" className="text-gray-600 hover:text-primary-600">Fairbanks</Link></li>
+                <li><Link href="/locations/alaska/juneau/juneau" className="text-gray-600 hover:text-primary-600">Juneau</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Arizona</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/arizona/maricopa/phoenix" className="text-gray-600 hover:text-primary-600">Phoenix</Link></li>
+                <li><Link href="/locations/arizona/pima/tucson" className="text-gray-600 hover:text-primary-600">Tucson</Link></li>
+                <li><Link href="/locations/arizona/yuma/yuma" className="text-gray-600 hover:text-primary-600">Yuma</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Arkansas</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/arkansas/pulaski/little-rock" className="text-gray-600 hover:text-primary-600">Little Rock</Link></li>
+                <li><Link href="/locations/arkansas/benton/rogers" className="text-gray-600 hover:text-primary-600">Rogers</Link></li>
+                <li><Link href="/locations/arkansas/washington/fayetteville" className="text-gray-600 hover:text-primary-600">Fayetteville</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">California</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/california/los-angeles/los-angeles" className="text-gray-600 hover:text-primary-600">Los Angeles</Link></li>
+                <li><Link href="/locations/california/san-diego/san-diego" className="text-gray-600 hover:text-primary-600">San Diego</Link></li>
+                <li><Link href="/locations/california/orange/anaheim" className="text-gray-600 hover:text-primary-600">Anaheim</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 6-10 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Colorado</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/colorado/denver/denver" className="text-gray-600 hover:text-primary-600">Denver</Link></li>
+                <li><Link href="/locations/colorado/el-paso/colorado-springs" className="text-gray-600 hover:text-primary-600">Colorado Springs</Link></li>
+                <li><Link href="/locations/colorado/arapahoe/aurora" className="text-gray-600 hover:text-primary-600">Aurora</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Connecticut</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/connecticut/hartford/hartford" className="text-gray-600 hover:text-primary-600">Hartford</Link></li>
+                <li><Link href="/locations/connecticut/new-haven/new-haven" className="text-gray-600 hover:text-primary-600">New Haven</Link></li>
+                <li><Link href="/locations/connecticut/fairfield/bridgeport" className="text-gray-600 hover:text-primary-600">Bridgeport</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Delaware</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/delaware/new-castle/wilmington" className="text-gray-600 hover:text-primary-600">Wilmington</Link></li>
+                <li><Link href="/locations/delaware/kent/dover" className="text-gray-600 hover:text-primary-600">Dover</Link></li>
+                <li><Link href="/locations/delaware/sussex/millsboro" className="text-gray-600 hover:text-primary-600">Millsboro</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Florida</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/florida/miami-dade/miami" className="text-gray-600 hover:text-primary-600">Miami</Link></li>
+                <li><Link href="/locations/florida/orange/orlando" className="text-gray-600 hover:text-primary-600">Orlando</Link></li>
+                <li><Link href="/locations/florida/hillsborough/tampa" className="text-gray-600 hover:text-primary-600">Tampa</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Georgia</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/georgia/fulton/atlanta" className="text-gray-600 hover:text-primary-600">Atlanta</Link></li>
+                <li><Link href="/locations/georgia/chatham/savannah" className="text-gray-600 hover:text-primary-600">Savannah</Link></li>
+                <li><Link href="/locations/georgia/cobb/marietta" className="text-gray-600 hover:text-primary-600">Marietta</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 11-15 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Hawaii</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/hawaii/honolulu/honolulu" className="text-gray-600 hover:text-primary-600">Honolulu</Link></li>
+                <li><Link href="/locations/hawaii/kauai/kapaa" className="text-gray-600 hover:text-primary-600">Kapaa</Link></li>
+                <li><Link href="/locations/hawaii/maui/kahului" className="text-gray-600 hover:text-primary-600">Kahului</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Idaho</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/idaho/ada/boise" className="text-gray-600 hover:text-primary-600">Boise</Link></li>
+                <li><Link href="/locations/idaho/canyon/nampa" className="text-gray-600 hover:text-primary-600">Nampa</Link></li>
+                <li><Link href="/locations/idaho/bonneville/idaho-falls" className="text-gray-600 hover:text-primary-600">Idaho Falls</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Illinois</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/illinois/cook/chicago" className="text-gray-600 hover:text-primary-600">Chicago</Link></li>
+                <li><Link href="/locations/illinois/dupage/naperville" className="text-gray-600 hover:text-primary-600">Naperville</Link></li>
+                <li><Link href="/locations/illinois/kane/aurora" className="text-gray-600 hover:text-primary-600">Aurora</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Indiana</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/indiana/marion/indianapolis" className="text-gray-600 hover:text-primary-600">Indianapolis</Link></li>
+                <li><Link href="/locations/indiana/allen/fort-wayne" className="text-gray-600 hover:text-primary-600">Fort Wayne</Link></li>
+                <li><Link href="/locations/indiana/hamilton/carmel" className="text-gray-600 hover:text-primary-600">Carmel</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Iowa</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/iowa/polk/des-moines" className="text-gray-600 hover:text-primary-600">Des Moines</Link></li>
+                <li><Link href="/locations/iowa/linn/cedar-rapids" className="text-gray-600 hover:text-primary-600">Cedar Rapids</Link></li>
+                <li><Link href="/locations/iowa/black-hawk/waterloo" className="text-gray-600 hover:text-primary-600">Waterloo</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 16-20 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Kansas</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/kansas/sedgwick/wichita" className="text-gray-600 hover:text-primary-600">Wichita</Link></li>
+                <li><Link href="/locations/kansas/johnson/overland-park" className="text-gray-600 hover:text-primary-600">Overland Park</Link></li>
+                <li><Link href="/locations/kansas/shawnee/topeka" className="text-gray-600 hover:text-primary-600">Topeka</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Kentucky</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/kentucky/jefferson/louisville" className="text-gray-600 hover:text-primary-600">Louisville</Link></li>
+                <li><Link href="/locations/kentucky/fayette/lexington" className="text-gray-600 hover:text-primary-600">Lexington</Link></li>
+                <li><Link href="/locations/kentucky/warren/bowling-green" className="text-gray-600 hover:text-primary-600">Bowling Green</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Louisiana</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/louisiana/orleans/new-orleans" className="text-gray-600 hover:text-primary-600">New Orleans</Link></li>
+                <li><Link href="/locations/louisiana/east-baton-rouge/baton-rouge" className="text-gray-600 hover:text-primary-600">Baton Rouge</Link></li>
+                <li><Link href="/locations/louisiana/caddo/shreveport" className="text-gray-600 hover:text-primary-600">Shreveport</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Maine</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/maine/cumberland/portland" className="text-gray-600 hover:text-primary-600">Portland</Link></li>
+                <li><Link href="/locations/maine/androscoggin/lewiston" className="text-gray-600 hover:text-primary-600">Lewiston</Link></li>
+                <li><Link href="/locations/maine/kennebec/waterville" className="text-gray-600 hover:text-primary-600">Waterville</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Maryland</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/maryland/baltimore/baltimore" className="text-gray-600 hover:text-primary-600">Baltimore</Link></li>
+                <li><Link href="/locations/maryland/montgomery/silver-spring" className="text-gray-600 hover:text-primary-600">Silver Spring</Link></li>
+                <li><Link href="/locations/maryland/prince-georges/hyattsville" className="text-gray-600 hover:text-primary-600">Hyattsville</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 21-25 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Massachusetts</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/massachusetts/suffolk/boston" className="text-gray-600 hover:text-primary-600">Boston</Link></li>
+                <li><Link href="/locations/massachusetts/middlesex/cambridge" className="text-gray-600 hover:text-primary-600">Cambridge</Link></li>
+                <li><Link href="/locations/massachusetts/worcester/worcester" className="text-gray-600 hover:text-primary-600">Worcester</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Michigan</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/michigan/wayne/detroit" className="text-gray-600 hover:text-primary-600">Detroit</Link></li>
+                <li><Link href="/locations/michigan/kent/grand-rapids" className="text-gray-600 hover:text-primary-600">Grand Rapids</Link></li>
+                <li><Link href="/locations/michigan/oakland/rochester" className="text-gray-600 hover:text-primary-600">Rochester</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Minnesota</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/minnesota/hennepin/minneapolis" className="text-gray-600 hover:text-primary-600">Minneapolis</Link></li>
+                <li><Link href="/locations/minnesota/ramsey/saint-paul" className="text-gray-600 hover:text-primary-600">Saint Paul</Link></li>
+                <li><Link href="/locations/minnesota/dakota/saint-paul" className="text-gray-600 hover:text-primary-600">Saint Paul</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Mississippi</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/mississippi/hinds/jackson" className="text-gray-600 hover:text-primary-600">Jackson</Link></li>
+                <li><Link href="/locations/mississippi/harrison/gulfport" className="text-gray-600 hover:text-primary-600">Gulfport</Link></li>
+                <li><Link href="/locations/mississippi/desoto/olive-branch" className="text-gray-600 hover:text-primary-600">Olive Branch</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Missouri</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/missouri/st-louis/saint-louis" className="text-gray-600 hover:text-primary-600">Saint Louis</Link></li>
+                <li><Link href="/locations/missouri/jackson/kansas-city" className="text-gray-600 hover:text-primary-600">Kansas City</Link></li>
+                <li><Link href="/locations/missouri/greene/springfield" className="text-gray-600 hover:text-primary-600">Springfield</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 26-30 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Montana</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/montana/yellowstone/billings" className="text-gray-600 hover:text-primary-600">Billings</Link></li>
+                <li><Link href="/locations/montana/cascade/great-falls" className="text-gray-600 hover:text-primary-600">Great Falls</Link></li>
+                <li><Link href="/locations/montana/gallatin/bozeman" className="text-gray-600 hover:text-primary-600">Bozeman</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Nebraska</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/nebraska/douglas/omaha" className="text-gray-600 hover:text-primary-600">Omaha</Link></li>
+                <li><Link href="/locations/nebraska/lancaster/lincoln" className="text-gray-600 hover:text-primary-600">Lincoln</Link></li>
+                <li><Link href="/locations/nebraska/sarpy/bellevue" className="text-gray-600 hover:text-primary-600">Bellevue</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Nevada</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/nevada/clark/las-vegas" className="text-gray-600 hover:text-primary-600">Las Vegas</Link></li>
+                <li><Link href="/locations/nevada/washoe/reno" className="text-gray-600 hover:text-primary-600">Reno</Link></li>
+                <li><Link href="/locations/nevada/carson-city/carson-city" className="text-gray-600 hover:text-primary-600">Carson City</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">New Hampshire</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/new-hampshire/hillsborough/manchester" className="text-gray-600 hover:text-primary-600">Manchester</Link></li>
+                <li><Link href="/locations/new-hampshire/rockingham/derry" className="text-gray-600 hover:text-primary-600">Derry</Link></li>
+                <li><Link href="/locations/new-hampshire/merrimack/concord" className="text-gray-600 hover:text-primary-600">Concord</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">New Jersey</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/new-jersey/hudson/jersey-city" className="text-gray-600 hover:text-primary-600">Jersey City</Link></li>
+                <li><Link href="/locations/new-jersey/essex/newark" className="text-gray-600 hover:text-primary-600">Newark</Link></li>
+                <li><Link href="/locations/new-jersey/middlesex/edison" className="text-gray-600 hover:text-primary-600">Edison</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 31-35 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">New Mexico</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/new-mexico/bernalillo/albuquerque" className="text-gray-600 hover:text-primary-600">Albuquerque</Link></li>
+                <li><Link href="/locations/new-mexico/santa-fe/santa-fe" className="text-gray-600 hover:text-primary-600">Santa Fe</Link></li>
+                <li><Link href="/locations/new-mexico/dona-ana/las-cruces" className="text-gray-600 hover:text-primary-600">Las Cruces</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">New York</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/new-york/new-york/new-york" className="text-gray-600 hover:text-primary-600">New York</Link></li>
+                <li><Link href="/locations/new-york/kings/brooklyn" className="text-gray-600 hover:text-primary-600">Brooklyn</Link></li>
+                <li><Link href="/locations/new-york/queens/jamaica" className="text-gray-600 hover:text-primary-600">Jamaica</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">North Carolina</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/north-carolina/mecklenburg/charlotte" className="text-gray-600 hover:text-primary-600">Charlotte</Link></li>
+                <li><Link href="/locations/north-carolina/wake/raleigh" className="text-gray-600 hover:text-primary-600">Raleigh</Link></li>
+                <li><Link href="/locations/north-carolina/guilford/greensboro" className="text-gray-600 hover:text-primary-600">Greensboro</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">North Dakota</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/north-dakota/cass/fargo" className="text-gray-600 hover:text-primary-600">Fargo</Link></li>
+                <li><Link href="/locations/north-dakota/burleigh/bismarck" className="text-gray-600 hover:text-primary-600">Bismarck</Link></li>
+                <li><Link href="/locations/north-dakota/grand-forks/grand-forks" className="text-gray-600 hover:text-primary-600">Grand Forks</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Ohio</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/ohio/franklin/columbus" className="text-gray-600 hover:text-primary-600">Columbus</Link></li>
+                <li><Link href="/locations/ohio/cuyahoga/cleveland" className="text-gray-600 hover:text-primary-600">Cleveland</Link></li>
+                <li><Link href="/locations/ohio/hamilton/cincinnati" className="text-gray-600 hover:text-primary-600">Cincinnati</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 36-40 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Oklahoma</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/oklahoma/oklahoma/oklahoma-city" className="text-gray-600 hover:text-primary-600">Oklahoma City</Link></li>
+                <li><Link href="/locations/oklahoma/tulsa/tulsa" className="text-gray-600 hover:text-primary-600">Tulsa</Link></li>
+                <li><Link href="/locations/oklahoma/cleveland/norman" className="text-gray-600 hover:text-primary-600">Norman</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Oregon</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/oregon/multnomah/portland" className="text-gray-600 hover:text-primary-600">Portland</Link></li>
+                <li><Link href="/locations/oregon/marion/salem" className="text-gray-600 hover:text-primary-600">Salem</Link></li>
+                <li><Link href="/locations/oregon/lane/eugene" className="text-gray-600 hover:text-primary-600">Eugene</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Pennsylvania</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/pennsylvania/philadelphia/philadelphia" className="text-gray-600 hover:text-primary-600">Philadelphia</Link></li>
+                <li><Link href="/locations/pennsylvania/allegheny/pittsburgh" className="text-gray-600 hover:text-primary-600">Pittsburgh</Link></li>
+                <li><Link href="/locations/pennsylvania/bucks/levittown" className="text-gray-600 hover:text-primary-600">Levittown</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Rhode Island</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/rhode-island/providence/providence" className="text-gray-600 hover:text-primary-600">Providence</Link></li>
+                <li><Link href="/locations/rhode-island/kent/warwick" className="text-gray-600 hover:text-primary-600">Warwick</Link></li>
+                <li><Link href="/locations/rhode-island/newport/newport" className="text-gray-600 hover:text-primary-600">Newport</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">South Carolina</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/south-carolina/richland/columbia" className="text-gray-600 hover:text-primary-600">Columbia</Link></li>
+                <li><Link href="/locations/south-carolina/charleston/charleston" className="text-gray-600 hover:text-primary-600">Charleston</Link></li>
+                <li><Link href="/locations/south-carolina/greenville/greenville" className="text-gray-600 hover:text-primary-600">Greenville</Link></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* States 41-45 */}
+          <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">South Dakota</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/south-dakota/minnehaha/sioux-falls" className="text-gray-600 hover:text-primary-600">Sioux Falls</Link></li>
+                <li><Link href="/locations/south-dakota/pennington/rapid-city" className="text-gray-600 hover:text-primary-600">Rapid City</Link></li>
+                <li><Link href="/locations/south-dakota/brown/aberdeen" className="text-gray-600 hover:text-primary-600">Aberdeen</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Tennessee</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/tennessee/shelby/memphis" className="text-gray-600 hover:text-primary-600">Memphis</Link></li>
+                <li><Link href="/locations/tennessee/davidson/nashville" className="text-gray-600 hover:text-primary-600">Nashville</Link></li>
+                <li><Link href="/locations/tennessee/knox/knoxville" className="text-gray-600 hover:text-primary-600">Knoxville</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Texas</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/texas/harris/houston" className="text-gray-600 hover:text-primary-600">Houston</Link></li>
+                <li><Link href="/locations/texas/dallas/dallas" className="text-gray-600 hover:text-primary-600">Dallas</Link></li>
+                <li><Link href="/locations/texas/bexar/san-antonio" className="text-gray-600 hover:text-primary-600">San Antonio</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Utah</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/utah/salt-lake/salt-lake-city" className="text-gray-600 hover:text-primary-600">Salt Lake City</Link></li>
+                <li><Link href="/locations/utah/utah/provo" className="text-gray-600 hover:text-primary-600">Provo</Link></li>
+                <li><Link href="/locations/utah/weber/ogden" className="text-gray-600 hover:text-primary-600">Ogden</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-gray-900">Vermont</h3>
+              <ul className="space-y-3">
+                <li><Link href="/locations/vermont/chittenden/burlington" className="text-gray-600 hover:text-primary-600">Burlington</Link></li>
+                <li><Link href="/locations/vermont/washington/barre" className="text-gray-600 hover:text-primary-600">Barre</Link></li>
+                <li><Link href="/locations/vermont/windsor/white-river-junction" className="text-gray-600 hover:text-primary-600">White River Junction</Link></li>
+              </ul>
+            </div>
+          </div>
 
           {/* States 46-50 */}
           <div className="mt-16 grid grid-cols-1 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
