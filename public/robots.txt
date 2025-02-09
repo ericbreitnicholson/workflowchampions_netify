@@ -1,21 +1,25 @@
-# Allow all crawlers
 User-agent: *
-
-# Allow most pages
 Allow: /
-Allow: /services
-Allow: /blog
-Allow: /about
-Allow: /locations
-Allow: /contact
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
+# Optimize crawl rate
+Crawl-delay: 1
 
-# Sitemap location
+# Sitemaps
 Sitemap: https://workflowchampions.com/sitemap.xml
 
-# Crawl delay for better server performance
-Crawl-delay: 10 
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+
+# Allow search engines to crawl JavaScript and CSS
+Allow: /*.js$
+Allow: /*.css$
+
+# Block certain file types
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+
+# Host directive
+Host: workflowchampions.com

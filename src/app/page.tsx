@@ -1,6 +1,38 @@
+import { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
+  description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
+  keywords: 'real estate seo, real estate marketing, local seo, real estate agent marketing, realtor seo, real estate seo agency, best real estate seo company',
+  openGraph: {
+    title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
+    description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
+    images: [
+      {
+        url: 'https://workflowchampions.com/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Workflow Champions - #1 Real Estate SEO Agency',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+    siteName: 'Workflow Champions',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Best Real Estate SEO Services | #1 Ranked Agency | Workflow Champions',
+    description: 'Award-winning real estate SEO services with guaranteed results. Dominate local searches, attract quality leads, and grow your real estate business. Free strategy call - No rankings, no payment.',
+    images: ['https://workflowchampions.com/og-image.jpg'],
+    site: '@workflowchamps',
+  },
+  alternates: {
+    canonical: 'https://workflowchampions.com'
+  }
+}
 
 export default function Home() {
   return (
@@ -28,17 +60,17 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h1 className="mt-10 text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Best Real Estate SEO Services in the USA - Workflow Champions
+              #1 Ranked Real Estate SEO Agency | Guaranteed Results
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-200">
-              Dominate local searches, attract quality leads, and grow your real estate business with our specialized SEO strategies. <span className="font-semibold text-primary-200">Our guarantee: if your rankings don't improve, you don't pay.</span>
+              Dominate your local real estate market with our award-winning SEO strategies. We help agents attract quality leads and grow their business in Beverly Hills, Santa Monica, and beyond. <span className="font-semibold text-primary-200">100% Satisfaction Guarantee: No Rankings, No Payment</span>
             </p>
             <div className="mt-8 flex items-center justify-center">
               <Link
                 href="https://calendly.com/eric-workflowchampions/30min"
                 className="btn-primary"
               >
-                Improve Your Rankings Today
+                Get Your Free SEO Strategy
               </Link>
             </div>
           </div>
@@ -190,6 +222,8 @@ export default function Home() {
             "name": "Workflow Champions",
             "description": "Leading Real Estate SEO agency helping agents dominate local search rankings. Our proven SEO strategies help realtors attract more leads and outrank competitors.",
             "url": "https://workflowchampions.com",
+            "logo": "https://workflowchampions.com/logo.png",
+            "image": "https://workflowchampions.com/og-image.jpg",
             "areaServed": {
               "@type": "Country",
               "name": "United States"
@@ -232,6 +266,11 @@ export default function Home() {
                   }
                 }
               ]
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "27"
             },
             "sameAs": [
               "https://calendly.com/eric-workflowchampions/30min"

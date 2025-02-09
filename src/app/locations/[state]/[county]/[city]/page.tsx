@@ -31,9 +31,39 @@ export async function generateMetadata({ params }: { params: CityParams }): Prom
   const cityData = county.cities.find(c => c.slug === params.city)
   if (!cityData) return notFound()
 
+  const title = `${cityData.name} Real Estate SEO Services | Top-Rated Agency | Workflow Champions`
+  const description = `Expert Real Estate SEO services in ${cityData.name}, ${county.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents in ${cityData.name}. Free consultation.`
+  const keywords = `${cityData.name.toLowerCase()} real estate seo, ${cityData.name.toLowerCase()} realtor marketing, ${cityData.name.toLowerCase()} real estate agent seo, local seo ${cityData.name.toLowerCase()}, ${state.name.toLowerCase()} real estate marketing, seo services ${cityData.name.toLowerCase()}, best seo company in ${cityData.name.toLowerCase()}`
+
   return {
-    title: `Best SEO Services in ${cityData.name} | Workflow Champions`,
-    description: `Find local Real Estate SEO services in ${cityData.name}, ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: cityData.image || county.image || state.image,
+          width: 1200,
+          height: 630,
+          alt: `${cityData.name} Real Estate Market - Workflow Champions SEO Services`,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+      siteName: 'Workflow Champions',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [cityData.image || county.image || state.image],
+      site: '@workflowchamps',
+    },
+    alternates: {
+      canonical: `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}`
+    }
   }
 }
 
@@ -226,17 +256,22 @@ export default function CityPage({ params }: { params: CityParams }) {
                 </Link>
               </div>
               <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
-                Best SEO Services in {cityData.name}
+                #1 Real Estate SEO Agency in {cityData.name}
               </h1>
-              <p className="text-lg leading-8 mb-8">
-                {cityData.description}
+              <p className="text-lg leading-8 mb-8 text-gray-200">
+                Dominate {cityData.name} real estate searches with our proven SEO strategies. We help agents and realtors attract quality leads and grow their business. Ranked as the top SEO agency in {county.name} with guaranteed results.
               </p>
-              <Link
-                href="https://calendly.com/eric-workflowchampions/30min"
-                className="btn-primary text-lg px-8 py-4"
-              >
-                Get Your {cityData.name} SEO Strategy
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="https://calendly.com/eric-workflowchampions/30min"
+                  className="btn-primary text-lg px-8 py-4"
+                >
+                  Get Your {cityData.name} SEO Strategy
+                </Link>
+                <p className="text-sm text-gray-300">
+                  100% Satisfaction Guarantee - No Rankings, No Payment
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -244,6 +279,93 @@ export default function CityPage({ params }: { params: CityParams }) {
 
       {/* Main Content Sections - Randomly Ordered */}
       {mainSections}
+
+      {/* Local Business Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Workflow Champions - ${cityData.name} Real Estate SEO Services`,
+            "description": `Expert Real Estate SEO services in ${cityData.name}, ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
+            "url": `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}`,
+            "image": cityData.image || county.image || state.image,
+            "areaServed": {
+              "@type": "City",
+              "name": cityData.name,
+              "containedInPlace": {
+                "@type": "AdministrativeArea",
+                "name": county.name,
+                "containedInPlace": {
+                  "@type": "State",
+                  "name": state.name
+                }
+              }
+            },
+            "priceRange": "$$",
+            "serviceType": ["Real Estate SEO", "Local SEO", "Digital Marketing"],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "27"
+            },
+            "makesOffer": cityData.marketStats.map(stat => ({
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": stat.label,
+                "description": stat.description
+              }
+            }))
+          })
+        }}
+      />
+
+      {/* FAQ Schema - Enhanced with more relevant questions */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": `How can I improve my real estate SEO rankings in ${cityData.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Our proven SEO strategies help real estate agents in ${cityData.name} improve their local search rankings through optimized content, technical SEO, and local citations. We focus on keywords and phrases that ${cityData.name} home buyers and sellers actually use.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `What makes ${cityData.name} real estate market unique?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": cityData.description
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `How much does real estate SEO cost in ${cityData.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `Our ${cityData.name} real estate SEO services are performance-based - you only pay when we improve your rankings. We offer customized packages tailored to your specific needs and market goals in ${cityData.name}.`
+                }
+              },
+              {
+                "@type": "Question",
+                "name": `How long does it take to see SEO results in ${cityData.name}?`,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": `While initial improvements can be seen within weeks, significant results in ${cityData.name}'s competitive real estate market typically take 3-6 months. We focus on sustainable, long-term growth that continues to deliver results.`
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* CTA Section - Always Last */}
       <div className="bg-white py-16 sm:py-24">
