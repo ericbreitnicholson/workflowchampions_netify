@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: CityParams }): Prom
   const cityData = county.cities.find(c => c.slug === params.city)
   if (!cityData) return notFound()
 
-  const title = `${cityData.name} Real Estate SEO Services | Top-Rated Agency | Workflow Champions`
+  const title = `Best SEO Services in ${cityData.name} - Workflow Champions`
   const description = `Expert Real Estate SEO services in ${cityData.name}, ${county.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents in ${cityData.name}. Free consultation.`
   const keywords = `${cityData.name.toLowerCase()} real estate seo, ${cityData.name.toLowerCase()} realtor marketing, ${cityData.name.toLowerCase()} real estate agent seo, local seo ${cityData.name.toLowerCase()}, ${state.name.toLowerCase()} real estate marketing, seo services ${cityData.name.toLowerCase()}, best seo company in ${cityData.name.toLowerCase()}`
 

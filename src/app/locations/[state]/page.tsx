@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: { params: StateParams }): Pro
   const state = stateData[params.state]
   if (!state) return notFound()
 
-  const title = `${state.name} Real Estate SEO Services | Top-Rated Agency | Workflow Champions`
+  const title = `Best SEO Services in ${state.name} - Workflow Champions`
   const description = `Expert Real Estate SEO services in ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents across ${state.name}. Free consultation.`
   const keywords = `${state.name.toLowerCase()} real estate seo, ${state.name.toLowerCase()} realtor marketing, ${state.name.toLowerCase()} real estate agent seo, local seo ${state.name.toLowerCase()}, real estate marketing ${state.name.toLowerCase()}, seo services ${state.name.toLowerCase()}, best seo company in ${state.name.toLowerCase()}`
   const canonicalUrl = `https://workflowchampions.com/locations/${params.state}`

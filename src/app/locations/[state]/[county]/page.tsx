@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: { params: CountyParams }): Pr
   const county = state.counties.find((c: County) => c.slug === params.county)
   if (!county) return notFound()
 
-  const title = `${county.name} County Real Estate SEO Services | Workflow Champions`
+  const title = `Best SEO Services in ${county.name} County - Workflow Champions`
   const description = `Expert Real Estate SEO services in ${county.name} County, ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents. Free consultation.`
   const keywords = `${county.name.toLowerCase()} county real estate seo, ${county.name.toLowerCase()} county realtor marketing, ${state.name.toLowerCase()} real estate seo, local seo ${county.name.toLowerCase()}, real estate marketing ${state.name.toLowerCase()}`
   const canonicalUrl = `https://workflowchampions.com/locations/${params.state}/${params.county}`
