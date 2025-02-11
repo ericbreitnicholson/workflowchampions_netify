@@ -1,8 +1,21 @@
 'use client'
 
+import { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Link from 'next/link'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: 'About Workflow Champions - Real Estate SEO Experts',
+  description: 'Learn about Workflow Champions, your trusted partner in real estate SEO. We help agents and realtors dominate their local markets with proven strategies.',
+  robots: {
+    index: true,
+    follow: true
+  },
+  alternates: {
+    canonical: 'https://workflowchampions.com/about'
+  }
+}
 
 export default function About() {
   return (

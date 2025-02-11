@@ -4,8 +4,15 @@ import Navigation from '@/components/Navigation'
 import { stateData } from '../locations/[state]/page'
 
 export const metadata: Metadata = {
-  title: 'Sitemap | Workflow Champions',
-  description: 'Complete sitemap of Workflow Champions website, listing all our pages and services.',
+  title: 'Sitemap - Workflow Champions',
+  description: 'Browse our complete website sitemap to find all pages and resources on Workflow Champions, your trusted real estate SEO partner.',
+  robots: {
+    index: true,
+    follow: true
+  },
+  alternates: {
+    canonical: 'https://workflowchampions.com/sitemap'
+  }
 }
 
 export default function SitemapPage() {
