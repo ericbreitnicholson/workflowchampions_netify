@@ -255,23 +255,18 @@ export default function CityPage({ params }: { params: CityParams }) {
                   {county.name}
                 </Link>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
-                #1 Real Estate SEO Agency in {cityData.name}
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-8">
+                Best SEO Services in {cityData.name}
               </h1>
               <p className="text-lg leading-8 mb-8 text-gray-200">
-                Dominate {cityData.name} real estate searches with our proven SEO strategies. We help agents and realtors attract quality leads and grow their business. Ranked as the top SEO agency in {county.name} with guaranteed results.
+                {cityData.description}
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link
-                  href="https://calendly.com/eric-workflowchampions/30min"
-                  className="btn-primary text-lg px-8 py-4"
-                >
-                  Get Your {cityData.name} SEO Strategy
-                </Link>
-                <p className="text-sm text-gray-300">
-                  100% Satisfaction Guarantee - No Rankings, No Payment
-                </p>
-              </div>
+              <Link
+                href="https://calendly.com/eric-workflowchampions/30min"
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Get Your {cityData.name} SEO Strategy
+              </Link>
             </div>
           </div>
         </div>

@@ -232,10 +232,10 @@ export default function StatePage({ params }: { params: StateParams }) {
                   ← Back to All Locations
                 </Link>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-8">
                 Best SEO Services in {state.name}
               </h1>
-              <p className="text-lg leading-8 mb-8">
+              <p className="text-lg leading-8 mb-8 text-gray-200">
                 {state.description}
               </p>
               <Link

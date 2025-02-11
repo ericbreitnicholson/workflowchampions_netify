@@ -199,10 +199,10 @@ export default function CountyPage({ params }: { params: CountyParams }) {
                   ← Back to {state.name}
                 </Link>
               </div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-6xl mb-8">
+              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-8">
                 Best SEO Services in {county.name}
               </h1>
-              <p className="text-lg leading-8 mb-8">
+              <p className="text-lg leading-8 mb-8 text-gray-200">
                 {county.description}
               </p>
               <Link
