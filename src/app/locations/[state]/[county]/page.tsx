@@ -27,9 +27,37 @@ export async function generateMetadata({ params }: { params: CountyParams }): Pr
   const county = state.counties.find((c: County) => c.slug === params.county)
   if (!county) return notFound()
 
+  const title = `${county.name} County Real Estate SEO Services | Workflow Champions`
+  const description = `Expert Real Estate SEO services in ${county.name} County, ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents. Free consultation.`
+  const keywords = `${county.name.toLowerCase()} county real estate seo, ${county.name.toLowerCase()} county realtor marketing, ${state.name.toLowerCase()} real estate seo, local seo ${county.name.toLowerCase()}, real estate marketing ${state.name.toLowerCase()}`
+  const canonicalUrl = `https://workflowchampions.com/locations/${params.state}/${params.county}`
+
   return {
-    title: `Best SEO Services in ${county.name} | Workflow Champions`,
-    description: `Find local Real Estate SEO services in ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      images: [
+        {
+          url: county.image || state.image,
+          width: 1200,
+          height: 630,
+          alt: `${county.name} County Real Estate Market - Workflow Champions SEO Services`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [county.image || state.image],
+    },
+    alternates: {
+      canonical: canonicalUrl
+    }
   }
 }
 

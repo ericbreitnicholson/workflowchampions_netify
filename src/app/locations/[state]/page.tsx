@@ -63,9 +63,41 @@ export async function generateMetadata({ params }: { params: StateParams }): Pro
   const state = stateData[params.state]
   if (!state) return notFound()
 
+  const title = `${state.name} Real Estate SEO Services | Top-Rated Agency | Workflow Champions`
+  const description = `Expert Real Estate SEO services in ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents across ${state.name}. Free consultation.`
+  const keywords = `${state.name.toLowerCase()} real estate seo, ${state.name.toLowerCase()} realtor marketing, ${state.name.toLowerCase()} real estate agent seo, local seo ${state.name.toLowerCase()}, real estate marketing ${state.name.toLowerCase()}, seo services ${state.name.toLowerCase()}, best seo company in ${state.name.toLowerCase()}`
+  const canonicalUrl = `https://workflowchampions.com/locations/${params.state}`
+
   return {
-    title: `Best SEO Services in ${state.name} | Workflow Champions`,
-    description: `Find local Real Estate SEO services in ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
+    title,
+    description,
+    keywords,
+    openGraph: {
+      title,
+      description,
+      url: canonicalUrl,
+      images: [
+        {
+          url: state.image,
+          width: 1200,
+          height: 630,
+          alt: `${state.name} Real Estate Market - Workflow Champions SEO Services`,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+      siteName: 'Workflow Champions',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [state.image],
+      site: '@workflowchamps',
+    },
+    alternates: {
+      canonical: canonicalUrl
+    }
   }
 }
 
