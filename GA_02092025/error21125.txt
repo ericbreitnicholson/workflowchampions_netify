@@ -1,0 +1,124 @@
+Building
+Failed
+12:30:22 AM: Netlify Build                                                 
+12:30:22 AM: ────────────────────────────────────────────────────────────────
+12:30:22 AM: ​
+12:30:22 AM: ❯ Version
+12:30:22 AM:   @netlify/build 29.58.9
+12:30:22 AM: ​
+12:30:22 AM: ❯ Flags
+12:30:22 AM:   accountId: 67809af97bd20ffefe0e092e
+12:30:22 AM:   baseRelDir: true
+12:30:22 AM:   buildId: 67aae048ccd1060008407d2f
+12:30:22 AM:   deployId: 67aae048ccd1060008407d31
+12:30:22 AM: ​
+12:30:22 AM: ❯ Current directory
+12:30:22 AM:   /opt/build/repo
+12:30:22 AM: ​
+12:30:22 AM: ❯ Config file
+12:30:22 AM:   /opt/build/repo/netlify.toml
+12:30:22 AM: ​
+12:30:22 AM: ❯ Context
+12:30:22 AM:   deploy-preview
+12:30:23 AM: ​
+12:30:23 AM: ❯ Using Next.js Runtime - v5.9.4
+12:30:24 AM: Next.js cache restored
+12:30:24 AM: ​
+12:30:24 AM: build.command from netlify.toml                               
+12:30:24 AM: ────────────────────────────────────────────────────────────────
+12:30:24 AM: ​
+12:30:24 AM: $ npm run build
+12:30:24 AM: > realestate-seo-agency@1.0.0 build
+12:30:24 AM: > next build
+12:30:24 AM:    ▲ Next.js 14.1.0
+12:30:24 AM:    Creating an optimized production build ...
+12:30:25 AM:  ⚠ Found lockfile missing swc dependencies, run next locally to automatically patch
+12:30:27 AM: Failed to compile.
+12:30:27 AM: 
+12:30:27 AM: ./src/app/about/page.tsx
+12:30:27 AM: Error:
+12:30:27 AM:   x You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/
+12:30:27 AM:   | docs/getting-started/react-essentials#the-use-client-directive
+12:30:27 AM:   |
+12:30:27 AM:   |
+12:30:27 AM:     ,-[/opt/build/repo/src/app/about/page.tsx:5:1]
+12:30:27 AM:   5 | import Link from 'next/link'
+12:30:27 AM:   6 | import Image from 'next/image'
+12:30:27 AM:   7 |
+12:30:27 AM:   8 | export const metadata: Metadata = {
+12:30:27 AM:     :              ^^^^^^^^
+12:30:27 AM:   9 |   title: 'About Workflow Champions - Real Estate SEO Experts',
+12:30:27 AM:  10 |   description: 'Learn about Workflow Champions, your trusted partner in real estate SEO. We help agents and realtors dominate their local markets with proven strategies.',
+12:30:27 AM:  11 |   robots: {
+12:30:27 AM:     `----
+
+Import trace for requested module:
+./src/app/about/page.tsx
+
+./src/app/contact/page.tsx
+Error: 
+  x You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/
+  | docs/getting-started/react-essentials#the-use-client-directive
+  | 
+  | 
+    ,-[/opt/build/repo/src/app/contact/page.tsx:6:1]
+  6 | import Script from 'next/script'
+  7 | import Link from 'next/link'
+  8 | 
+  9 | export const metadata: Metadata = {
+    :              ^^^^^^^^
+ 10 |   title: 'Contact Workflow Champions - Get Your SEO Strategy',
+ 11 |   description: 'Contact Workflow Champions for expert real estate SEO services. Schedule a free consultation and learn how we can help you dominate your local market.',
+ 12 |   robots: {
+    `----
+12:30:27 AM: Import trace for requested module:
+12:30:27 AM: ./src/app/contact/page.tsx
+12:30:27 AM: ./src/app/services/page.tsx
+12:30:27 AM: Error:
+12:30:27 AM:   x You are attempting to export "metadata" from a component marked with "use client", which is disallowed. Either remove the export, or the "use client" directive. Read more: https://nextjs.org/
+12:30:27 AM:   | docs/getting-started/react-essentials#the-use-client-directive
+12:30:27 AM:   |
+12:30:27 AM:   |
+12:30:27 AM:     ,-[/opt/build/repo/src/app/services/page.tsx:65:1]
+12:30:27 AM:  65 |   }
+12:30:27 AM:  66 | ]
+12:30:27 AM:  67 |
+12:30:27 AM:  68 | export const metadata: Metadata = {
+12:30:27 AM:     :              ^^^^^^^^
+12:30:27 AM:  69 |   title: 'Real Estate SEO Services - Workflow Champions',
+12:30:27 AM:  70 |   description: 'Explore our comprehensive real estate SEO services. From local SEO to content optimization, we help agents and realtors dominate their markets.',
+12:30:27 AM:  71 |   robots: {
+12:30:27 AM:     `----
+
+Import trace for requested module:
+./src/app/services/page.tsx
+12:30:27 AM: > Build failed because of webpack errors
+12:30:27 AM: ​
+12:30:27 AM: "build.command" failed                                        
+12:30:27 AM: ────────────────────────────────────────────────────────────────
+12:30:27 AM: ​
+12:30:27 AM:   Error message
+12:30:27 AM:   Command failed with exit code 1: npm run build (https://ntl.fyi/exit-code-1)
+12:30:27 AM: ​
+12:30:27 AM:   Error location
+12:30:27 AM:   In build.command from netlify.toml:
+12:30:27 AM:   npm run build
+12:30:27 AM: ​
+12:30:27 AM:   Resolved config
+12:30:27 AM:   build:
+12:30:27 AM:     command: npm run build
+12:30:27 AM:     commandOrigin: config
+12:30:27 AM:     environment:
+12:30:27 AM:       - NEXT_PUBLIC_WORDPRESS_API_URL
+12:30:27 AM:       - REVIEW_ID
+12:30:27 AM:       - NETLIFY_NEXT_PLUGIN_SKIP
+12:30:27 AM:     publish: /opt/build/repo/.next
+12:30:27 AM:     publishOrigin: config
+12:30:27 AM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+12:30:27 AM:   plugins:
+12:30:27 AM:     - inputs: {}
+12:30:27 AM:       origin: config
+12:30:27 AM:       package: '@netlify/plugin-nextjs'
+12:30:27 AM: Build failed due to a user error: Build script returned non-zero exit code: 2
+12:30:27 AM: Failing build: Failed to build site
+12:30:27 AM: Finished processing build request in 33.198s

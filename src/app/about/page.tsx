@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from 'next'
 import Navigation from '@/components/Navigation'
 import Link from 'next/link'

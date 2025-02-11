@@ -5,7 +5,9 @@ import Navigation from '@/components/Navigation'
 import Script from 'next/script'
 import Link from 'next/link'
 
-export default function ContactForm() {
+interface ContactFormProps {}
+
+const ContactForm: React.FC<ContactFormProps> = () => {
   useEffect(() => {
     // Initialize Calendly widget when component mounts
     const script = document.createElement('script')
@@ -38,4 +40,6 @@ export default function ContactForm() {
       </div>
     </>
   )
-} 
+}
+
+export default ContactForm 
