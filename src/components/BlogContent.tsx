@@ -18,10 +18,11 @@ export default function BlogContent() {
       try {
         setLoading(true)
         setError(null)
+        
         const { data } = await client.query({
           query: POSTS_QUERY,
           variables: { first: 10 },
-          fetchPolicy: 'network-only' // Force fetch from network
+          fetchPolicy: 'network-only'
         })
         
         if (data?.posts?.nodes) {
@@ -29,7 +30,7 @@ export default function BlogContent() {
         } else {
           setError('No posts found')
         }
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error fetching posts:', error)
         setError('Failed to load posts. Please try again later.')
       } finally {
@@ -76,7 +77,7 @@ export default function BlogContent() {
               <p className="text-red-600">{error}</p>
               <button
                 onClick={() => window.location.reload()}
-                className="mt-4 btn-primary"
+                className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
               >
                 Try Again
               </button>
@@ -99,14 +100,16 @@ export default function BlogContent() {
                     <time dateTime={post.date} className="text-gray-500">
                       {format(new Date(post.date), 'MMMM d, yyyy')}
                     </time>
-                    {post.categories?.nodes.map((category) => (
-                      <span
-                        key={category.id}
-                        className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600"
-                      >
-                        {category.name}
-                      </span>
-                    ))}
+                    {post.categories?.nodes && post.categories.nodes.length > 0 && (
+                      post.categories.nodes.map((category) => (
+                        <span
+                          key={category.id}
+                          className="relative z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-gray-600"
+                        >
+                          {category.name}
+                        </span>
+                      ))
+                    )}
                   </div>
                   <div className="group relative">
                     <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">

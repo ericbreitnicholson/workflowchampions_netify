@@ -1,11 +1,25 @@
 import { ApolloClient, InMemoryCache, createHttpLink } from '@apollo/client';
 import { gql } from '@apollo/client/core';
 
-const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL || 'https://workflowchampions.com/graphql';
+const WORDPRESS_API_URL = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+
+if (!WORDPRESS_API_URL) {
+  throw new Error('NEXT_PUBLIC_WORDPRESS_API_URL is not defined in environment variables');
+}
+
+// Create the Apollo Client with proper configuration
+const httpLink = createHttpLink({
+  uri: WORDPRESS_API_URL
+});
+
+const client = new ApolloClient({
+  link: httpLink,
+  cache: new InMemoryCache()
+});
 
 // Test query to verify connection
 export const TEST_QUERY = gql`
-  query TestConnection {
+  query TestQuery {
     generalSettings {
       title
       url
@@ -15,24 +29,42 @@ export const TEST_QUERY = gql`
 
 // Function to test the connection
 export async function testConnection() {
+  if (!WORDPRESS_API_URL) {
+    throw new Error('WordPress API URL is not defined');
+  }
+
   try {
-    const result = await client.query({
-      query: TEST_QUERY
+    console.log('Testing connection to:', WORDPRESS_API_URL);
+    const result = await fetch(WORDPRESS_API_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        query: `
+          query TestQuery {
+            generalSettings {
+              title
+              url
+            }
+          }
+        `
+      })
     });
-    return result.data;
+    
+    if (!result.ok) {
+      throw new Error(`HTTP error! status: ${result.status}`);
+    }
+    
+    const data = await result.json();
+    console.log('Connection response:', data);
+    return data;
   } catch (error) {
     console.error('WordPress connection error:', error);
     throw error;
   }
 }
-
-// Create the Apollo Client
-const client = new ApolloClient({
-  link: createHttpLink({
-    uri: WORDPRESS_API_URL,
-  }),
-  cache: new InMemoryCache(),
-});
 
 export default client;
 
@@ -56,6 +88,7 @@ export interface WPPost {
   date: string;
   slug: string;
   excerpt: string;
+  status: string;
   featuredImage?: {
     node: {
       sourceUrl: string;
@@ -69,10 +102,10 @@ export interface WPPost {
       slug: string;
     }[];
   };
-  seo?: {
-    title: string;
-    metaDesc: string;
-    canonical: string;
+  author?: {
+    node: {
+      name: string;
+    };
   };
 }
 
@@ -113,7 +146,7 @@ export const PAGE_QUERY = gql`
 
 export const POSTS_QUERY = gql`
   query GetPosts($first: Int!) {
-    posts(first: $first) {
+    posts(first: $first, where: { status: PUBLISH }) {
       nodes {
         id
         title
@@ -121,6 +154,7 @@ export const POSTS_QUERY = gql`
         date
         slug
         excerpt
+        status
         featuredImage {
           node {
             sourceUrl
@@ -134,10 +168,10 @@ export const POSTS_QUERY = gql`
             slug
           }
         }
-        seo {
-          title
-          metaDesc
-          canonical
+        author {
+          node {
+            name
+          }
         }
       }
     }
