@@ -323,38 +323,6 @@ export default function StatePage({ params }: { params: StateParams }) {
       {/* Main Content Sections - Randomly Ordered */}
       {mainSections}
 
-      {/* Local Business Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": `Workflow Champions - ${state.name} Real Estate SEO Services`,
-            "description": `Expert Real Estate SEO services in ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
-            "url": `https://workflowchampions.com/locations/${params.state}`,
-            "image": {
-              "@type": "ImageObject",
-              "url": state.image,
-              "width": 1200,
-              "height": 630,
-              "caption": `${state.name} Real Estate Market - Workflow Champions SEO Services`,
-              "inLanguage": "en-US"
-            },
-            "areaServed": {
-              "@type": "State",
-              "name": state.name
-            },
-            "priceRange": "$$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "27"
-            }
-          })
-        }}
-      />
-
       {/* CTA Section - Always Last */}
       <div className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -337,54 +337,6 @@ export default function CityPage({ params }: { params: CityParams }) {
       {/* Main Content Sections - Randomly Ordered */}
       {mainSections}
 
-      {/* Local Business Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": `Workflow Champions - ${cityData.name} Real Estate SEO Services`,
-            "description": `Expert Real Estate SEO services in ${cityData.name}, ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
-            "url": `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}`,
-            "image": {
-              "@type": "ImageObject",
-              "url": cityData.image || county.image || state.image,
-              "width": 1200,
-              "height": 630,
-              "caption": `${cityData.name} Real Estate Market - Workflow Champions SEO Services`,
-              "inLanguage": "en-US"
-            },
-            "areaServed": {
-              "@type": "City",
-              "name": cityData.name,
-              "containedInPlace": {
-                "@type": "AdministrativeArea",
-                "name": county.name,
-                "containedInPlace": {
-                  "@type": "State",
-                  "name": state.name
-                }
-              }
-            },
-            "priceRange": "$$",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "27"
-            },
-            "makesOffer": cityData.marketStats.map(stat => ({
-              "@type": "Offer",
-              "itemOffered": {
-                "@type": "Service",
-                "name": stat.label,
-                "description": stat.description
-              }
-            }))
-          })
-        }}
-      />
-
       {/* FAQ Schema - Enhanced with more relevant questions */}
       <script
         type="application/ld+json"
