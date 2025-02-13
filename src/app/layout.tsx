@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Footer from '@/components/Footer'
 import Script from 'next/script'
+import Breadcrumb from '@/components/Breadcrumb'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -79,7 +80,10 @@ export default function RootLayout({
         
         <div className="flex min-h-full flex-col">
           <main className="flex-grow pt-16">
-            {children}
+            <div className="container mx-auto px-4">
+              <Breadcrumb />
+              {children}
+            </div>
           </main>
           <Footer />
         </div>
