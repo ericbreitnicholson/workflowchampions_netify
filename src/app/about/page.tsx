@@ -40,6 +40,14 @@ export default function About() {
       'name': 'Workflow Champions',
       'description': 'Leading Real Estate SEO agency helping agents dominate local search rankings',
       'url': 'https://workflowchampions.com',
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '1758 North Rhodes Street Unit 337',
+        'addressLocality': 'Arlington',
+        'addressRegion': 'VA',
+        'postalCode': '22201',
+        'addressCountry': 'US'
+      },
       'foundingDate': '2024-01-01',
       'knowsAbout': [
         'Real Estate SEO',

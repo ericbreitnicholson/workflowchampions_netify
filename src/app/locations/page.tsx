@@ -602,12 +602,17 @@ export default function LocationsPage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "RealEstateAgent",
+            "@type": "OnlineBusiness",
+            "@id": "https://workflowchampions.com/#organization",
             "name": "Workflow Champions",
             "description": "Expert Real Estate SEO services across the United States. Dominate local searches with proven strategies.",
             "url": "https://workflowchampions.com/locations",
             "address": {
               "@type": "PostalAddress",
+              "streetAddress": "1758 North Rhodes Street Unit 337",
+              "addressLocality": "Arlington",
+              "addressRegion": "VA",
+              "postalCode": "22201",
               "addressCountry": "US"
             },
             "aggregateRating": {

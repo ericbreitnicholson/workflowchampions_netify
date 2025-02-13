@@ -49,46 +49,101 @@ export default function Home() {
     },
     'primaryImageOfPage': {
       '@type': 'ImageObject',
+      '@id': 'https://workflowchampions.com/#primaryimage',
       'url': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa',
       'width': 2070,
-      'height': 1380
-    },
-    'about': {
-      '@type': 'Thing',
-      'name': 'Real Estate SEO Services',
-      'description': 'Professional SEO services for real estate agents and brokers'
+      'height': 1380,
+      'caption': 'Modern real estate building representing Workflow Champions professional services'
     },
     'mainEntity': {
       '@type': 'ProfessionalService',
+      '@id': 'https://workflowchampions.com/#business',
       'name': 'Workflow Champions',
       'description': metadata.description,
       'url': 'https://workflowchampions.com',
-      'provider': {
-        '@type': 'OnlineBusiness',
-        '@id': 'https://workflowchampions.com/#organization'
+      'image': {
+        '@type': 'ImageObject',
+        '@id': 'https://workflowchampions.com/#logo',
+        'url': 'https://workflowchampions.com/logo.png',
+        'width': '512',
+        'height': '512'
       },
+      'priceRange': '$$',
       'areaServed': {
         '@type': 'Country',
         'name': 'United States'
       },
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '1758 North Rhodes Street Unit 337',
+        'addressLocality': 'Arlington',
+        'addressRegion': 'VA',
+        'postalCode': '22201',
+        'addressCountry': 'US'
+      },
+      'serviceType': [
+        'SEO Services',
+        'Digital Marketing',
+        'Content Strategy',
+        'Website Optimization'
+      ],
+      'makesOffer': [
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Real Estate SEO Services',
+            'description': 'Dominate your local real estate market with our award-winning SEO strategies',
+            'provider': {
+              '@type': 'OnlineBusiness',
+              '@id': 'https://workflowchampions.com/#organization'
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Website Optimization Services',
+            'description': 'Comprehensive website optimization services for real estate professionals',
+            'provider': {
+              '@type': 'OnlineBusiness',
+              '@id': 'https://workflowchampions.com/#organization'
+            }
+          }
+        },
+        {
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': 'Content Strategy Services',
+            'description': 'Strategic content creation and optimization for real estate websites',
+            'provider': {
+              '@type': 'OnlineBusiness',
+              '@id': 'https://workflowchampions.com/#organization'
+            }
+          }
+        }
+      ],
       'hasOfferCatalog': {
         '@type': 'OfferCatalog',
-        'name': 'Real Estate SEO Services',
+        'name': 'SEO Services',
         'itemListElement': [
           {
             '@type': 'Offer',
             'itemOffered': {
               '@type': 'Service',
-              'name': 'Local SEO for Real Estate',
+              'name': 'Real Estate SEO Services',
               'description': 'Dominate your local real estate market with our award-winning SEO strategies'
-            },
-            'offeredBy': {
-              '@type': 'OnlineBusiness',
-              '@id': 'https://workflowchampions.com/#organization'
             }
           }
         ]
-      }
+      },
+      'sameAs': [
+        'https://www.linkedin.com/company/workflow-champions',
+        'https://twitter.com/workflowchamps',
+        'https://www.facebook.com/workflowchampions'
+      ]
     }
   };
 

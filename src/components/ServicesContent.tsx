@@ -304,8 +304,17 @@ export default function ServicesContent() {
             "@type": "Service",
             "name": "Real Estate SEO Services",
             "provider": {
-              "@type": "Organization",
+              "@type": "OnlineBusiness",
+              "@id": "https://workflowchampions.com/#organization",
               "name": "Workflow Champions",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "1758 North Rhodes Street Unit 337",
+                "addressLocality": "Arlington",
+                "addressRegion": "VA",
+                "postalCode": "22201",
+                "addressCountry": "US"
+              },
               "logo": {
                 "@type": "ImageObject",
                 "url": "https://workflowchampions.com/logo.png",

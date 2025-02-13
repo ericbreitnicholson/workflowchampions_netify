@@ -41,68 +41,81 @@ export default function RootLayout({
 }) {
   const baseSchema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': 'https://workflowchampions.com/#webpage',
+    '@type': 'WebSite',
+    '@id': 'https://workflowchampions.com/#website',
     'url': 'https://workflowchampions.com',
-    'name': metadata.title,
-    'description': metadata.description,
-    'inLanguage': 'en-US',
-    'isPartOf': {
-      '@type': 'WebSite',
-      '@id': 'https://workflowchampions.com/#website',
-      'url': 'https://workflowchampions.com',
+    'name': 'Workflow Champions',
+    'description': 'Leading Real Estate SEO Agency',
+    'publisher': {
+      '@type': 'OnlineBusiness',
+      '@id': 'https://workflowchampions.com/#organization',
       'name': 'Workflow Champions',
-      'description': 'Leading Real Estate SEO Agency',
-      'publisher': {
-        '@type': 'OnlineBusiness',
-        '@id': 'https://workflowchampions.com/#organization',
-        'name': 'Workflow Champions',
-        'url': 'https://workflowchampions.com',
-        'logo': {
-          '@type': 'ImageObject',
-          '@id': 'https://workflowchampions.com/#logo',
-          'url': 'https://workflowchampions.com/logo.png',
-          'contentUrl': 'https://workflowchampions.com/logo.png',
-          'width': '512',
-          'height': '512'
-        },
-        'description': 'Leading Real Estate SEO Agency specializing in helping real estate professionals dominate their local markets',
-        'sameAs': [
-          'https://www.linkedin.com/company/workflow-champions',
-          'https://twitter.com/workflowchamps',
-          'https://www.facebook.com/workflowchampions'
-        ],
-        'address': {
-          '@type': 'PostalAddress',
-          'addressCountry': 'US',
-          'addressRegion': 'CA'
-        },
-        'contactPoint': {
+      'url': 'https://workflowchampions.com',
+      'logo': {
+        '@type': 'ImageObject',
+        '@id': 'https://workflowchampions.com/#logo',
+        'url': 'https://workflowchampions.com/logo.png',
+        'contentUrl': 'https://workflowchampions.com/logo.png',
+        'width': '512',
+        'height': '512',
+        'caption': 'Workflow Champions - Leading Real Estate SEO Agency'
+      },
+      'description': 'Leading Real Estate SEO Agency specializing in helping real estate professionals dominate their local markets',
+      'sameAs': [
+        'https://www.linkedin.com/company/workflow-champions',
+        'https://twitter.com/workflowchamps',
+        'https://www.facebook.com/workflowchampions'
+      ],
+      'address': {
+        '@type': 'PostalAddress',
+        'streetAddress': '1758 North Rhodes Street Unit 337',
+        'addressLocality': 'Arlington',
+        'addressRegion': 'VA',
+        'postalCode': '22201',
+        'addressCountry': 'US'
+      },
+      'contactPoint': [
+        {
           '@type': 'ContactPoint',
           'contactType': 'customer service',
           'email': 'support@workflowchampions.com',
           'url': 'https://workflowchampions.com/contact'
         },
-        'foundingDate': '2024-01-01',
-        'areaServed': {
-          '@type': 'Country',
-          'name': 'United States'
-        },
-        'priceRange': '$$',
-        'knowsAbout': [
-          'Real Estate SEO',
-          'Digital Marketing',
-          'Local SEO',
-          'Content Strategy',
-          'Website Optimization'
-        ]
-      }
+        {
+          '@type': 'ContactPoint',
+          'contactType': 'sales',
+          'email': 'sales@workflowchampions.com',
+          'url': 'https://workflowchampions.com/contact'
+        }
+      ],
+      'foundingDate': '2024-01-01',
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'United States'
+      },
+      'priceRange': '$$',
+      'knowsAbout': [
+        'Real Estate SEO',
+        'Digital Marketing',
+        'Local SEO',
+        'Content Strategy',
+        'Website Optimization'
+      ],
+      'award': [
+        {
+          '@type': 'Award',
+          'name': 'Best Real Estate SEO Agency 2024',
+          'description': 'Recognized for excellence in real estate digital marketing'
+        }
+      ]
     },
-    'datePublished': '2024-01-01T00:00:00+00:00',
-    'dateModified': new Date().toISOString(),
-    'breadcrumb': {
-      '@type': 'BreadcrumbList',
-      '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/#breadcrumb`
+    'potentialAction': {
+      '@type': 'SearchAction',
+      'target': {
+        '@type': 'EntryPoint',
+        'urlTemplate': 'https://workflowchampions.com/search?q={search_term_string}'
+      },
+      'query-input': 'required name=search_term_string'
     }
   };
 

@@ -36,13 +36,15 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/#breadcrumb`,
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://workflowchampions.com'}/#breadcrumb`,
     'itemListElement': [
       {
         '@type': 'ListItem',
         'position': 1,
         'item': {
-          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/`,
+          '@type': 'WebPage',
+          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://workflowchampions.com'}/`,
+          'url': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://workflowchampions.com'}/`,
           'name': 'Home'
         }
       },
@@ -50,7 +52,9 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
         '@type': 'ListItem',
         'position': index + 2,
         'item': {
-          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}${crumb.href}`,
+          '@type': 'WebPage',
+          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://workflowchampions.com'}${crumb.href}`,
+          'url': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://workflowchampions.com'}${crumb.href}`,
           'name': crumb.label
         }
       }))

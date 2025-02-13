@@ -40,8 +40,17 @@ export default function Services() {
           'name': 'AI-Powered Search Dominance',
           'description': 'Stay ahead of your competition by dominating both traditional search results and emerging AI platforms.',
           'provider': {
-            '@type': 'Organization',
-            'name': 'Workflow Champions'
+            '@type': 'OnlineBusiness',
+            '@id': 'https://workflowchampions.com/#organization',
+            'name': 'Workflow Champions',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': '1758 North Rhodes Street Unit 337',
+              'addressLocality': 'Arlington',
+              'addressRegion': 'VA',
+              'postalCode': '22201',
+              'addressCountry': 'US'
+            }
           },
           'serviceType': 'Real Estate SEO',
           'offers': {
@@ -63,8 +72,17 @@ export default function Services() {
           'name': 'Local Market Domination',
           'description': 'Own your local market and become the go-to agent in your area.',
           'provider': {
-            '@type': 'Organization',
-            'name': 'Workflow Champions'
+            '@type': 'OnlineBusiness',
+            '@id': 'https://workflowchampions.com/#organization',
+            'name': 'Workflow Champions',
+            'address': {
+              '@type': 'PostalAddress',
+              'streetAddress': '1758 North Rhodes Street Unit 337',
+              'addressLocality': 'Arlington',
+              'addressRegion': 'VA',
+              'postalCode': '22201',
+              'addressCountry': 'US'
+            }
           },
           'serviceType': 'Local SEO',
           'hasOfferCatalog': {

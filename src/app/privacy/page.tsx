@@ -32,9 +32,18 @@ export default function Page() {
       'name': 'Privacy Policy',
       'description': metadata.description,
       'publisher': {
-        '@type': 'Organization',
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization',
         'name': 'Workflow Champions',
-        'url': 'https://workflowchampions.com'
+        'url': 'https://workflowchampions.com',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': '1758 North Rhodes Street Unit 337',
+          'addressLocality': 'Arlington',
+          'addressRegion': 'VA',
+          'postalCode': '22201',
+          'addressCountry': 'US'
+        }
       },
       'datePublished': '2024-01-01T00:00:00+00:00',
       'dateModified': new Date().toISOString()

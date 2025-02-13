@@ -31,9 +31,18 @@ export default function Contact() {
       'name': 'Contact Workflow Champions',
       'description': metadata.description,
       'provider': {
-        '@type': 'Organization',
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization',
         'name': 'Workflow Champions',
-        'url': 'https://workflowchampions.com'
+        'url': 'https://workflowchampions.com',
+        'address': {
+          '@type': 'PostalAddress',
+          'streetAddress': '1758 North Rhodes Street Unit 337',
+          'addressLocality': 'Arlington',
+          'addressRegion': 'VA',
+          'postalCode': '22201',
+          'addressCountry': 'US'
+        }
       },
       'mainEntityOfPage': {
         '@type': 'WebPage',
