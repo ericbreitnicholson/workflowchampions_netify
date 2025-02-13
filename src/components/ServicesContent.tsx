@@ -307,7 +307,6 @@ export default function ServicesContent() {
               "@type": "Organization",
               "name": "Workflow Champions"
             },
-            "serviceType": "Search Engine Optimization",
             "areaServed": "United States",
             "description": "Comprehensive SEO solutions designed specifically for real estate professionals.",
             "hasOfferCatalog": {

@@ -299,7 +299,6 @@ export default function CityPage({ params }: { params: CityParams }) {
               }
             },
             "priceRange": "$$",
-            "serviceType": ["Real Estate SEO", "Local SEO", "Digital Marketing"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",

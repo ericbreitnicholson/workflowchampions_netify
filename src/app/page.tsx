@@ -229,7 +229,6 @@ export default function Home() {
               "name": "United States"
             },
             "priceRange": "$$",
-            "serviceType": ["Real Estate SEO", "Digital Marketing", "Local SEO"],
             "knowsAbout": [
               "Real Estate SEO",
               "Local Search Optimization",
