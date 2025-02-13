@@ -285,7 +285,14 @@ export default function CityPage({ params }: { params: CityParams }) {
             "name": `Workflow Champions - ${cityData.name} Real Estate SEO Services`,
             "description": `Expert Real Estate SEO services in ${cityData.name}, ${county.name}, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
             "url": `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}`,
-            "image": cityData.image || county.image || state.image,
+            "image": {
+              "@type": "ImageObject",
+              "url": cityData.image || county.image || state.image,
+              "width": 1200,
+              "height": 630,
+              "caption": `${cityData.name} Real Estate Market - Workflow Champions SEO Services`,
+              "inLanguage": "en-US"
+            },
             "areaServed": {
               "@type": "City",
               "name": cityData.name,

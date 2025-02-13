@@ -222,8 +222,22 @@ export default function Home() {
             "name": "Workflow Champions",
             "description": "Leading Real Estate SEO agency helping agents dominate local search rankings. Our proven SEO strategies help realtors attract more leads and outrank competitors.",
             "url": "https://workflowchampions.com",
-            "logo": "https://workflowchampions.com/logo.png",
-            "image": "https://workflowchampions.com/og-image.jpg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://workflowchampions.com/logo.png",
+              "width": 180,
+              "height": 60,
+              "caption": "Workflow Champions Logo",
+              "inLanguage": "en-US"
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://workflowchampions.com/og-image.jpg",
+              "width": 1200,
+              "height": 630,
+              "caption": "Workflow Champions - Real Estate SEO Services",
+              "inLanguage": "en-US"
+            },
             "areaServed": {
               "@type": "Country",
               "name": "United States"
@@ -245,7 +259,15 @@ export default function Home() {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Local Search Dominance",
-                    "description": "Optimize your presence for local real estate searches and capture more leads"
+                    "description": "Optimize your presence for local real estate searches and capture more leads",
+                    "image": {
+                      "@type": "ImageObject",
+                      "url": benefits[0].image,
+                      "width": 870,
+                      "height": 580,
+                      "caption": "Local Search Dominance - Real Estate SEO",
+                      "inLanguage": "en-US"
+                    }
                   }
                 },
                 {
@@ -253,7 +275,15 @@ export default function Home() {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Content That Converts",
-                    "description": "SEO-optimized content creation for real estate professionals"
+                    "description": "SEO-optimized content creation for real estate professionals",
+                    "image": {
+                      "@type": "ImageObject",
+                      "url": benefits[1].image,
+                      "width": 870,
+                      "height": 580,
+                      "caption": "Content That Converts - Real Estate SEO",
+                      "inLanguage": "en-US"
+                    }
                   }
                 },
                 {
@@ -261,7 +291,15 @@ export default function Home() {
                   "itemOffered": {
                     "@type": "Service",
                     "name": "Technical SEO Excellence",
-                    "description": "Technical optimization for real estate websites"
+                    "description": "Technical optimization for real estate websites",
+                    "image": {
+                      "@type": "ImageObject",
+                      "url": benefits[2].image,
+                      "width": 870,
+                      "height": 580,
+                      "caption": "Technical SEO Excellence - Real Estate SEO",
+                      "inLanguage": "en-US"
+                    }
                   }
                 }
               ]

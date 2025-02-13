@@ -219,6 +219,42 @@ export default function CountyPage({ params }: { params: CountyParams }) {
       {/* Main Content Sections - Randomly Ordered */}
       {mainSections}
 
+      {/* Local Business Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": `Workflow Champions - ${county.name} County Real Estate SEO Services`,
+            "description": `Expert Real Estate SEO services in ${county.name} County, ${state.name}. We help real estate agents dominate their local markets with proven SEO strategies.`,
+            "url": `https://workflowchampions.com/locations/${params.state}/${params.county}`,
+            "image": {
+              "@type": "ImageObject",
+              "url": county.image || state.image,
+              "width": 1200,
+              "height": 630,
+              "caption": `${county.name} County Real Estate Market - Workflow Champions SEO Services`,
+              "inLanguage": "en-US"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": county.name,
+              "containedInPlace": {
+                "@type": "State",
+                "name": state.name
+              }
+            },
+            "priceRange": "$$",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.9",
+              "reviewCount": "27"
+            }
+          })
+        }}
+      />
+
       {/* CTA Section - Always Last */}
       <div className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">

@@ -305,10 +305,26 @@ export default function ServicesContent() {
             "name": "Real Estate SEO Services",
             "provider": {
               "@type": "Organization",
-              "name": "Workflow Champions"
+              "name": "Workflow Champions",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://workflowchampions.com/logo.png",
+                "width": 180,
+                "height": 60,
+                "caption": "Workflow Champions Logo",
+                "inLanguage": "en-US"
+              }
             },
             "areaServed": "United States",
             "description": "Comprehensive SEO solutions designed specifically for real estate professionals.",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://workflowchampions.com/og-image.jpg",
+              "width": 1200,
+              "height": 630,
+              "caption": "Real Estate SEO Services - Workflow Champions",
+              "inLanguage": "en-US"
+            },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Real Estate SEO Services",
@@ -317,7 +333,15 @@ export default function ServicesContent() {
                 "itemOffered": {
                   "@type": "Service",
                   "name": service.category,
-                  "description": service.description
+                  "description": service.description,
+                  "image": {
+                    "@type": "ImageObject",
+                    "url": service.image,
+                    "width": 870,
+                    "height": 580,
+                    "caption": `${service.category} - Real Estate SEO Services`,
+                    "inLanguage": "en-US"
+                  }
                 },
                 "position": index + 1
               }))
