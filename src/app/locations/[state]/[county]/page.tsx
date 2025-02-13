@@ -100,29 +100,35 @@ export default function CountyPage({ params }: { params: CountyParams }) {
       'name': `Real Estate SEO Services in ${county.name} County`,
       'description': `Professional SEO services for real estate agents and brokers in ${county.name} County, ${state.name}`,
       'provider': {
-        '@type': 'Organization',
-        'name': 'Workflow Champions',
-        'url': 'https://workflowchampions.com'
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization'
       },
       'areaServed': {
         '@type': 'AdministrativeArea',
         'name': `${county.name} County`,
         'containedInPlace': {
           '@type': 'State',
-          'name': state.name
+          'name': state.name,
+          'addressCountry': 'US'
         }
       },
       'hasOfferCatalog': {
         '@type': 'OfferCatalog',
-        'name': `${county.name} County Real Estate SEO Services`,
-        'itemListElement': county.cities.slice(0, 3).map(city => ({
-          '@type': 'Offer',
-          'itemOffered': {
-            '@type': 'Service',
-            'name': `Real Estate SEO in ${city.name}`,
-            'description': city.description
+        'name': `Real Estate SEO Services in ${county.name} County`,
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': `Local SEO for Real Estate in ${county.name} County`,
+              'description': `Dominate your local real estate market in ${county.name} County with our award-winning SEO strategies`
+            },
+            'offeredBy': {
+              '@type': 'OnlineBusiness',
+              '@id': 'https://workflowchampions.com/#organization'
+            }
           }
-        }))
+        ]
       }
     },
     'speakable': {

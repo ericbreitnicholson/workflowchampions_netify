@@ -63,6 +63,10 @@ export default function Home() {
       'name': 'Workflow Champions',
       'description': metadata.description,
       'url': 'https://workflowchampions.com',
+      'provider': {
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization'
+      },
       'areaServed': {
         '@type': 'Country',
         'name': 'United States'
@@ -77,6 +81,10 @@ export default function Home() {
               '@type': 'Service',
               'name': 'Local SEO for Real Estate',
               'description': 'Dominate your local real estate market with our award-winning SEO strategies'
+            },
+            'offeredBy': {
+              '@type': 'OnlineBusiness',
+              '@id': 'https://workflowchampions.com/#organization'
             }
           }
         ]

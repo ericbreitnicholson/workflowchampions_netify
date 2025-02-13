@@ -107,9 +107,8 @@ export default function ServicePage({ params }: { params: ServiceParams }) {
       'name': service.category,
       'description': service.description,
       'provider': {
-        '@type': 'Organization',
-        'name': 'Workflow Champions',
-        'url': 'https://workflowchampions.com'
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization'
       },
       'image': {
         '@type': 'ImageObject',
@@ -123,6 +122,10 @@ export default function ServicePage({ params }: { params: ServiceParams }) {
           '@type': 'Service',
           'name': service.category,
           'description': service.description
+        },
+        'offeredBy': {
+          '@type': 'OnlineBusiness',
+          '@id': 'https://workflowchampions.com/#organization'
         }
       },
       'hasOfferCatalog': service.benefits ? {
@@ -132,7 +135,27 @@ export default function ServicePage({ params }: { params: ServiceParams }) {
           '@type': 'Offer',
           'itemOffered': {
             '@type': 'Service',
-            'name': benefit
+            'name': benefit,
+            'description': benefit
+          },
+          'offeredBy': {
+            '@type': 'OnlineBusiness',
+            '@id': 'https://workflowchampions.com/#organization'
+          }
+        }))
+      } : service.outcomes ? {
+        '@type': 'OfferCatalog',
+        'name': `${service.category} Outcomes`,
+        'itemListElement': service.outcomes.map(outcome => ({
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': outcome.name,
+            'description': outcome.description
+          },
+          'offeredBy': {
+            '@type': 'OnlineBusiness',
+            '@id': 'https://workflowchampions.com/#organization'
           }
         }))
       } : undefined

@@ -36,14 +36,24 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    'itemListElement': breadcrumbs.map((crumb, index) => ({
-      '@type': 'ListItem',
-      'position': index + 1,
-      'item': {
-        '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}${crumb.href}`,
-        'name': crumb.label
-      }
-    }))
+    'itemListElement': [
+      {
+        '@type': 'ListItem',
+        'position': 1,
+        'item': {
+          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/`,
+          'name': 'Home'
+        }
+      },
+      ...breadcrumbs.map((crumb, index) => ({
+        '@type': 'ListItem',
+        'position': index + 2,
+        'item': {
+          '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}${crumb.href}`,
+          'name': crumb.label
+        }
+      }))
+    ]
   };
 
   return (

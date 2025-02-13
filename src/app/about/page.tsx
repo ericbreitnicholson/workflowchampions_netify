@@ -35,10 +35,12 @@ export default function About() {
       'height': 800
     },
     'about': {
-      '@type': 'Organization',
+      '@type': 'OnlineBusiness',
+      '@id': 'https://workflowchampions.com/#organization',
       'name': 'Workflow Champions',
       'description': 'Leading Real Estate SEO agency helping agents dominate local search rankings',
-      'foundingDate': '2024',
+      'url': 'https://workflowchampions.com',
+      'foundingDate': '2024-01-01',
       'knowsAbout': [
         'Real Estate SEO',
         'Local Search Optimization',
@@ -49,6 +51,35 @@ export default function About() {
       'areaServed': {
         '@type': 'Country',
         'name': 'United States'
+      },
+      'award': [
+        {
+          '@type': 'Award',
+          'name': 'Top Real Estate SEO Agency 2024',
+          'description': 'Recognized for excellence in real estate digital marketing'
+        }
+      ],
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Real Estate SEO Services',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Local SEO for Real Estate',
+              'description': 'Comprehensive local SEO services for real estate professionals'
+            }
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'AI Search Optimization',
+              'description': 'Advanced AI-powered SEO strategies for modern search'
+            }
+          }
+        ]
       }
     },
     'mainEntity': {

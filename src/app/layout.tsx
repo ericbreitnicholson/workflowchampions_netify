@@ -54,8 +54,10 @@ export default function RootLayout({
       'name': 'Workflow Champions',
       'description': 'Leading Real Estate SEO Agency',
       'publisher': {
-        '@type': 'Organization',
+        '@type': 'OnlineBusiness',
+        '@id': 'https://workflowchampions.com/#organization',
         'name': 'Workflow Champions',
+        'url': 'https://workflowchampions.com',
         'logo': {
           '@type': 'ImageObject',
           '@id': 'https://workflowchampions.com/#logo',
@@ -63,7 +65,37 @@ export default function RootLayout({
           'contentUrl': 'https://workflowchampions.com/logo.png',
           'width': '512',
           'height': '512'
-        }
+        },
+        'description': 'Leading Real Estate SEO Agency specializing in helping real estate professionals dominate their local markets',
+        'sameAs': [
+          'https://www.linkedin.com/company/workflow-champions',
+          'https://twitter.com/workflowchamps',
+          'https://www.facebook.com/workflowchampions'
+        ],
+        'address': {
+          '@type': 'PostalAddress',
+          'addressCountry': 'US',
+          'addressRegion': 'CA'
+        },
+        'contactPoint': {
+          '@type': 'ContactPoint',
+          'contactType': 'customer service',
+          'email': 'support@workflowchampions.com',
+          'url': 'https://workflowchampions.com/contact'
+        },
+        'foundingDate': '2024-01-01',
+        'areaServed': {
+          '@type': 'Country',
+          'name': 'United States'
+        },
+        'priceRange': '$$',
+        'knowsAbout': [
+          'Real Estate SEO',
+          'Digital Marketing',
+          'Local SEO',
+          'Content Strategy',
+          'Website Optimization'
+        ]
       }
     },
     'datePublished': '2024-01-01T00:00:00+00:00',
