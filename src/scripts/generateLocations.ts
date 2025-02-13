@@ -398,7 +398,9 @@ async function generateLocationData(): Promise<void> {
         'texas/harris/houston': 'https://images.unsplash.com/photo-1510623425998-4894a2ad0da9?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'ohio/cuyahoga/lakewood': 'https://images.unsplash.com/photo-1545433243-0a87e3fed9b4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'florida/palm-beach/lake-worth': 'https://images.unsplash.com/photo-1581391534864-5b4d7c038370?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-        'florida/palm-beach/west-palm-beach': 'https://images.unsplash.com/photo-1584677488802-c080664c7c45?q=80&w=2525&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+        'florida/palm-beach/west-palm-beach': 'https://images.unsplash.com/photo-1584677488802-c080664c7c45?q=80&w=2525&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'connecticut/new-london/colchester': 'https://upload.wikimedia.org/wikipedia/commons/2/2d/ColchesterCT_WestchesterCongregationalChurch.jpg',
+        'south-dakota/lincoln/sioux-falls': 'https://upload.wikimedia.org/wikipedia/commons/c/c0/St._Joseph_Cathedral%2C_Sioux_Falls.jpg'
       }
       const locationKey = `${stateSlug}/${countySlug}/${citySlug}`
       const cityImage = cityImages[locationKey] || `https://images.unsplash.com/photo-${Math.floor(Math.random() * 1000000)}?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80`
