@@ -102,7 +102,7 @@ export default function RootLayout({
     'dateModified': new Date().toISOString(),
     'breadcrumb': {
       '@type': 'BreadcrumbList',
-      '@id': 'https://workflowchampions.com/#breadcrumb'
+      '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/#breadcrumb`
     }
   };
 

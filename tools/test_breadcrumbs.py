@@ -30,16 +30,20 @@ def verify_breadcrumb_schema(schema):
     if schema.get('@type') != 'BreadcrumbList':
         return False, "Schema is not of type BreadcrumbList"
     
+    # Check @id
+    if '@id' not in schema:
+        return False, "Schema missing @id"
+    
     items = schema.get('itemListElement', [])
     if not items:
         return False, "No items in breadcrumb list"
     
     # Check each item
-    for item in items:
+    for i, item in enumerate(items, 1):
         if item.get('@type') != 'ListItem':
             return False, f"Item is not of type ListItem: {item}"
-        if 'position' not in item:
-            return False, f"Item missing position: {item}"
+        if item.get('position') != i:
+            return False, f"Item position {item.get('position')} does not match expected position {i}"
         if 'item' not in item:
             return False, f"Item missing item property: {item}"
         if '@id' not in item['item']:

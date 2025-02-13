@@ -36,6 +36,7 @@ export const Breadcrumb: React.FC<BreadcrumbProps> = ({ className = '' }) => {
   const schemaData = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
+    '@id': `${process.env.NEXT_PUBLIC_SITE_URL || 'https://example.com'}/#breadcrumb`,
     'itemListElement': [
       {
         '@type': 'ListItem',
