@@ -77,6 +77,62 @@ export default function CityPage({ params }: { params: CityParams }) {
   const cityData = county.cities.find(c => c.slug === params.city)
   if (!cityData) return notFound()
 
+  const citySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}#webpage`,
+    'url': `https://workflowchampions.com/locations/${params.state}/${params.county}/${params.city}`,
+    'name': `Best SEO Services in ${cityData.name} - Workflow Champions`,
+    'description': `Expert Real Estate SEO services in ${cityData.name}, ${county.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents in ${cityData.name}. Free consultation.`,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website'
+    },
+    'primaryImageOfPage': {
+      '@type': 'ImageObject',
+      'url': cityData.image || county.image || state.image,
+      'width': 1200,
+      'height': 630
+    },
+    'about': {
+      '@type': 'Place',
+      'name': cityData.name,
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': cityData.name,
+        'addressRegion': state.name,
+        'addressCountry': 'US'
+      }
+    },
+    'mainEntity': {
+      '@type': 'Service',
+      'name': `Real Estate SEO Services in ${cityData.name}`,
+      'description': `Professional SEO services for real estate agents and brokers in ${cityData.name}, ${state.name}`,
+      'provider': {
+        '@type': 'Organization',
+        'name': 'Workflow Champions',
+        'url': 'https://workflowchampions.com'
+      },
+      'areaServed': {
+        '@type': 'City',
+        'name': cityData.name,
+        'containedInPlace': {
+          '@type': 'AdministrativeArea',
+          'name': county.name,
+          'containedInPlace': {
+            '@type': 'State',
+            'name': state.name
+          }
+        }
+      }
+    },
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['h1', 'h2', '.hero-text']
+    }
+  };
+
   // Define main content sections
   const mainSections = shuffleArray([
     // Market Stats Section
@@ -223,6 +279,12 @@ export default function CityPage({ params }: { params: CityParams }) {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(citySchema)
+        }}
+      />
       <Navigation />
       
       {/* Hero Section - Always First */}

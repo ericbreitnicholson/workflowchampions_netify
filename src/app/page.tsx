@@ -35,8 +35,63 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
+  const pageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://workflowchampions.com/#webpage',
+    'url': 'https://workflowchampions.com',
+    'name': metadata.title,
+    'description': metadata.description,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website'
+    },
+    'primaryImageOfPage': {
+      '@type': 'ImageObject',
+      'url': 'https://images.unsplash.com/photo-1560518883-ce09059eeffa',
+      'width': 2070,
+      'height': 1380
+    },
+    'about': {
+      '@type': 'Thing',
+      'name': 'Real Estate SEO Services',
+      'description': 'Professional SEO services for real estate agents and brokers'
+    },
+    'mainEntity': {
+      '@type': 'ProfessionalService',
+      'name': 'Workflow Champions',
+      'description': metadata.description,
+      'url': 'https://workflowchampions.com',
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'United States'
+      },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': 'Real Estate SEO Services',
+        'itemListElement': [
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
+              'name': 'Local SEO for Real Estate',
+              'description': 'Dominate your local real estate market with our award-winning SEO strategies'
+            }
+          }
+        ]
+      }
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(pageSchema)
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}
@@ -211,110 +266,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
-      {/* Schema Markup */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            "name": "Workflow Champions",
-            "description": "Leading Real Estate SEO agency helping agents dominate local search rankings. Our proven SEO strategies help realtors attract more leads and outrank competitors.",
-            "url": "https://workflowchampions.com",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://workflowchampions.com/logo.png",
-              "width": 180,
-              "height": 60,
-              "caption": "Workflow Champions Logo",
-              "inLanguage": "en-US"
-            },
-            "image": {
-              "@type": "ImageObject",
-              "url": "https://workflowchampions.com/og-image.jpg",
-              "width": 1200,
-              "height": 630,
-              "caption": "Workflow Champions - Real Estate SEO Services",
-              "inLanguage": "en-US"
-            },
-            "areaServed": {
-              "@type": "Country",
-              "name": "United States"
-            },
-            "priceRange": "$$",
-            "knowsAbout": [
-              "Real Estate SEO",
-              "Local Search Optimization",
-              "Digital Marketing for Realtors",
-              "Real Estate Marketing",
-              "Search Engine Optimization"
-            ],
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Real Estate SEO Services",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Local Search Dominance",
-                    "description": "Optimize your presence for local real estate searches and capture more leads",
-                    "image": {
-                      "@type": "ImageObject",
-                      "url": benefits[0].image,
-                      "width": 870,
-                      "height": 580,
-                      "caption": "Local Search Dominance - Real Estate SEO",
-                      "inLanguage": "en-US"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Content That Converts",
-                    "description": "SEO-optimized content creation for real estate professionals",
-                    "image": {
-                      "@type": "ImageObject",
-                      "url": benefits[1].image,
-                      "width": 870,
-                      "height": 580,
-                      "caption": "Content That Converts - Real Estate SEO",
-                      "inLanguage": "en-US"
-                    }
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Technical SEO Excellence",
-                    "description": "Technical optimization for real estate websites",
-                    "image": {
-                      "@type": "ImageObject",
-                      "url": benefits[2].image,
-                      "width": 870,
-                      "height": 580,
-                      "caption": "Technical SEO Excellence - Real Estate SEO",
-                      "inLanguage": "en-US"
-                    }
-                  }
-                }
-              ]
-            },
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "4.9",
-              "reviewCount": "27"
-            },
-            "sameAs": [
-              "https://calendly.com/eric-workflowchampions/30min"
-            ]
-          })
-        }}
-      />
     </>
   )
 }

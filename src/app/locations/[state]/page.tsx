@@ -115,6 +115,71 @@ export default function StatePage({ params }: { params: StateParams }) {
   const state = stateData[params.state]
   if (!state) return notFound()
 
+  const stateSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://workflowchampions.com/locations/${params.state}#webpage`,
+    'url': `https://workflowchampions.com/locations/${params.state}`,
+    'name': `Best SEO Services in ${state.name} - Workflow Champions`,
+    'description': `Expert Real Estate SEO services in ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents across ${state.name}. Free consultation.`,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website'
+    },
+    'primaryImageOfPage': {
+      '@type': 'ImageObject',
+      'url': state.image,
+      'width': 1200,
+      'height': 630
+    },
+    'about': {
+      '@type': 'State',
+      'name': state.name,
+      'description': state.description,
+      'addressCountry': 'US'
+    },
+    'mainEntity': {
+      '@type': 'Service',
+      'name': `Real Estate SEO Services in ${state.name}`,
+      'description': `Professional SEO services for real estate agents and brokers across ${state.name}`,
+      'provider': {
+        '@type': 'Organization',
+        'name': 'Workflow Champions',
+        'url': 'https://workflowchampions.com'
+      },
+      'areaServed': {
+        '@type': 'State',
+        'name': state.name,
+        'addressCountry': 'US'
+      },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': `${state.name} Real Estate SEO Services`,
+        'itemListElement': state.counties.slice(0, 5).map(county => ({
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': `Real Estate SEO in ${county.name} County`,
+            'description': county.description,
+            'areaServed': {
+              '@type': 'AdministrativeArea',
+              'name': `${county.name} County`,
+              'containedInPlace': {
+                '@type': 'State',
+                'name': state.name
+              }
+            }
+          }
+        }))
+      }
+    },
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['h1', 'h2', '.hero-text']
+    }
+  };
+
   // Define main content sections
   const mainSections = shuffleArray([
     // Counties Grid Section
@@ -207,6 +272,12 @@ export default function StatePage({ params }: { params: StateParams }) {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(stateSchema)
+        }}
+      />
       <Navigation />
       
       {/* Hero Section - Always First */}

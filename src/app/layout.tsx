@@ -39,9 +39,50 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const baseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://workflowchampions.com/#webpage',
+    'url': 'https://workflowchampions.com',
+    'name': metadata.title,
+    'description': metadata.description,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website',
+      'url': 'https://workflowchampions.com',
+      'name': 'Workflow Champions',
+      'description': 'Leading Real Estate SEO Agency',
+      'publisher': {
+        '@type': 'Organization',
+        'name': 'Workflow Champions',
+        'logo': {
+          '@type': 'ImageObject',
+          '@id': 'https://workflowchampions.com/#logo',
+          'url': 'https://workflowchampions.com/logo.png',
+          'contentUrl': 'https://workflowchampions.com/logo.png',
+          'width': '512',
+          'height': '512'
+        }
+      }
+    },
+    'datePublished': '2024-01-01T00:00:00+00:00',
+    'dateModified': new Date().toISOString(),
+    'breadcrumb': {
+      '@type': 'BreadcrumbList',
+      '@id': 'https://workflowchampions.com/#breadcrumb'
+    }
+  };
+
   return (
     <html lang="en" className="h-full scroll-smooth">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(baseSchema)
+          }}
+        />
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="beforeInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

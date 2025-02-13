@@ -16,8 +16,83 @@ export const metadata: Metadata = {
 }
 
 export default function About() {
+  const aboutSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': 'https://workflowchampions.com/about#webpage',
+    'url': 'https://workflowchampions.com/about',
+    'name': metadata.title,
+    'description': metadata.description,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website'
+    },
+    'primaryImageOfPage': {
+      '@type': 'ImageObject',
+      'url': 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3',
+      'width': 1200,
+      'height': 800
+    },
+    'about': {
+      '@type': 'Organization',
+      'name': 'Workflow Champions',
+      'description': 'Leading Real Estate SEO agency helping agents dominate local search rankings',
+      'foundingDate': '2024',
+      'knowsAbout': [
+        'Real Estate SEO',
+        'Local Search Optimization',
+        'Digital Marketing for Realtors',
+        'AI Search Optimization',
+        'Schema Markup Implementation'
+      ],
+      'areaServed': {
+        '@type': 'Country',
+        'name': 'United States'
+      }
+    },
+    'mainEntity': {
+      '@type': 'AboutPage',
+      'name': 'About Workflow Champions',
+      'description': metadata.description,
+      'mainContentOfPage': {
+        '@type': 'WebPageElement',
+        'isPartOf': {
+          '@id': 'https://workflowchampions.com/about#webpage'
+        },
+        'significantLink': [
+          {
+            '@type': 'SiteNavigationElement',
+            'name': 'Our Story',
+            'description': 'Founded in 2024, we emerged from a simple yet powerful observation: talented independent real estate agents were being overshadowed online by large brokerages with deep pockets.'
+          },
+          {
+            '@type': 'SiteNavigationElement',
+            'name': 'What Sets Us Apart',
+            'description': 'We specialize exclusively in real estate SEO, with a unique focus on preparing your online presence for the AI search revolution.'
+          },
+          {
+            '@type': 'SiteNavigationElement',
+            'name': 'Our Approach',
+            'description': 'We translate your real-world expertise into digital authority through strategic optimization and advanced techniques.'
+          }
+        ]
+      }
+    },
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['h1', 'h2', '.hero-text']
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(aboutSchema)
+        }}
+      />
       <Navigation />
       
       {/* Hero Section */}

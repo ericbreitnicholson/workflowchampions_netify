@@ -68,6 +68,69 @@ export default function CountyPage({ params }: { params: CountyParams }) {
   const county = state.counties.find((c: County) => c.slug === params.county)
   if (!county) return notFound()
 
+  const countySchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `https://workflowchampions.com/locations/${params.state}/${params.county}#webpage`,
+    'url': `https://workflowchampions.com/locations/${params.state}/${params.county}`,
+    'name': `Best SEO Services in ${county.name} County - Workflow Champions`,
+    'description': `Expert Real Estate SEO services in ${county.name} County, ${state.name}. Dominate local searches with proven strategies. #1 rated agency for realtors and agents. Free consultation.`,
+    'inLanguage': 'en-US',
+    'isPartOf': {
+      '@type': 'WebSite',
+      '@id': 'https://workflowchampions.com/#website'
+    },
+    'primaryImageOfPage': {
+      '@type': 'ImageObject',
+      'url': county.image || state.image,
+      'width': 1200,
+      'height': 630
+    },
+    'about': {
+      '@type': 'AdministrativeArea',
+      'name': `${county.name} County`,
+      'containedInPlace': {
+        '@type': 'State',
+        'name': state.name,
+        'addressCountry': 'US'
+      }
+    },
+    'mainEntity': {
+      '@type': 'Service',
+      'name': `Real Estate SEO Services in ${county.name} County`,
+      'description': `Professional SEO services for real estate agents and brokers in ${county.name} County, ${state.name}`,
+      'provider': {
+        '@type': 'Organization',
+        'name': 'Workflow Champions',
+        'url': 'https://workflowchampions.com'
+      },
+      'areaServed': {
+        '@type': 'AdministrativeArea',
+        'name': `${county.name} County`,
+        'containedInPlace': {
+          '@type': 'State',
+          'name': state.name
+        }
+      },
+      'hasOfferCatalog': {
+        '@type': 'OfferCatalog',
+        'name': `${county.name} County Real Estate SEO Services`,
+        'itemListElement': county.cities.slice(0, 3).map(city => ({
+          '@type': 'Offer',
+          'itemOffered': {
+            '@type': 'Service',
+            'name': `Real Estate SEO in ${city.name}`,
+            'description': city.description
+          }
+        }))
+      }
+    },
+    'speakable': {
+      '@type': 'SpeakableSpecification',
+      'cssSelector': ['h1', 'h2', '.hero-text']
+    }
+  };
+
   // Define main content sections
   const mainSections = shuffleArray([
     // Cities Section
@@ -174,6 +237,12 @@ export default function CountyPage({ params }: { params: CountyParams }) {
 
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(countySchema)
+        }}
+      />
       <Navigation />
       
       {/* Hero Section - Always First */}
