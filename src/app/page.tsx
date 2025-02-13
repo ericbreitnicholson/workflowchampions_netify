@@ -56,7 +56,7 @@ export default function Home() {
       'caption': 'Modern real estate building representing Workflow Champions professional services'
     },
     'mainEntity': {
-      '@type': 'ProfessionalService',
+      '@type': 'OnlineBusiness',
       '@id': 'https://workflowchampions.com/#business',
       'name': 'Workflow Champions',
       'description': metadata.description,
