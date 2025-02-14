@@ -4,6 +4,7 @@ import { Fragment, useEffect, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const navigation = [
@@ -58,8 +59,18 @@ export default function Navigation() {
               <div className="flex h-16 justify-between">
                 <div className="flex">
                   <div className="flex flex-shrink-0 items-center">
-                    <Link href="/" className="text-xl font-bold text-primary-600">
-                      Workflow Champions
+                    <Link href="/" className="flex items-center">
+                      <Image
+                        src="/images/logo.svg"
+                        alt="Workflow Champions"
+                        width={32}
+                        height={32}
+                        className="h-8 w-auto"
+                        priority
+                      />
+                      <span className="ml-2 text-xl font-bold text-primary-600">
+                        Workflow Champions
+                      </span>
                     </Link>
                   </div>
                 </div>

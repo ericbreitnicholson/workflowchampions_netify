@@ -54,11 +54,11 @@ export default function RootLayout({
       'logo': {
         '@type': 'ImageObject',
         '@id': 'https://workflowchampions.com/#logo',
-        'url': 'https://workflowchampions.com/logo.png',
-        'contentUrl': 'https://workflowchampions.com/logo.png',
-        'width': '512',
-        'height': '512',
-        'caption': 'Workflow Champions - Leading Real Estate SEO Agency'
+        'url': 'https://workflowchampions.com/images/logo.svg',
+        'contentUrl': 'https://workflowchampions.com/images/logo.svg',
+        'width': '32',
+        'height': '32',
+        'caption': 'Workflow Champions Logo'
       },
       'description': 'Leading Real Estate SEO Agency specializing in helping real estate professionals dominate their local markets',
       'sameAs': [
