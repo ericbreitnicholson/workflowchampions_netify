@@ -59,18 +59,15 @@ export default function Navigation() {
               <div className="flex h-16 justify-between">
                 <div className="flex">
                   <div className="flex flex-shrink-0 items-center">
-                    <Link href="/" className="flex items-center">
+                    <Link href="/" className="flex items-center" aria-label="Home">
                       <Image
                         src="/images/logo.svg"
                         alt="Workflow Champions"
-                        width={32}
-                        height={32}
-                        className="h-8 w-auto"
+                        width={40}
+                        height={40}
+                        className="h-10 w-auto"
                         priority
                       />
-                      <span className="ml-2 text-xl font-bold text-primary-600">
-                        Workflow Champions
-                      </span>
                     </Link>
                   </div>
                 </div>
@@ -78,18 +75,20 @@ export default function Navigation() {
                 {/* Desktop navigation */}
                 <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                   {navigation.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className={classNames(
-                        pathname === item.href
-                          ? 'border-primary-500 text-gray-900'
-                          : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
-                        'inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium'
-                      )}
-                    >
-                      {item.name}
-                    </Link>
+                    item.href !== '/' && (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className={classNames(
+                          pathname === item.href
+                            ? 'border-primary-500 text-gray-900'
+                            : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700',
+                          'inline-flex items-center border-b-2 px-1 pt-1 text-sm font-medium'
+                        )}
+                      >
+                        {item.name}
+                      </Link>
+                    )
                   ))}
                 </div>
 
@@ -111,19 +110,21 @@ export default function Navigation() {
             <Disclosure.Panel className="sm:hidden bg-white">
               <div className="space-y-1 pb-3 pt-2">
                 {navigation.map((item) => (
-                  <Disclosure.Button
-                    key={item.name}
-                    as={Link}
-                    href={item.href}
-                    className={classNames(
-                      pathname === item.href
-                        ? 'bg-primary-50 border-primary-500 text-primary-700'
-                        : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700',
-                      'block border-l-4 py-2 pl-3 pr-4 text-base font-medium'
-                    )}
-                  >
-                    {item.name}
-                  </Disclosure.Button>
+                  item.href !== '/' && (
+                    <Disclosure.Button
+                      key={item.name}
+                      as={Link}
+                      href={item.href}
+                      className={classNames(
+                        pathname === item.href
+                          ? 'bg-primary-50 border-primary-500 text-primary-700'
+                          : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700',
+                        'block border-l-4 py-2 pl-3 pr-4 text-base font-medium'
+                      )}
+                    >
+                      {item.name}
+                    </Disclosure.Button>
+                  )
                 ))}
               </div>
             </Disclosure.Panel>
