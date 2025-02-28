@@ -15,6 +15,13 @@ Sitemap: https://workflowchampions.com/sitemap-6.xml
 Sitemap: https://workflowchampions.com/sitemap-7.xml
 Sitemap: https://workflowchampions.com/sitemap-8.xml
 Sitemap: https://workflowchampions.com/sitemap-9.xml
+Sitemap: https://workflowchampions.com/sitemap-10.xml
+Sitemap: https://workflowchampions.com/sitemap-11.xml
+Sitemap: https://workflowchampions.com/sitemap-12.xml
+Sitemap: https://workflowchampions.com/sitemap-13.xml
+Sitemap: https://workflowchampions.com/sitemap-14.xml
+Sitemap: https://workflowchampions.com/sitemap-15.xml
+Sitemap: https://workflowchampions.com/sitemap-16.xml
 
 # Block access to admin areas
 Disallow: /admin/
