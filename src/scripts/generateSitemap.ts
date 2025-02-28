@@ -49,9 +49,123 @@ const blogPosts = [
   }
 ]
 
+interface SitemapUrl {
+  loc: string
+  lastmod: string
+  changefreq: string
+  priority: string
+  image?: {
+    loc: string
+    title: string
+    caption: string
+  }
+}
+
 async function generateSitemap() {
-  // Start XML
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const urls: SitemapUrl[] = []
+
+  // Add homepage
+  urls.push({
+    loc: BASE_URL,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'daily',
+    priority: '1.0'
+  })
+
+  // Add blog index page
+  urls.push({
+    loc: `${BASE_URL}/blog`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'daily',
+    priority: '0.9'
+  })
+
+  // Add blog posts
+  for (const post of blogPosts) {
+    urls.push({
+      loc: `${BASE_URL}/blog/${post.slug}`,
+      lastmod: post.modified,
+      changefreq: 'weekly',
+      priority: '0.8',
+      ...(post.featuredImage?.node && {
+        image: {
+          loc: post.featuredImage.node.sourceUrl,
+          title: post.title,
+          caption: post.title
+        }
+      })
+    })
+  }
+
+  // Add main locations page
+  urls.push({
+    loc: `${BASE_URL}/locations`,
+    lastmod: new Date().toISOString().split('T')[0],
+    changefreq: 'daily',
+    priority: '0.9'
+  })
+
+  // Add state pages
+  for (const [stateSlug, state] of Object.entries(stateData)) {
+    urls.push({
+      loc: `${BASE_URL}/locations/${stateSlug}`,
+      lastmod: new Date().toISOString().split('T')[0],
+      changefreq: 'weekly',
+      priority: '0.8',
+      ...(state.image && {
+        image: {
+          loc: state.image,
+          title: `${state.name} Real Estate Market`,
+          caption: `Real Estate SEO Services in ${state.name}`
+        }
+      })
+    })
+
+    // Add county pages
+    for (const county of state.counties) {
+      urls.push({
+        loc: `${BASE_URL}/locations/${stateSlug}/${county.slug}`,
+        lastmod: new Date().toISOString().split('T')[0],
+        changefreq: 'weekly',
+        priority: '0.7',
+        ...(county.image && {
+          image: {
+            loc: county.image,
+            title: `${county.name}, ${state.name} Real Estate Market`,
+            caption: `Real Estate SEO Services in ${county.name}, ${state.name}`
+          }
+        })
+      })
+
+      // Add city pages
+      for (const city of county.cities) {
+        urls.push({
+          loc: `${BASE_URL}/locations/${stateSlug}/${county.slug}/${city.slug}`,
+          lastmod: new Date().toISOString().split('T')[0],
+          changefreq: 'weekly',
+          priority: '0.6',
+          ...(city.image && {
+            image: {
+              loc: city.image,
+              title: `${city.name}, ${county.name}, ${state.name} Real Estate Market`,
+              caption: `Expert Real Estate SEO Services in ${city.name}, ${county.name}, ${state.name}`
+            }
+          })
+        })
+      }
+    }
+  }
+
+  // Split URLs into chunks of 100
+  const URLS_PER_FILE = 100
+  const chunks = []
+  for (let i = 0; i < urls.length; i += URLS_PER_FILE) {
+    chunks.push(urls.slice(i, i + URLS_PER_FILE))
+  }
+
+  // Generate sitemap files
+  chunks.forEach((chunk, index) => {
+    let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
@@ -59,98 +173,40 @@ async function generateSitemap() {
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 `
 
-  // Add homepage
-  sitemap += `  <url>
-    <loc>${BASE_URL}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>\n`
-
-  // Add blog index page
-  sitemap += `  <url>
-    <loc>${BASE_URL}/blog</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>\n`
-
-  // Add blog posts
-  for (const post of blogPosts) {
-    sitemap += `  <url>
-    <loc>${BASE_URL}/blog/${post.slug}</loc>
-    <lastmod>${post.modified}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>${post.featuredImage?.node ? `
-    <image:image>
-      <image:loc>${escapeUrl(post.featuredImage.node.sourceUrl)}</image:loc>
-      <image:title>${escapeXml(post.title)}</image:title>
-      <image:caption>${escapeXml(post.title)}</image:caption>
-    </image:image>` : ''}
-  </url>\n`
-  }
-
-  // Add main locations page
-  sitemap += `  <url>
-    <loc>${BASE_URL}/locations</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>\n`
-
-  // Add state pages
-  for (const [stateSlug, state] of Object.entries(stateData)) {
-    sitemap += `  <url>
-    <loc>${BASE_URL}/locations/${stateSlug}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>${state.image ? `
-    <image:image>
-      <image:loc>${escapeUrl(state.image)}</image:loc>
-      <image:title>${escapeXml(state.name)} Real Estate Market</image:title>
-      <image:caption>Real Estate SEO Services in ${escapeXml(state.name)}</image:caption>
-    </image:image>` : ''}
-  </url>\n`
-
-    // Add county pages
-    for (const county of state.counties) {
+    for (const url of chunk) {
       sitemap += `  <url>
-    <loc>${BASE_URL}/locations/${stateSlug}/${county.slug}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>${county.image ? `
+    <loc>${escapeUrl(url.loc)}</loc>
+    <lastmod>${url.lastmod}</lastmod>
+    <changefreq>${url.changefreq}</changefreq>
+    <priority>${url.priority}</priority>${url.image ? `
     <image:image>
-      <image:loc>${escapeUrl(county.image)}</image:loc>
-      <image:title>${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
-      <image:caption>Real Estate SEO Services in ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
+      <image:loc>${escapeUrl(url.image.loc)}</image:loc>
+      <image:title>${escapeXml(url.image.title)}</image:title>
+      <image:caption>${escapeXml(url.image.caption)}</image:caption>
     </image:image>` : ''}
   </url>\n`
-
-      // Add city pages
-      for (const city of county.cities) {
-        sitemap += `  <url>
-    <loc>${BASE_URL}/locations/${stateSlug}/${county.slug}/${city.slug}</loc>
-    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>${city.image ? `
-    <image:image>
-      <image:loc>${escapeUrl(city.image)}</image:loc>
-      <image:title>${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)} Real Estate Market</image:title>
-      <image:caption>Expert Real Estate SEO Services in ${escapeXml(city.name)}, ${escapeXml(county.name)}, ${escapeXml(state.name)}</image:caption>
-    </image:image>` : ''}
-  </url>\n`
-      }
     }
+
+    sitemap += '</urlset>\n'
+    fs.writeFileSync(`public/sitemap-${index + 1}.xml`, sitemap)
+  })
+
+  // Generate sitemap index
+  let sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+`
+
+  for (let i = 0; i < chunks.length; i++) {
+    sitemapIndex += `  <sitemap>
+    <loc>${BASE_URL}/sitemap-${i + 1}.xml</loc>
+    <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
+  </sitemap>\n`
   }
 
-  // Close XML
-  sitemap += '</urlset>\n'
+  sitemapIndex += '</sitemapindex>\n'
+  fs.writeFileSync('public/sitemap.xml', sitemapIndex)
 
-  // Write sitemap
-  fs.writeFileSync('public/sitemap.xml', sitemap)
-  console.log('Sitemap generated successfully!')
-
-  // Generate enhanced robots.txt
+  // Update robots.txt to point to sitemap index
   const robotsTxt = `User-agent: *
 Allow: /
 
@@ -178,7 +234,7 @@ Disallow: /*.txt$
 Host: workflowchampions.com`
 
   fs.writeFileSync('public/robots.txt', robotsTxt)
-  console.log('robots.txt generated successfully!')
+  console.log('Sitemaps and robots.txt generated successfully!')
 }
 
 async function generateHtmlSitemap() {
