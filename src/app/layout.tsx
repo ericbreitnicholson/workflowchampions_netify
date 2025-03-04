@@ -15,7 +15,7 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+  title: 'Real Estate SEO Services - Workflow Champions',
   description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies.',
   icons: {
     icon: [

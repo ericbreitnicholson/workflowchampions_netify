@@ -1,0 +1,37 @@
+warning: in the working copy of 'src/app/layout.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/app/page.tsx', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'src/components/Navigation.tsx', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/commit_msg.txt b/commit_msg.txt[m
+[1mindex c22ae82..622af42 100644[m
+Binary files a/commit_msg.txt and b/commit_msg.txt differ
+[1mdiff --git a/src/app/layout.tsx b/src/app/layout.tsx[m
+[1mindex 60809e8..f7c5342 100644[m
+[1m--- a/src/app/layout.tsx[m
+[1m+++ b/src/app/layout.tsx[m
+[36m@@ -15,7 +15,7 @@[m [mexport const viewport: Viewport = {[m
+ }[m
+ [m
+ export const metadata: Metadata = {[m
+[31m-  title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',[m
+[32m+[m[32m  title: 'Real Estate SEO Services - Workflow Champions',[m
+   description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies.',[m
+   icons: {[m
+     icon: [[m
+[1mdiff --git a/src/app/page.tsx b/src/app/page.tsx[m
+[1mindex 4de39bc..f3b25d0 100644[m
+[1m--- a/src/app/page.tsx[m
+[1m+++ b/src/app/page.tsx[m
+[36m@@ -4,11 +4,11 @@[m [mimport Image from 'next/image'[m
+ import Link from 'next/link'[m
+ [m
+ export const metadata: Metadata = {[m
+[31m-  title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',[m
+[32m+[m[32m  title: 'Real Estate SEO Services - Workflow Champions',[m
+   description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',[m
+   keywords: 'workflow champions, real estate seo, real estate marketing, local seo, real estate agent marketing, realtor seo, real estate seo agency',[m
+   openGraph: {[m
+[31m-    title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',[m
+[32m+[m[32m    title: 'Real Estate SEO Services - Workflow Champions',[m
+     description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',[m
+     images: [[m
+       {[m

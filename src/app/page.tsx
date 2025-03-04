@@ -4,11 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+  title: 'Real Estate SEO Services - Workflow Champions',
   description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',
   keywords: 'workflow champions, real estate seo, real estate marketing, local seo, real estate agent marketing, realtor seo, real estate seo agency',
   openGraph: {
-    title: 'Workflow Champions | Premier Real Estate SEO & Digital Marketing Agency',
+    title: 'Real Estate SEO Services - Workflow Champions',
     description: 'Workflow Champions: Your trusted partner for real estate SEO excellence. Boost property listings, dominate local searches, and grow your real estate business with our proven strategies. Schedule your free consultation today.',
     images: [
       {
