@@ -5,8 +5,30 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
+    <loc>https://workflowchampions.com/locations/oregon</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1449034446853-66c86144b0ad?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80</image:loc>
+      <image:title>Oregon Real Estate Market</image:title>
+      <image:caption>Real Estate SEO Services in Oregon</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://workflowchampions.com/locations/oregon/multnomah</loc>
+    <lastmod>2025-03-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-968178?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Multnomah, Oregon Real Estate Market</image:title>
+      <image:caption>Real Estate SEO Services in Multnomah, Oregon</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://workflowchampions.com/locations/oregon/multnomah/portland</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -17,7 +39,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/multnomah/gresham</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -28,7 +50,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/multnomah/troutdale</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -39,7 +61,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/multnomah/fairview</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -50,7 +72,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/multnomah/corbett</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -61,7 +83,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -72,7 +94,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion/salem</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -83,7 +105,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion/woodburn</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -94,7 +116,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion/silverton</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -105,7 +127,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion/stayton</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -116,7 +138,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/marion/turner</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -127,7 +149,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -138,7 +160,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington/beaverton</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -149,7 +171,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington/portland</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -160,7 +182,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington/hillsboro</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -171,7 +193,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington/tualatin</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -182,7 +204,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/washington/forest-grove</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -193,7 +215,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -204,7 +226,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane/eugene</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -215,7 +237,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane/springfield</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -226,7 +248,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane/cottage-grove</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -237,7 +259,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane/florence</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -248,7 +270,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/lane/junction-city</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -259,7 +281,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -270,7 +292,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas/portland</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -281,7 +303,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas/oregon-city</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -292,7 +314,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas/lake-oswego</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -303,7 +325,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas/happy-valley</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -314,7 +336,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/oregon/clackamas/west-linn</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -325,7 +347,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -336,7 +358,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -347,7 +369,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king/seattle</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -358,7 +380,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king/kent</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -369,7 +391,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king/renton</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -380,7 +402,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king/bellevue</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -391,7 +413,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/king/auburn</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -402,7 +424,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -413,7 +435,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish/everett</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -424,7 +446,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish/lynnwood</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -435,7 +457,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish/bothell</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -446,7 +468,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish/marysville</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -457,7 +479,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/snohomish/snohomish</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -468,7 +490,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -479,7 +501,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark/vancouver</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -490,7 +512,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark/battle-ground</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -501,7 +523,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark/camas</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -512,7 +534,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark/washougal</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -523,7 +545,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/clark/ridgefield</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -534,7 +556,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -545,7 +567,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce/tacoma</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -556,7 +578,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce/puyallup</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -567,7 +589,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce/lakewood</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -578,7 +600,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce/gig-harbor</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -589,7 +611,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/pierce/bonney-lake</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -600,7 +622,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -611,7 +633,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane/spokane</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -622,7 +644,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane/cheney</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -633,7 +655,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane/greenacres</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -644,7 +666,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane/veradale</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -655,7 +677,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/washington/spokane/deer-park</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -666,7 +688,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -677,7 +699,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -688,7 +710,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade/miami</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -699,7 +721,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade/hialeah</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -710,7 +732,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade/homestead</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -721,7 +743,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade/miami-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -732,7 +754,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/miami-dade/opa-locka</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -743,7 +765,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -754,7 +776,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward/fort-lauderdale</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -765,7 +787,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward/hollywood</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -776,7 +798,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward/pompano-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -787,7 +809,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward/coral-springs</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -798,7 +820,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/broward/deerfield-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -809,7 +831,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -820,7 +842,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough/tampa</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -831,7 +853,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough/riverview</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -842,7 +864,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough/brandon</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -853,7 +875,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough/plant-city</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -864,7 +886,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/hillsborough/lutz</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -875,7 +897,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -886,7 +908,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange/orlando</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -897,7 +919,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange/apopka</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -908,7 +930,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange/winter-park</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -919,7 +941,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange/winter-garden</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -930,7 +952,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/orange/ocoee</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -941,7 +963,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -952,7 +974,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach/west-palm-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -963,7 +985,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach/boca-raton</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -974,7 +996,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach/lake-worth</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -985,7 +1007,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach/boynton-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -996,7 +1018,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/florida/palm-beach/delray-beach</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -1007,7 +1029,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -1018,7 +1040,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
     <image:image>
@@ -1029,7 +1051,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison/huntsville</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -1040,7 +1062,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison/madison</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -1051,7 +1073,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison/harvest</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -1062,7 +1084,7 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison/owens-cross-roads</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
@@ -1073,35 +1095,13 @@
   </url>
   <url>
     <loc>https://workflowchampions.com/locations/alabama/madison/hazel-green</loc>
-    <lastmod>2025-02-28</lastmod>
+    <lastmod>2025-03-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
     <image:image>
       <image:loc>https://images.unsplash.com/photo-168590?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
       <image:title>Hazel Green, Madison, Alabama Real Estate Market</image:title>
       <image:caption>Expert Real Estate SEO Services in Hazel Green, Madison, Alabama</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://workflowchampions.com/locations/alabama/jefferson</loc>
-    <lastmod>2025-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-851543?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
-      <image:title>Jefferson, Alabama Real Estate Market</image:title>
-      <image:caption>Real Estate SEO Services in Jefferson, Alabama</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://workflowchampions.com/locations/alabama/jefferson/birmingham</loc>
-    <lastmod>2025-02-28</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://images.unsplash.com/photo-177785?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
-      <image:title>Birmingham, Jefferson, Alabama Real Estate Market</image:title>
-      <image:caption>Expert Real Estate SEO Services in Birmingham, Jefferson, Alabama</image:caption>
     </image:image>
   </url>
 </urlset>

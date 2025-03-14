@@ -3,6 +3,54 @@ import { stateData } from '../data/generatedLocations'
 
 const BASE_URL = 'https://workflowchampions.com'
 
+// Static blog data as fallback
+const staticBlogPosts = [
+  {
+    slug: 'workflow-champions-acquires-codieum',
+    title: 'Workflow Champions Acquires codieum.com',
+    modified: '2024-03-09',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://workflowchampions.com/images/blog/acquisition.jpg',
+        altText: 'Workflow Champions Acquires Codieum'
+      }
+    }
+  },
+  {
+    slug: 'real-estate-seo-keywords',
+    title: 'Real Estate SEO Keywords: A How-To Guide',
+    modified: '2024-03-02',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://workflowchampions.com/images/blog/seo-keywords.jpg',
+        altText: 'Real Estate SEO Keywords Guide'
+      }
+    }
+  },
+  {
+    slug: 'real-estate-agents-organic-rankings',
+    title: 'Real Estate Agents and Organic Rankings: A Comprehensive Guide',
+    modified: '2024-02-12',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://workflowchampions.com/images/blog/organic-rankings.jpg',
+        altText: 'Real Estate Organic Rankings Guide'
+      }
+    }
+  },
+  {
+    slug: 'realtor-seo-second-office',
+    title: 'How Does a Realtor Do SEO for a Second Office',
+    modified: '2024-02-12',
+    featuredImage: {
+      node: {
+        sourceUrl: 'https://workflowchampions.com/images/blog/second-office.jpg',
+        altText: 'Realtor SEO for Second Office'
+      }
+    }
+  }
+]
+
 // Define the structure of our location data
 type City = {
   name: string
@@ -23,31 +71,50 @@ type State = {
   counties: County[]
 }
 
-// Static blog data for now
-const blogPosts = [
-  {
-    slug: 'real-estate-seo-guide-2024',
-    title: 'Complete Real Estate SEO Guide for 2024',
-    modified: '2024-02-15',
-    featuredImage: {
-      node: {
-        sourceUrl: 'https://workflowchampions.com/images/blog/real-estate-seo-guide.jpg',
-        altText: 'Real Estate SEO Guide'
-      }
-    }
-  },
-  {
-    slug: 'local-seo-strategies',
-    title: 'Local SEO Strategies for Real Estate Agents',
-    modified: '2024-02-10',
-    featuredImage: {
-      node: {
-        sourceUrl: 'https://workflowchampions.com/images/blog/local-seo-strategies.jpg',
-        altText: 'Local SEO Strategies'
-      }
+interface BlogPost {
+  slug: string
+  title: string
+  modified: string
+  featuredImage?: {
+    node: {
+      sourceUrl: string
+      altText: string
     }
   }
-]
+}
+
+// Update getBlogPosts function to use static data when WordPress is not available
+async function getBlogPosts(): Promise<BlogPost[]> {
+  // If WordPress API URL is not defined, use static data
+  if (!process.env.NEXT_PUBLIC_WORDPRESS_API_URL) {
+    console.log('WordPress API URL not found, using static blog data')
+    return staticBlogPosts
+  }
+
+  try {
+    const wordpress = await import('../lib/wordpress')
+    const { data } = await wordpress.default.query({
+      query: wordpress.POSTS_QUERY,
+      variables: { first: 10 },
+      fetchPolicy: 'network-only'
+    })
+    
+    if (data?.posts?.nodes) {
+      return data.posts.nodes.map((post: any) => ({
+        slug: post.slug,
+        title: post.title,
+        modified: new Date(post.date).toISOString().split('T')[0],
+        featuredImage: post.featuredImage
+      }))
+    }
+    console.log('No posts found in WordPress, using static blog data')
+    return staticBlogPosts
+  } catch (error) {
+    console.error('Error fetching blog posts:', error)
+    console.log('Falling back to static blog data')
+    return staticBlogPosts
+  }
+}
 
 interface SitemapUrl {
   loc: string
@@ -63,6 +130,7 @@ interface SitemapUrl {
 
 async function generateSitemap() {
   const urls: SitemapUrl[] = []
+  const blogPosts = await getBlogPosts()
 
   // Add homepage
   urls.push({
@@ -87,7 +155,7 @@ async function generateSitemap() {
       lastmod: post.modified,
       changefreq: 'weekly',
       priority: '0.8',
-      ...(post.featuredImage?.node && {
+      ...(post.featuredImage && {
         image: {
           loc: post.featuredImage.node.sourceUrl,
           title: post.title,
@@ -238,6 +306,8 @@ Host: workflowchampions.com`
 }
 
 async function generateHtmlSitemap() {
+  const blogPosts = await getBlogPosts()
+  
   let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -299,7 +369,7 @@ async function generateHtmlSitemap() {
     <div class="section">
         <h2>Blog Posts</h2>
         <ul class="grid">
-            ${blogPosts.map(post => `
+            ${blogPosts.map((post: BlogPost) => `
             <li>
                 <a href="${BASE_URL}/blog/${post.slug}">${escapeHtml(post.title)}</a>
             </li>`).join('')}
@@ -363,14 +433,21 @@ function escapeHtml(unsafe: string): string {
     .replace(/'/g, "&#039;")
 }
 
-// Update the main function to generate both sitemaps
+// Main execution
 async function main() {
   try {
+    console.log('Generating sitemaps...')
     await generateSitemap()
+    console.log('XML sitemaps generated successfully!')
+    
+    console.log('Generating HTML sitemap...')
     await generateHtmlSitemap()
+    console.log('HTML sitemap generated successfully!')
   } catch (error) {
     console.error('Error generating sitemaps:', error)
+    process.exit(1)
   }
 }
 
-main().catch(console.error) 
+// Run the script
+main() 
